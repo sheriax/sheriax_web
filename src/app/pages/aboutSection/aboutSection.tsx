@@ -4,7 +4,10 @@ import image from '@/app/constant/image';
 
 const AboutSection = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section
+      id="aboutSection"
+      className={styles.aboutSection}
+    >
       <h1>About Us</h1>
       <div className={styles.aboutSection__firstContent}>
         <div>

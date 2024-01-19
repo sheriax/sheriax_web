@@ -5,7 +5,10 @@ import image from '../../constant/image';
 
 const HeroSection = () => {
   return (
-    <section className={styles.heroSection}>
+    <section
+      id="heroSection"
+      className={styles.heroSection}
+    >
       <img
         className={styles.heroContentImage}
         src={image.logo.vectorBackdrop.src}
@@ -18,7 +21,7 @@ const HeroSection = () => {
           <p>TECHNOLOGY BEYOND TIME</p>
         </div>
         <div className={styles.heroContent__textRight}>
-          <p>
+          <p className={styles.heroContent__textMobile}>
             Imagine a world where our innovations become as iconic as Doraemon's
             magical gadgets, Kitaratsu's ingenious contraptions, Wall-E's
             heartwarming charm, Eva's futuristic brilliance, and the daring

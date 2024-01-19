@@ -1,0 +1,28 @@
+.contactUsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: initial;
+  background: #213376;
+  gap: 30px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  & > h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.contactUsSection__formData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

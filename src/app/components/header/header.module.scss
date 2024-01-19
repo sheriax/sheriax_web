@@ -14,7 +14,6 @@
 
 .name {
   color: #000;
-  font-family: General Sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -37,10 +36,15 @@
     color: #000;
 
     text-align: center;
-    font-family: General Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .navs {
+    gap: 0px;
   }
 }

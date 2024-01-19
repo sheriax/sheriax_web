@@ -18,7 +18,7 @@
   & > div > p {
     color: #fff;
     text-align: center;
-    font-family: General Sans;
+    font-family: 'Poppins';
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -38,7 +38,7 @@
   & > h1 {
     color: #fff;
     text-align: center;
-    font-family: General Sans;
+    font-family: 'Poppins';
     font-size: 72px;
     font-style: normal;
     font-weight: 500;
@@ -48,7 +48,7 @@
   & > p {
     color: #fff;
     text-align: center;
-    font-family: General Sans;
+    font-family: 'Poppins';
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -65,7 +65,7 @@
   & > p {
     color: #fff;
     text-align: center;
-    font-family: General Sans;
+    font-family: 'Poppins';
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -77,4 +77,24 @@
   position: absolute;
   width: 100%;
   top: 200px;
+}
+
+@media screen and (max-width: 540px) {
+  .heroContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .heroContent__text {
+    display: flex;
+    align-items: center;
+    max-width: 95%;
+    transform: translateX(-150px);
+  }
+
+  .heroContent__textMobile {
+    max-width: 130% !important;
+    font-size: 24px !important;
+  }
 }

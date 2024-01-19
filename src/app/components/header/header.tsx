@@ -6,12 +6,15 @@ const Header = () => {
   const navs = [
     {
       name: 'Home',
+      id: 'heroSection',
     },
     {
       name: 'About us',
+      id: 'aboutUsSection',
     },
     {
       name: 'Contact us',
+      id: 'contactUsSection',
     },
   ];
   return (

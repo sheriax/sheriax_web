@@ -1,0 +1,68 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: var(--Dark, #0a142f);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-inline: 40px;
+}
+
+.footer__Content {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__Links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__AllLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__LogoTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.links,
+.services,
+.product {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.links_text,
+.product_text,
+.services_text {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.companyName {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: 540px) {
+  .footer__Content {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,28 @@
+.inputOption {
+  display: flex;
+  width: 449px;
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  background: var(--neutral-white, #fff);
+  border: #fff;
+
+  &::placeholder {
+    color: #8c8c8c;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &::-webkit-input-placeholder {
+    color: var(--primary-1-bunting-600, #15154c);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .inputOption {
+    width: 350px;
+  }
+}
