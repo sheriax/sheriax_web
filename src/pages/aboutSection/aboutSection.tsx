@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './aboutSection.module.scss';
-import image from '@/app/constant/image';
+import image from '@/constant/image';
 
 const AboutSection = () => {
   return (

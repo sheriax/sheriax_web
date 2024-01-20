@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './heroSection.module.scss';
 import Header from '../../components/Header';
 import image from '../../constant/image';
+import AboutSection from '../aboutSection/aboutSection';
 
 const HeroSection = () => {
   return (
@@ -15,6 +16,7 @@ const HeroSection = () => {
         src={image.logo.vectorBackdrop.src}
         alt="dummy image"
       />
+
       <div className={styles.heroContent}>
         <div className={styles.heroContent__text}>
           <h1>SHERIAX</h1>
@@ -32,6 +34,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
+      <AboutSection />
     </section>
   );
 };

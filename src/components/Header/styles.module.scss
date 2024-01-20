@@ -8,6 +8,7 @@
   inset: 0;
   z-index: 9999;
   padding-inline: 6%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .companyLogoName {
@@ -38,6 +39,8 @@
     gap: 10px;
     border-radius: 16px;
     color: var(--Dark, #0a142f);
+    transition: all 0.2s ease-in-out;
+    background: #e8eced;
 
     text-align: center;
     font-size: 14px;
@@ -47,7 +50,7 @@
     scroll-behavior: smooth;
 
     &:hover {
-      background: #213376 !important;
+      background: #0d2fad !important;
       color: #fff;
     }
   }
@@ -87,6 +90,7 @@
     gap: 10px;
     border-radius: 16px;
     color: var(--Dark, #0a142f);
+    transition: all 0.2s ease-in-out;
 
     text-align: center;
     font-size: 14px;
@@ -96,7 +100,7 @@
     scroll-behavior: smooth;
 
     &:hover {
-      background: #213376 !important;
+      background: #0d2fad !important;
       color: #e8eced;
     }
   }

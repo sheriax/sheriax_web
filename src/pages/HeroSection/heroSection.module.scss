@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   height: initial;
-  background: #213376;
+  // background: #0b33c6;
+  background: #0d2fad;
+
   gap: 200px;
   padding-top: 200px;
-  padding-bottom: 200px;
+  // padding-bottom: 200px;
   z-index: 1;
 }
 
@@ -76,6 +78,7 @@
 .heroContentImage {
   position: absolute;
   width: 100%;
+  // transform: translateY(-400px);
   top: 200px;
 }
 

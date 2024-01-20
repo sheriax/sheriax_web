@@ -1,9 +1,7 @@
-'use client';
+import Footer from '@/components/Footer';
+import HeroSection from '@/pages/HeroSection/heroSection';
+import ContactUsSection from '@/pages/contactUsSection/contactUsSection';
 import Head from 'next/head';
-import Footer from '../components/Footer';
-import HeroSection from '../pages/HeroSection/heroSection';
-import AboutSection from '../pages/aboutSection/aboutSection';
-import ContactUsSection from '../pages/contactUsSection/contactUsSection';
 
 export default function Home() {
   return (
@@ -16,7 +14,6 @@ export default function Home() {
         />
       </Head>
       <HeroSection />
-      <AboutSection />
       <ContactUsSection />
       <Footer />
     </>

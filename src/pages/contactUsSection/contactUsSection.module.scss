@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: initial;
-  background: #213376;
+  background: #0d2fad;
   gap: 30px;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -17,6 +17,11 @@
     font-weight: 600;
     line-height: normal;
   }
+}
+
+.contactUsBgImage {
+  width: 100%;
+  position: absolute;
 }
 
 .contactUsSection__formData {

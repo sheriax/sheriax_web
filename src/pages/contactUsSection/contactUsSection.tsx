@@ -1,17 +1,24 @@
+'use client';
 import React, { useState } from 'react';
 
-import FormInput from '@/app/components/Forminput';
 import styles from './contactUsSection.module.scss';
-import Button from '@/app/components/Button';
+import FormInput from '@/components/Forminput';
+import Button from '@/components/Button';
+import image from '@/constant/image';
 
 const ContactUsSection = () => {
-  //   const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <section
       id="contactUsSection"
       className={styles.contactUsSection}
     >
+      <img
+        className={styles.contactUsBgImage}
+        src={image.contactUsSection.vectorContactUs.src}
+        alt="dummy image"
+      />
       <h1>Contact us</h1>
       <div className={styles.contactUsSection__formData}>
         <FormInput
@@ -28,7 +35,7 @@ const ContactUsSection = () => {
         />
         <Button
           text="Submit"
-          //   loading={loading}
+          loading={loading}
         />
       </div>
     </section>
