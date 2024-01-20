@@ -4,6 +4,9 @@
   align-items: center;
   height: 70px;
   background: #e8eced;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
 }
 
 .companyLogoName {
@@ -26,7 +29,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  & > p {
+  & > a > p {
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -40,10 +43,20 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    scroll-behavior: smooth;
   }
 }
 
+.a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 540px) {
+  .header {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+  }
   .navs {
     gap: 0px;
   }

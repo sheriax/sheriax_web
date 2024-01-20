@@ -19,11 +19,11 @@ const ContactUsSection = () => {
           type="text"
         />
         <FormInput
-          placeholder="Enter Name"
+          placeholder="Enter Email"
           type="text"
         />
         <FormInput
-          placeholder="Enter Name"
+          placeholder="Enter Message"
           type="text"
         />
         <Button

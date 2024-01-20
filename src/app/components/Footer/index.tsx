@@ -8,9 +8,15 @@ const Footer = () => {
       <div className={styles.footer__Content}>
         <div>
           <p className={styles.links}>LINKS</p>
-          <p className={styles.links_text}>Home</p>
-          <p className={styles.links_text}>About us</p>
-          <p className={styles.links_text}>Contact us</p>
+          <a href="#heroSection">
+            <p className={styles.links_text}>Home</p>
+          </a>
+          <a href="#aboutSection">
+            <p className={styles.links_text}>About us</p>
+          </a>
+          <a href="#contactUsSection">
+            <p className={styles.links_text}>Contact us</p>
+          </a>
         </div>
         <div>
           <p className={styles.product}>PRODUCTS</p>
@@ -26,22 +32,42 @@ const Footer = () => {
       </div>
       <div className={styles.footer__Links}>
         <div className={styles.footer__AllLinks}>
-          <img
-            src={image.footer.facebook.src}
-            alt="facebook"
-          />
-          <img
-            src={image.footer.instagram.src}
-            alt="instagram"
-          />
-          <img
-            src={image.footer.twitter.src}
-            alt="twitter"
-          />
-          <img
-            src={image.footer.linkedIn.src}
-            alt="linkedIn"
-          />
+          <a
+            href="https://www.facebook.com/sheriaxofficial"
+            target="_blank"
+          >
+            <img
+              src={image.footer.facebook.src}
+              alt="facebook"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/sheriax"
+            target="_blank"
+          >
+            <img
+              src={image.footer.instagram.src}
+              alt="instagram"
+            />
+          </a>
+          <a
+            href="https://twitter.com/sheriaxofficial"
+            target="_blank"
+          >
+            <img
+              src={image.footer.twitter.src}
+              alt="twitter"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sheriax"
+            target="_blank"
+          >
+            <img
+              src={image.footer.linkedIn.src}
+              alt="linkedIn"
+            />
+          </a>
         </div>
         <div className={styles.footer__LogoTitle}>
           <img

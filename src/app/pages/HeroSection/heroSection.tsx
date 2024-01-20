@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './heroSection.module.scss';
-import Header from '../../components/header/header';
+import Header from '../../components/Header';
 import image from '../../constant/image';
 
 const HeroSection = () => {
@@ -9,12 +9,12 @@ const HeroSection = () => {
       id="heroSection"
       className={styles.heroSection}
     >
+      <Header />
       <img
         className={styles.heroContentImage}
         src={image.logo.vectorBackdrop.src}
         alt="dummy image"
       />
-      <Header />
       <div className={styles.heroContent}>
         <div className={styles.heroContent__text}>
           <h1>SHERIAX</h1>
