@@ -1,8 +1,10 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import image from '@/app/constant/image';
 
 const Header = () => {
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const navs = [
     {
       name: 'Home',
@@ -17,8 +19,9 @@ const Header = () => {
       id: '#contactUsSection',
     },
   ];
+
   return (
-    <section className={styles.header}>
+    <nav className={styles.header}>
       <div className={styles.companyLogoName}>
         <img
           src={image.logo.sheriaxLogo.src}
@@ -31,12 +34,35 @@ const Header = () => {
           <a
             className={styles.a}
             href={data.id}
+            key={data.name}
           >
-            <p key={data.name}>{data.name}</p>
+            <p>{data.name}</p>
           </a>
         ))}
       </div>
-    </section>
+      <div
+        className={`${styles.mobileNavigationBars} ${
+          hamburgerOpen ? styles.open : ''
+        }`}
+      >
+        {navs.map((data) => (
+          <a
+            href={data.id}
+            key={data.name}
+          >
+            {data.name}
+          </a>
+        ))}
+      </div>
+      <div
+        className={`${styles.hamburger} ${hamburgerOpen ? styles.open : ''}`}
+        onClick={() => setHamburgerOpen(!hamburgerOpen)}
+      >
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
+    </nav>
   );
 };
 

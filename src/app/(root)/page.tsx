@@ -1,3 +1,4 @@
+'use client';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import HeroSection from '../pages/HeroSection/heroSection';
