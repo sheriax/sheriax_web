@@ -8,7 +8,7 @@ import { motion } from '@/components/ui/motion';
 export default function MobileAppPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <motion.section 
+      <motion.section
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -43,9 +43,10 @@ export default function MobileAppPage() {
             whileHover={{ y: -4 }}
           >
             <Smartphone className="w-7 h-7 text-blue-500 mb-3" />
-            <h3 className="font-medium">React Native & Expo builds</h3>
+            <h3 className="font-medium">React Native & Flutter</h3>
             <p className="text-foreground/70 text-sm mt-2">
-              Single codebase, native performance, faster iteration.
+              Cross-platform development with native performance and faster
+              iteration.
             </p>
           </motion.div>
           <motion.div
