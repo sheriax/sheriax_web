@@ -1,0 +1,127 @@
+'use client';
+
+import ServiceCard from '@/components/ServiceCard';
+import { BrainCircuit, Globe, Smartphone, Search, Boxes } from 'lucide-react';
+import { motion } from '@/components/ui/motion';
+
+export default function ServicesPage() {
+  return (
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Prompt: "Technology services showcase with floating holographic icons" */}
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+          <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
+            Explore our comprehensive range of services that blend cutting-edge AI, 
+            thoughtful design, and robust engineering to build intuitive, future-ready products 
+            that transform businesses and delight users.
+          </p>
+          <div className="mt-8 h-48 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10 rounded-lg flex items-center justify-center">
+            <p className="text-foreground/50 text-center">Services Hero Image Placeholder<br/>
+            <span className="text-sm">&quot;Technology services showcase with floating holographic icons&quot;</span></p>
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <ServiceCard
+            title="AI & ML"
+            href="/services/ai-ml"
+            icon={BrainCircuit}
+          />
+          <ServiceCard
+            title="Web Development"
+            href="/services/web-development"
+            icon={Globe}
+          />
+          <ServiceCard
+            title="Mobile App Development"
+            href="/services/mobile-app"
+            icon={Smartphone}
+          />
+          <ServiceCard title="SEO" href="/services/seo" icon={Search} />
+          <ServiceCard title="AR/VR" href="/services/ar-vr" icon={Boxes} />
+        </motion.div>
+
+        {/* Additional Content Section */}
+        <motion.div
+          className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold">Why Choose Our Services?</h2>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-medium">End-to-End Solutions</h3>
+                  <p className="text-foreground/70">From ideation to deployment, we handle every aspect of your project.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-medium">Cutting-Edge Technology</h3>
+                  <p className="text-foreground/70">We leverage the latest technologies and frameworks for optimal results.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-medium">Future-Ready Approach</h3>
+                  <p className="text-foreground/70">Built for scalability and adaptability to evolving business needs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-6">
+            <h2 className="text-2xl font-semibold">Our Process</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">1</div>
+                <div>
+                  <h3 className="font-medium">Discovery & Planning</h3>
+                  <p className="text-foreground/70 text-sm">Understanding your goals and requirements</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">2</div>
+                <div>
+                  <h3 className="font-medium">Design & Prototype</h3>
+                  <p className="text-foreground/70 text-sm">Creating user-centered designs and prototypes</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">3</div>
+                <div>
+                  <h3 className="font-medium">Development & Testing</h3>
+                  <p className="text-foreground/70 text-sm">Building and rigorously testing your solution</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold">4</div>
+                <div>
+                  <h3 className="font-medium">Launch & Support</h3>
+                  <p className="text-foreground/70 text-sm">Deploying and providing ongoing maintenance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
