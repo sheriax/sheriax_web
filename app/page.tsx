@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Hero from '@/components/Hero';
@@ -114,21 +115,19 @@ export default function Home() {
           </p>
         </motion.div>
 
-        {/* Prompt: "Professional team working on innovative technology solutions with AI, robots, and futuristic elements" */}
+        {/* Why Choose Us Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-12 h-64 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-lg flex items-center justify-center"
+          className="mt-12 h-64 rounded-lg overflow-hidden border border-white/10"
         >
-          <p className="text-foreground/50 text-center">
-            Why Choose Us Hero Image Placeholder
-            <br />
-            <span className="text-sm">
-              Professional team working on innovative technology solutions
-            </span>
-          </p>
+          <img
+            src="/images/services-showcase-holographic.jpeg"
+            alt="Professional team working on innovative technology solutions with AI and futuristic elements"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
         <motion.div

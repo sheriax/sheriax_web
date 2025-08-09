@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -19,8 +21,17 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="font-semibold tracking-tight text-lg">
-            Sheriax
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo/Sheriax-Logo.png"
+              alt="Sheriax Logo"
+              width={32}
+              height={32}
+              className="rounded"
+            />
+            <span className="font-bold text-xl hidden sm:block text-foreground">
+              HERIAX
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -37,13 +48,16 @@ export default function Header() {
             ))}
           </nav>
 
-          <button
-            className="md:hidden p-2 rounded hover:bg-white/5"
-            aria-label="Toggle menu"
-            onClick={() => setOpen(v => !v)}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="md:hidden p-2 rounded hover:bg-white/5"
+              aria-label="Toggle menu"
+              onClick={() => setOpen(v => !v)}
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -60,6 +74,9 @@ export default function Header() {
                 {n.label}
               </Link>
             ))}
+            <div className="pt-3 border-t border-white/10">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}

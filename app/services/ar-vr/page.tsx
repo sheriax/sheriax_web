@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Link from 'next/link';
@@ -20,13 +21,12 @@ export default function ARVRPage() {
           with interactive AR/VR prototypes and production-ready apps. From
           concept to reality in virtual worlds.
         </p>
-        <div className="mt-8 h-72 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-foreground/50">AR/VR Hero Image Placeholder</p>
-            <p className="text-foreground/30 text-sm mt-2">
-              &quot;Immersive AR/VR experience with headset and holograms&quot;
-            </p>
-          </div>
+        <div className="mt-8 h-72 rounded-lg overflow-hidden border border-white/10">
+          <img
+            src="/images/ar-vr-immersive-experience.jpeg"
+            alt="Immersive AR/VR experience with headset and holograms"
+            className="w-full h-full object-cover"
+          />
         </div>
       </motion.section>
 

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { ArrowRight } from 'lucide-react';
@@ -10,14 +11,14 @@ export default function Hero() {
       {/* Background Image Placeholder */}
       {/* Prompt: "Futuristic tech city with digital innovation, neon lights, AR/VR elements, holographic displays" */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20 opacity-50"></div>
-      
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -25,7 +26,7 @@ export default function Hero() {
           >
             Technology beyond time
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -35,7 +36,7 @@ export default function Hero() {
             adventures. We craft AI/ML, web, mobile, SEO, and AR/VR experiences
             that feel magical and intuitive.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -55,22 +56,19 @@ export default function Hero() {
             </Link>
           </motion.div>
         </motion.div>
-        
-        {/* Hero Image Placeholder */}
-        <motion.div 
+
+        {/* Hero Image */}
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-16 h-96 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-lg border border-white/10 flex items-center justify-center"
+          className="mt-16 h-96 rounded-lg border border-white/10 overflow-hidden"
         >
-          <div className="text-center">
-            <p className="text-foreground/50 text-lg font-medium">
-              Hero Technology Showcase Placeholder
-            </p>
-            <p className="text-foreground/30 text-sm mt-2">
-              Futuristic tech city with AI, robots, and holographic displays
-            </p>
-          </div>
+          <img
+            src="/images/hero-futuristic-city.jpeg"
+            alt="Futuristic tech city with AI, robots, and holographic displays"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
       </div>
     </section>

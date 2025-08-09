@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import ServiceCard from '@/components/ServiceCard';
@@ -16,18 +17,21 @@ export default function ServicesPage() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
-            Explore our comprehensive range of services that blend cutting-edge AI, 
-            thoughtful design, and robust engineering to build intuitive, future-ready products 
-            that transform businesses and delight users.
+            Explore our comprehensive range of services that blend cutting-edge
+            AI, thoughtful design, and robust engineering to build intuitive,
+            future-ready products that transform businesses and delight users.
           </p>
-          <div className="mt-8 h-48 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10 rounded-lg flex items-center justify-center">
-            <p className="text-foreground/50 text-center">Services Hero Image Placeholder<br/>
-            <span className="text-sm">&quot;Technology services showcase with floating holographic icons&quot;</span></p>
+          <div className="mt-8 h-48 rounded-lg overflow-hidden border border-white/10">
+            <img
+              src="/images/services-showcase-holographic.jpeg"
+              alt="Technology services showcase with floating holographic icons"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -67,55 +71,80 @@ export default function ServicesPage() {
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-medium">End-to-End Solutions</h3>
-                  <p className="text-foreground/70">From ideation to deployment, we handle every aspect of your project.</p>
+                  <p className="text-foreground/70">
+                    From ideation to deployment, we handle every aspect of your
+                    project.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-medium">Cutting-Edge Technology</h3>
-                  <p className="text-foreground/70">We leverage the latest technologies and frameworks for optimal results.</p>
+                  <p className="text-foreground/70">
+                    We leverage the latest technologies and frameworks for
+                    optimal results.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-medium">Future-Ready Approach</h3>
-                  <p className="text-foreground/70">Built for scalability and adaptability to evolving business needs.</p>
+                  <p className="text-foreground/70">
+                    Built for scalability and adaptability to evolving business
+                    needs.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold">Our Process</h2>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">1</div>
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  1
+                </div>
                 <div>
                   <h3 className="font-medium">Discovery & Planning</h3>
-                  <p className="text-foreground/70 text-sm">Understanding your goals and requirements</p>
+                  <p className="text-foreground/70 text-sm">
+                    Understanding your goals and requirements
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">2</div>
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  2
+                </div>
                 <div>
                   <h3 className="font-medium">Design & Prototype</h3>
-                  <p className="text-foreground/70 text-sm">Creating user-centered designs and prototypes</p>
+                  <p className="text-foreground/70 text-sm">
+                    Creating user-centered designs and prototypes
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">3</div>
+                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  3
+                </div>
                 <div>
                   <h3 className="font-medium">Development & Testing</h3>
-                  <p className="text-foreground/70 text-sm">Building and rigorously testing your solution</p>
+                  <p className="text-foreground/70 text-sm">
+                    Building and rigorously testing your solution
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold">4</div>
+                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  4
+                </div>
                 <div>
                   <h3 className="font-medium">Launch & Support</h3>
-                  <p className="text-foreground/70 text-sm">Deploying and providing ongoing maintenance</p>
+                  <p className="text-foreground/70 text-sm">
+                    Deploying and providing ongoing maintenance
+                  </p>
                 </div>
               </div>
             </div>
