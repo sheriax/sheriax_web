@@ -87,6 +87,45 @@ export default function AboutPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
+        <h2 className="text-2xl font-semibold mb-8">Mission & Vision</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="p-6 rounded-lg bg-blue-500/5 border border-blue-500/20"
+            whileHover={{ y: -4 }}
+          >
+            <h3 className="text-xl font-semibold">Mission</h3>
+            <p className="mt-2 text-foreground/70">
+              &quot;Igniting Tomorrow&apos;s Marvels Through Revolutionary Tech
+              Adventures&quot; — We embark on thrilling, creative tech
+              adventures powered by AI and ML. Inspired by Doraemon, Wall‑E,
+              Eva, and Big Hero 6, our goal is to build magical, imaginative
+              technology that delights.
+            </p>
+          </motion.div>
+          <motion.div
+            className="p-6 rounded-lg bg-purple-500/5 border border-purple-500/20"
+            whileHover={{ y: -4 }}
+          >
+            <h3 className="text-xl font-semibold">Vision</h3>
+            <p className="mt-2 text-foreground/70">
+              &quot;Crafting Tomorrow&apos;s Tech Ecosystem with Intuitive
+              Brilliance&quot; — We envision a seamless and trustworthy tech
+              ecosystem—smart, intuitive, and impactful. Drawing from the
+              creativity of Kitaratsu, the eco‑consciousness of Wall‑E, the
+              futuristic nature of Eva, the reliability of Doraemon, and the
+              team spirit of Big Hero 6.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="rounded-lg border border-white/10 p-8">
           <h3 className="text-xl font-semibold">Our Story</h3>
           <p className="mt-2 text-foreground/70">
