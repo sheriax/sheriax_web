@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from 'react';
@@ -83,15 +84,11 @@ export default function ContactPage() {
             </li>
           </ul>
           <div className="mt-6 h-48 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-md flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-foreground/50">
-                Contact Illustration Placeholder
-              </p>
-              <p className="text-foreground/30 text-xs mt-1">
-                &quot;Friendly support team with chat bubbles and email
-                icon&quot;
-              </p>
-            </div>
+            <img
+              src="/images/contact-support-team.jpeg"
+              alt="Friendly support team with holographic chat bubbles and email icons"
+              className="mt-6 w-full h-full object-cover rounded-md"
+            />
           </div>
         </motion.section>
 
