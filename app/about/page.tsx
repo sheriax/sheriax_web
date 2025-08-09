@@ -21,8 +21,8 @@ export default function AboutPage() {
         </p>
         <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
-            src="/images/about-collaboration-studio.jpeg"
-            alt="Design studio culture with collaboration in a modern workspace"
+            src="/images/about-team-innovation.jpeg"
+            alt="Team collaborating with holographic interface and AI assistant"
             className="w-full h-full object-cover"
           />
         </div>
