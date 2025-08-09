@@ -121,7 +121,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-12 h-64 rounded-lg overflow-hidden border border-white/10"
+          className="mt-12 h-[23rem] rounded-lg overflow-hidden border border-white/10"
         >
           <img
             src="/images/services-showcase-holographic.jpeg"

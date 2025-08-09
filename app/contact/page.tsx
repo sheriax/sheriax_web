@@ -64,17 +64,33 @@ export default function ContactPage() {
           viewport={{ once: true }}
         >
           <h2 className="text-xl font-semibold">Get in touch</h2>
-          <p className="text-foreground/70 mt-2">We&apos;re excited to learn about your goals.</p>
+          <p className="text-foreground/70 mt-2">
+            We&apos;re excited to learn about your project, and we&apos;ll get
+            back to you within 24 hours.
+          </p>
           <ul className="mt-6 space-y-4 text-sm">
-            <li className="flex items-center gap-3"><Mail className="w-4 h-4" /> hello@sheriax.com</li>
-            <li className="flex items-center gap-3"><Phone className="w-4 h-4" /> +1 (555) 123-4567</li>
-            <li className="flex items-center gap-3"><MapPin className="w-4 h-4" /> Remote-first / Global</li>
-            <li className="flex items-center gap-3"><Clock className="w-4 h-4" /> Mon–Fri, 9am–6pm</li>
+            <li className="flex items-center gap-3">
+              <Mail className="w-4 h-4" /> contact@sheriax.com
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="w-4 h-4" /> +91 733 892 3502
+            </li>
+            <li className="flex items-center gap-3">
+              <MapPin className="w-4 h-4" /> Remote-first / Global
+            </li>
+            <li className="flex items-center gap-3">
+              <Clock className="w-4 h-4" /> Mon–Fri, 9am–6pm
+            </li>
           </ul>
           <div className="mt-6 h-48 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-md flex items-center justify-center">
             <div className="text-center">
-              <p className="text-foreground/50">Contact Illustration Placeholder</p>
-              <p className="text-foreground/30 text-xs mt-1">&quot;Friendly support team with chat bubbles and email icon&quot;</p>
+              <p className="text-foreground/50">
+                Contact Illustration Placeholder
+              </p>
+              <p className="text-foreground/30 text-xs mt-1">
+                &quot;Friendly support team with chat bubbles and email
+                icon&quot;
+              </p>
             </div>
           </div>
         </motion.section>
@@ -115,12 +131,16 @@ export default function ContactPage() {
               })}
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+              <p className="mt-1 text-sm text-red-500">
+                {errors.email.message}
+              </p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Company (optional)</label>
+            <label className="block text-sm font-medium">
+              Company (optional)
+            </label>
             <input
               className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Acme Inc."
@@ -135,12 +155,24 @@ export default function ContactPage() {
               {...register('service')}
               defaultValue=""
             >
-              <option value="" disabled className="bg-background">Select a service</option>
-              <option value="ai-ml" className="bg-background">AI & ML</option>
-              <option value="web" className="bg-background">Web Development</option>
-              <option value="mobile" className="bg-background">Mobile App Development</option>
-              <option value="seo" className="bg-background">SEO</option>
-              <option value="ar-vr" className="bg-background">AR/VR</option>
+              <option value="" disabled className="bg-background">
+                Select a service
+              </option>
+              <option value="ai-ml" className="bg-background">
+                AI & ML
+              </option>
+              <option value="web" className="bg-background">
+                Web Development
+              </option>
+              <option value="mobile" className="bg-background">
+                Mobile App Development
+              </option>
+              <option value="seo" className="bg-background">
+                SEO
+              </option>
+              <option value="ar-vr" className="bg-background">
+                AR/VR
+              </option>
             </select>
           </div>
 
@@ -150,10 +182,14 @@ export default function ContactPage() {
               rows={5}
               className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="What are you looking to build?"
-              {...register('message', { required: 'Please include a short message' })}
+              {...register('message', {
+                required: 'Please include a short message',
+              })}
             />
             {errors.message && (
-              <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+              <p className="mt-1 text-sm text-red-500">
+                {errors.message.message}
+              </p>
             )}
           </div>
 
@@ -166,10 +202,14 @@ export default function ContactPage() {
           </button>
 
           {status === 'success' && (
-            <p className="text-sm text-green-500">Thanks! We&apos;ll be in touch shortly.</p>
+            <p className="text-sm text-green-500">
+              Thanks! We&apos;ll be in touch shortly.
+            </p>
           )}
           {status === 'error' && (
-            <p className="text-sm text-red-500">Something went wrong. Please try again.</p>
+            <p className="text-sm text-red-500">
+              Something went wrong. Please try again.
+            </p>
           )}
         </motion.form>
       </div>

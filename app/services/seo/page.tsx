@@ -8,8 +8,7 @@ import { motion } from '@/components/ui/motion';
 export default function SEOPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Prompt: "Search engine optimization dashboard with graphs and keywords" */}
-      <motion.section
+      <motion.section 
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -21,7 +20,7 @@ export default function SEOPage() {
           and content SEO strategies. We build sustainable growth through
           data-driven optimization.
         </p>
-        <div className="mt-8 h-72 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
             src="/images/seo-analytics-dashboard.jpeg"
             alt="Search engine optimization dashboard with graphs and keywords"

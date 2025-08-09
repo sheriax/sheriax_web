@@ -14,8 +14,7 @@ import { motion } from '@/components/ui/motion';
 export default function WebDevPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Prompt: "Modern responsive web design on multiple devices, glassmorphism UI" */}
-      <motion.section
+      <motion.section 
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,7 +26,7 @@ export default function WebDevPage() {
           modern frameworks and best practices. Our focus is on performance,
           scalability, and delightful user experience.
         </p>
-        <div className="mt-8 h-72 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
             src="/images/web-dev-responsive-design.jpeg"
             alt="Modern responsive web design on multiple devices, glassmorphism UI"

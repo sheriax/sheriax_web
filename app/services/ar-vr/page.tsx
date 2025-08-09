@@ -8,8 +8,7 @@ import { motion } from '@/components/ui/motion';
 export default function ARVRPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Prompt: "Immersive AR/VR experience with headset and holograms" */}
-      <motion.section
+      <motion.section 
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -21,7 +20,7 @@ export default function ARVRPage() {
           with interactive AR/VR prototypes and production-ready apps. From
           concept to reality in virtual worlds.
         </p>
-        <div className="mt-8 h-72 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
             src="/images/ar-vr-immersive-experience.jpeg"
             alt="Immersive AR/VR experience with headset and holograms"

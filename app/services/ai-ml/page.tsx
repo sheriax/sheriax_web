@@ -16,7 +16,6 @@ import { motion } from '@/components/ui/motion';
 export default function AIMLPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Hero */}
       <motion.section
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
@@ -31,10 +30,10 @@ export default function AIMLPage() {
           into actionable insights and competitive advantages.
         </p>
         {/* Hero Image */}
-        <div className="mt-8 h-80 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-white/10">
           <img
             src="/images/ai-ml-data-analysis.jpeg"
-            alt="AI robot analyzing real-time data streams with floating holographic charts"
+            alt="AI & Machine Learning data analysis visuals with neural network overlays"
             className="w-full h-full object-cover"
           />
         </div>

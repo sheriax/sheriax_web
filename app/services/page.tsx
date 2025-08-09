@@ -13,7 +13,6 @@ export default function ServicesPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        {/* Prompt: "Technology services showcase with floating holographic icons" */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
@@ -21,13 +20,13 @@ export default function ServicesPage() {
             AI, thoughtful design, and robust engineering to build intuitive,
             future-ready products that transform businesses and delight users.
           </p>
-          <div className="mt-8 h-48 rounded-lg overflow-hidden border border-white/10">
-            <img
-              src="/images/services-showcase-holographic.jpeg"
-              alt="Technology services showcase with floating holographic icons"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-white/10">
+          <img
+            src="/images/services-showcase-holographic.jpeg"
+            alt="Technology services showcase with floating holographic icons"
+            className="w-full h-full object-cover"
+          />
+        </div>
         </div>
 
         {/* Services Grid */}

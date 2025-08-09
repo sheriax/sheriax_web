@@ -8,8 +8,6 @@ import { motion } from '@/components/ui/motion';
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Background Image Placeholder */}
-      {/* Prompt: "Futuristic tech city with digital innovation, neon lights, AR/VR elements, holographic displays" */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20 opacity-50"></div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
@@ -62,14 +60,14 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-16 h-96 rounded-lg border border-white/10 overflow-hidden"
-        >
-          <img
-            src="/images/hero-futuristic-city.jpeg"
-            alt="Futuristic tech city with AI, robots, and holographic displays"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+          className="mt-16 h-[28rem] rounded-lg border border-white/10 overflow-hidden"
+         >
+           <img 
+             src="/images/hero-futuristic-city.jpeg"
+             alt="Futuristic tech city with AI, robots, and holographic displays"
+             className="w-full h-full object-cover"
+           />
+         </motion.div>
       </div>
     </section>
   );

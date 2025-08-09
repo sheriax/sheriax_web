@@ -8,8 +8,7 @@ import { motion } from '@/components/ui/motion';
 export default function MobileAppPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Prompt: "Cross-platform mobile apps on Android and iOS with sleek UI" */}
-      <motion.section
+      <motion.section 
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -21,7 +20,7 @@ export default function MobileAppPage() {
           brilliantly across Android and iOS. From MVP to scale, we deliver apps
           users love.
         </p>
-        <div className="mt-8 h-72 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
             src="/images/mobile-app-devices.jpeg"
             alt="Cross-platform mobile apps on Android and iOS with sleek UI"

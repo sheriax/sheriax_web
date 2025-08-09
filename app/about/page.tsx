@@ -7,7 +7,6 @@ import { Award, Users2, Globe2, HeartHandshake } from 'lucide-react';
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      {/* Prompt: "Team collaborating with holographic interface and AI assistant" */}
       <motion.section
         className="py-12"
         initial={{ opacity: 0, y: 20 }}
@@ -20,10 +19,10 @@ export default function AboutPage() {
           delightful, future-ready products. We blend AI, thoughtful design, and
           robust engineering to solve problems that matter.
         </p>
-        <div className="mt-8 h-100 rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
           <img
-            src="/images/about-team-innovation.jpeg"
-            alt="Team collaborating with holographic interface and AI assistant"
+            src="/images/about-collaboration-studio.jpeg"
+            alt="Design studio culture with collaboration in a modern workspace"
             className="w-full h-full object-cover"
           />
         </div>
