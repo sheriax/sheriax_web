@@ -79,14 +79,14 @@ export default function Home() {
             <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-4">
               <Users className="w-6 h-6 text-blue-500" />
             </div>
-            <h3 className="text-2xl font-bold">50+</h3>
+            <h3 className="text-2xl font-bold">5+</h3>
             <p className="text-foreground/70">Happy Clients</p>
           </div>
           <div className="p-6">
             <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-lg mb-4">
               <Award className="w-6 h-6 text-green-500" />
             </div>
-            <h3 className="text-2xl font-bold">100+</h3>
+            <h3 className="text-2xl font-bold">10+</h3>
             <p className="text-foreground/70">Projects Delivered</p>
           </div>
           <div className="p-6">
@@ -230,16 +230,16 @@ export default function Home() {
               ))}
             </div>
             <p className="text-foreground/70 mb-4">
-              &quot;Sheriax transformed our business with their AI solutions.
-              The team&apos;s expertise and dedication exceeded our
-              expectations.&quot;
+              &quot;The JavaScript implementation exceeded my expectations
+              completely. The final product delivered exceptional quality and
+              performance that truly impressed us.&quot;
             </p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
               <div>
-                <p className="font-medium">Sarah Johnson</p>
+                <p className="font-medium">Karthi</p>
                 <p className="text-sm text-foreground/50">
-                  CEO, TechStart Inc.
+                  CEO, Cappricio Securities
                 </p>
               </div>
             </div>
@@ -255,15 +255,18 @@ export default function Home() {
               ))}
             </div>
             <p className="text-foreground/70 mb-4">
-              &quot;The mobile app they built for us has been a game-changer.
-              User engagement increased by 300% within the first month.&quot;
+              &quot;Working with Sheriax has been incredibly smooth and
+              efficient. Their attention to detail and quick response to any
+              issues is remarkable - when we encountered a minor bug, they
+              resolved it within hours. The quality of work and customer service
+              is truly outstanding.&quot;
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
               <div>
-                <p className="font-medium">Mike Chen</p>
+                <p className="font-medium">Amjath</p>
                 <p className="text-sm text-foreground/50">
-                  Founder, EcoTech Solutions
+                  Co-Founder, Tulips Organization
                 </p>
               </div>
             </div>
@@ -279,16 +282,16 @@ export default function Home() {
               ))}
             </div>
             <p className="text-foreground/70 mb-4">
-              &quot;Outstanding web development service. Our site is now
-              lightning-fast and converts visitors into customers
-              efficiently.&quot;
+              &quot;I&apos;m really happy with the website&apos;s simplicity as
+              well as the richness of the design. I need to do a lot. I&apos;m
+              looking forward to work with you in the future.&quot;
             </p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
               <div>
-                <p className="font-medium">Lisa Rodriguez</p>
+                <p className="font-medium">Venkat</p>
                 <p className="text-sm text-foreground/50">
-                  Marketing Director, Global Retail Co.
+                  Founder, Snowbirds.
                 </p>
               </div>
             </div>
