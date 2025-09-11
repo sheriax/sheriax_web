@@ -30,7 +30,7 @@ export default function Header() {
               className="rounded"
             />
             <span className="font-bold text-xl hidden sm:block text-foreground">
-              HERIAX
+              SHERIAX
             </span>
           </Link>
 
