@@ -52,9 +52,13 @@ export default function AIMLPage() {
             <div className="text-3xl font-bold text-blue-500">95%</div>
             <div className="text-foreground/70">Accuracy Improvement</div>
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className="text-3xl font-bold text-purple-500">50+</div>
             <div className="text-foreground/70">AI Models Deployed</div>
+          </div> */}
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-500">24/7</div>
+            <div className="text-foreground/70">Continuous Learning</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-green-500">10x</div>
