@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: 'Sheriax Solutions',
     images: [
       {
-        url: '/images/og-placeholder.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Sheriax Solutions - Technology beyond time',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: 'Sheriax Solutions – Technology beyond time',
     description:
       "Sheriax builds AI, ML, web, mobile, SEO, and AR/VR solutions. Crafting tomorrow's tech ecosystem with intuitive brilliance.",
-    images: ['/images/og-placeholder.jpg'],
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://www.sheriax.com',
@@ -96,7 +96,10 @@ const organizationJsonLd = {
     email: 'contact@sheriax.com',
   },
   sameAs: [
-    // Add your social media URLs when available
+    'https://linkedin.com/company/sheriax',
+    'https://instagram.com/sheriax/',
+    'https://x.com/sheriaxofficial',
+    'https://facebook.com/sheriaxofficial',
   ],
 };
 
