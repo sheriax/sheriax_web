@@ -2,7 +2,7 @@ type VideoPlayerProps = { src: string; poster?: string; title?: string };
 
 export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-white/10">
+    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border">
       <video
         className="h-full w-full"
         controls

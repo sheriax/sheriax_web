@@ -88,7 +88,7 @@ export default function TermsPage() {
         </section>
 
         {/* Product-Specific Terms */}
-        <section className="mt-16 p-6 rounded-xl border border-white/10 bg-white/[0.02]">
+        <section className="mt-16 p-6 rounded-xl border border-border bg-secondary/20">
           <h2 className="text-xl font-semibold mb-4">Product-Specific Terms of Service</h2>
           <p className="text-foreground/70 mb-4">
             Our products have their own detailed terms of service:

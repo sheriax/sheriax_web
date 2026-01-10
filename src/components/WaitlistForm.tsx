@@ -69,7 +69,7 @@ export default function WaitlistForm({ plan = 'free', className = '' }: Waitlist
           }}
           placeholder="Enter your email"
           disabled={status === 'loading' || status === 'success'}
-          className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#FF7043]/50 focus:outline-none text-foreground placeholder:text-foreground/50 min-w-[280px] disabled:opacity-50"
+          className="px-4 py-3 rounded-lg bg-secondary/50 border border-border focus:border-[#FF7043]/50 focus:outline-none text-foreground placeholder:text-foreground/50 min-w-[280px] disabled:opacity-50"
         />
         <button
           type="submit"

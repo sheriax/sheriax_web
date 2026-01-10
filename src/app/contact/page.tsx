@@ -58,7 +58,7 @@ export default function ContactPage() {
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Left: Info */}
         <motion.section
-          className="rounded-lg border border-white/10 p-6"
+          className="rounded-lg border border-border p-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -104,7 +104,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm font-medium">Name</label>
             <input
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Jane Doe"
               {...register('name', { required: 'Name is required' })}
             />
@@ -117,7 +117,7 @@ export default function ContactPage() {
             <label className="block text-sm font-medium">Email</label>
             <input
               type="email"
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="jane@example.com"
               {...register('email', {
                 required: 'Email is required',
@@ -139,7 +139,7 @@ export default function ContactPage() {
               Company (optional)
             </label>
             <input
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Acme Inc."
               {...register('company')}
             />
@@ -148,7 +148,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm font-medium">Interested in</label>
             <select
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               {...register('service')}
               defaultValue=""
             >
@@ -177,7 +177,7 @@ export default function ContactPage() {
             <label className="block text-sm font-medium">Message</label>
             <textarea
               rows={5}
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="What are you looking to build?"
               {...register('message', {
                 required: 'Please include a short message',

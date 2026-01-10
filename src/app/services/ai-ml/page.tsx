@@ -30,7 +30,7 @@ export default function AIMLPage() {
           into actionable insights and competitive advantages.
         </p>
         {/* Hero Image */}
-        <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/ai-ml-data-analysis.jpeg"
             alt="AI & Machine Learning data analysis visuals with neural network overlays"
@@ -80,7 +80,7 @@ export default function AIMLPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <Brain className="w-8 h-8 text-blue-500 mb-4" />
@@ -95,7 +95,7 @@ export default function AIMLPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <Eye className="w-8 h-8 text-purple-500 mb-4" />
@@ -107,7 +107,7 @@ export default function AIMLPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <MessageSquare className="w-8 h-8 text-green-500 mb-4" />
@@ -121,7 +121,7 @@ export default function AIMLPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <Database className="w-8 h-8 text-orange-500 mb-4" />
@@ -135,7 +135,7 @@ export default function AIMLPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <BarChart3 className="w-8 h-8 text-red-500 mb-4" />
@@ -148,7 +148,7 @@ export default function AIMLPage() {
           </motion.div>
 
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+            className="rounded-lg border border-border p-6 hover:border-primary/30 transition-all duration-300"
             whileHover={{ y: -5 }}
           >
             <Zap className="w-8 h-8 text-yellow-500 mb-4" />
@@ -171,27 +171,27 @@ export default function AIMLPage() {
       >
         <h2 className="text-2xl font-semibold mb-8">Industries We Serve</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-lg border border-white/10 p-6">
+          <div className="rounded-lg border border-border p-6">
             <h3 className="font-medium mb-2">Healthcare</h3>
             <p className="text-foreground/70 text-sm">
               Medical imaging analysis, drug discovery, patient diagnosis
               support
             </p>
           </div>
-          <div className="rounded-lg border border-white/10 p-6">
+          <div className="rounded-lg border border-border p-6">
             <h3 className="font-medium mb-2">Finance</h3>
             <p className="text-foreground/70 text-sm">
               Fraud detection, algorithmic trading, risk assessment, credit
               scoring
             </p>
           </div>
-          <div className="rounded-lg border border-white/10 p-6">
+          <div className="rounded-lg border border-border p-6">
             <h3 className="font-medium mb-2">E-commerce</h3>
             <p className="text-foreground/70 text-sm">
               Recommendation engines, demand forecasting, price optimization
             </p>
           </div>
-          <div className="rounded-lg border border-white/10 p-6">
+          <div className="rounded-lg border border-border p-6">
             <h3 className="font-medium mb-2">Manufacturing</h3>
             <p className="text-foreground/70 text-sm">
               Quality control, predictive maintenance, supply chain optimization
@@ -208,7 +208,7 @@ export default function AIMLPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8 text-center bg-gradient-to-r from-blue-500/5 to-purple-500/5">
+        <div className="rounded-lg border border-border p-8 text-center bg-gradient-to-r from-blue-500/5 to-purple-500/5">
           <h3 className="text-2xl font-semibold mb-4">
             Ready to transform your business with AI?
           </h3>

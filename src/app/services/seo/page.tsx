@@ -20,7 +20,7 @@ export default function SEOPage() {
           and content SEO strategies. We build sustainable growth through
           data-driven optimization.
         </p>
-        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/seo-analytics-dashboard.jpeg"
             alt="Search engine optimization dashboard with graphs and keywords"
@@ -39,7 +39,7 @@ export default function SEOPage() {
         <h2 className="text-2xl font-semibold mb-8">What We Do</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <BarChart2 className="w-7 h-7 text-blue-500 mb-3" />
@@ -49,7 +49,7 @@ export default function SEOPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Search className="w-7 h-7 text-green-500 mb-3" />
@@ -59,7 +59,7 @@ export default function SEOPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Code2 className="w-7 h-7 text-purple-500 mb-3" />
@@ -69,7 +69,7 @@ export default function SEOPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <FileText className="w-7 h-7 text-yellow-500 mb-3" />
@@ -88,7 +88,7 @@ export default function SEOPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8 text-center">
+        <div className="rounded-lg border border-border p-8 text-center">
           <h3 className="text-xl font-semibold">
             Ready to grow organic traffic?
           </h3>
