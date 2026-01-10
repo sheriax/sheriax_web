@@ -409,7 +409,7 @@ function TestimonialCard({
       </div>
       <p className="text-foreground/70 mb-4">&quot;{quote}&quot;</p>
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-gradient-to-r from-[#FF7043] to-[#FF8A65] rounded-full flex items-center justify-center text-white font-bold text-lg">
+        <div className="w-10 h-10 bg-gradient-to-r from-[var(--kizu-orange)] to-[var(--kizu-coral)] rounded-full flex items-center justify-center text-white font-bold text-lg">
           {name.charAt(0)}
         </div>
         <div>
