@@ -11,9 +11,14 @@ import {
   Search,
   Boxes,
   Star,
-  Users,
-  Award,
-  CheckCircle,
+  ScanLine,
+  ShieldAlert,
+  HeartPulse,
+  MessageCircleHeart,
+  Upload,
+  AlertTriangle,
+  TrendingUp,
+  ArrowRight,
 } from 'lucide-react';
 import { motion } from '@/components/ui/motion';
 
@@ -22,8 +27,147 @@ export default function Home() {
     <div>
       <Hero />
 
-      {/* Services Preview */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      {/* Kizu Features Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold">
+            Comprehensive Care for Your{' '}
+            <span className="text-[#FF7043]">Wallet</span>
+          </h2>
+          <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
+            Kizu provides the medical-grade attention your finances deserve,
+            powered by advanced artificial intelligence.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <FeatureCard
+            icon={ScanLine}
+            title="AI Receipt Scanning"
+            description="Instant diagnosis. Snap a photo of any receipt or invoice, and our AI extracts every detail to find financial leaks."
+            color="#FF7043"
+          />
+          <FeatureCard
+            icon={ShieldAlert}
+            title="Wound Detection"
+            description="Stop the bleeding. We automatically identify hidden fees, forgotten subscriptions, and wasteful spending habits."
+            color="#FF8A65"
+          />
+          <FeatureCard
+            icon={HeartPulse}
+            title="Financial Health Score"
+            description="Your vitals at a glance. Track your Kizu Score from 0-100 and watch it improve as you heal your finances."
+            color="#4CAF50"
+          />
+          <FeatureCard
+            icon={MessageCircleHeart}
+            title="AI Therapist"
+            description="24/7 Care. Chat with Kizu to get personalized advice, budgeting tips, and emotional support for your money stress."
+            color="#3b82f6"
+          />
+        </motion.div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold">The Healing Process</h2>
+          <p className="mt-4 text-lg text-foreground/70">
+            Three simple steps to financial recovery
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <StepCard
+            step="01"
+            icon={Upload}
+            title="Scan & Diagnose"
+            description="Upload receipts, invoices, or connect your bank. Kizu digitizes and analyzes your financial history."
+          />
+          <StepCard
+            step="02"
+            icon={AlertTriangle}
+            title="Detect Wounds"
+            description="Our AI identifies money leaks, hidden fees, and subscriptions that are bleeding your budget dry."
+          />
+          <StepCard
+            step="03"
+            icon={TrendingUp}
+            title="Heal & Recover"
+            description="Follow your personalized treatment plan to cut costs, save money, and improve your Kizu Score."
+          />
+        </motion.div>
+      </section>
+
+      {/* Transformation Showcase */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold">Real Transformations</h2>
+          <p className="mt-4 text-lg text-foreground/70">
+            See how Kizu heals financial wounds over time.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <TransformationCard
+            stage="Critical Condition"
+            score={23}
+            status="Multiple financial wounds detected."
+            color="red"
+          />
+          <TransformationCard
+            stage="Healing Started"
+            score={58}
+            status="Bleeding stopped, wounds treating."
+            color="yellow"
+          />
+          <TransformationCard
+            stage="Fully Healed"
+            score={92}
+            status="Financial wellness achieved."
+            color="green"
+          />
+        </motion.div>
+      </section>
+
+      {/* Services Spotlight */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,12 +175,17 @@ export default function Home() {
           viewport={{ once: true }}
           className="flex items-end justify-between gap-4"
         >
-          <h2 className="text-2xl font-semibold">Our Services</h2>
+          <div>
+            <p className="text-sm text-[#FF7043] font-medium mb-2">
+              Need Custom Development?
+            </p>
+            <h2 className="text-2xl font-semibold">Our Services</h2>
+          </div>
           <Link
             href="/services"
-            className="text-sm text-blue-500 hover:underline"
+            className="text-sm text-blue-500 hover:underline flex items-center gap-1"
           >
-            View all
+            View all <ArrowRight size={14} />
           </Link>
         </motion.div>
         <motion.div
@@ -66,139 +215,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Stats Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-        >
-          <div className="p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-4">
-              <Users className="w-6 h-6 text-blue-500" />
-            </div>
-            <h3 className="text-2xl font-bold">5+</h3>
-            <p className="text-foreground/70">Happy Clients</p>
-          </div>
-          <div className="p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-lg mb-4">
-              <Award className="w-6 h-6 text-green-500" />
-            </div>
-            <h3 className="text-2xl font-bold">10+</h3>
-            <p className="text-foreground/70">Projects Delivered</p>
-          </div>
-          <div className="p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/10 rounded-lg mb-4">
-              <Star className="w-6 h-6 text-purple-500" />
-            </div>
-            <h3 className="text-2xl font-bold">99%</h3>
-            <p className="text-foreground/70">Client Satisfaction</p>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-3xl font-bold">Why Choose Sheriax?</h2>
-          <p className="mt-4 text-lg text-foreground/70 max-w-3xl mx-auto">
-            We combine cutting-edge technology with creative problem-solving to
-            deliver solutions that drive real business results.
-          </p>
-        </motion.div>
-
-        {/* Why Choose Us Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-12 h-[23rem] rounded-lg overflow-hidden border border-white/10"
-        >
-          <img
-            src="/images/services-showcase-holographic.jpeg"
-            alt="Professional team working on innovative technology solutions with AI and futuristic elements"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <div className="p-6 rounded-lg border border-white/10">
-            <CheckCircle className="w-8 h-8 text-green-500 mb-4" />
-            <h3 className="text-lg font-semibold">Future-Ready Solutions</h3>
-            <p className="mt-2 text-foreground/70">
-              We build with tomorrow&apos;s technology today, ensuring your
-              solutions remain competitive and scalable.
-            </p>
-          </div>
-          <div className="p-6 rounded-lg border border-white/10">
-            <CheckCircle className="w-8 h-8 text-blue-500 mb-4" />
-            <h3 className="text-lg font-semibold">End-to-End Expertise</h3>
-            <p className="mt-2 text-foreground/70">
-              From AI/ML to web development, we provide comprehensive solutions
-              under one roof.
-            </p>
-          </div>
-          <div className="p-6 rounded-lg border border-white/10">
-            <CheckCircle className="w-8 h-8 text-purple-500 mb-4" />
-            <h3 className="text-lg font-semibold">24/7 Support</h3>
-            <p className="mt-2 text-foreground/70">
-              Our dedicated team provides ongoing support to ensure your success
-              long after deployment.
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12"
-        >
-          <div className="p-6 rounded-lg bg-blue-500/5 border border-blue-500/20">
-            <h3 className="text-xl font-semibold">Mission</h3>
-            <p className="mt-2 text-foreground/70">
-              &quot;Igniting Tomorrow&apos;s Marvels Through Revolutionary Tech
-              Adventures&quot; — We embark on thrilling, creative tech
-              adventures powered by AI and ML. Inspired by Doraemon, Wall‑E,
-              Eva, and Big Hero 6, our goal is to build magical, imaginative
-              technology that delights.
-            </p>
-          </div>
-          <div className="p-6 rounded-lg bg-purple-500/5 border border-purple-500/20">
-            <h3 className="text-xl font-semibold">Vision</h3>
-            <p className="mt-2 text-foreground/70">
-              &quot;Crafting Tomorrow&apos;s Tech Ecosystem with Intuitive
-              Brilliance&quot; — We envision a seamless and trustworthy tech
-              ecosystem—smart, intuitive, and impactful. Drawing from the
-              creativity of Kitaratsu, the eco‑consciousness of Wall‑E, the
-              futuristic nature of Eva, the reliability of Doraemon, and the
-              team spirit of Big Hero 6.
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
       {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -220,111 +238,183 @@ export default function Home() {
           viewport={{ once: true }}
           className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <div className="p-6 rounded-lg border border-white/10">
-            <div className="flex items-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <p className="text-foreground/70 mb-4">
-              &quot;The JavaScript implementation exceeded my expectations
-              completely. The final product delivered exceptional quality and
-              performance that truly impressed us.&quot;
-            </p>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-              <div>
-                <p className="font-medium">Karthi</p>
-                <p className="text-sm text-foreground/50">
-                  CEO, Cappricio Securities
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-6 rounded-lg border border-white/10">
-            <div className="flex items-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <p className="text-foreground/70 mb-4">
-              &quot;Working with Sheriax has been incredibly smooth and
-              efficient. Their attention to detail and quick response to any
-              issues is remarkable - when we encountered a minor bug, they
-              resolved it within hours. The quality of work and customer service
-              is truly outstanding.&quot;
-            </p>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-              <div>
-                <p className="font-medium">Amjath</p>
-                <p className="text-sm text-foreground/50">
-                  Co-Founder, Tulips Organization
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-6 rounded-lg border border-white/10">
-            <div className="flex items-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <p className="text-foreground/70 mb-4">
-              &quot;I&apos;m really happy with the website&apos;s simplicity as
-              well as the richness of the design. I need to do a lot. I&apos;m
-              looking forward to work with you in the future.&quot;
-            </p>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-              <div>
-                <p className="font-medium">Venkat</p>
-                <p className="text-sm text-foreground/50">
-                  Founder, Snowbirds.
-                </p>
-              </div>
-            </div>
-          </div>
+          <TestimonialCard
+            quote="The JavaScript implementation exceeded my expectations completely. The final product delivered exceptional quality and performance that truly impressed us."
+            name="Karthi"
+            title="CEO, Cappricio Securities"
+          />
+          <TestimonialCard
+            quote="Working with Sheriax has been incredibly smooth and efficient. Their attention to detail and quick response to any issues is remarkable - when we encountered a minor bug, they resolved it within hours."
+            name="Amjath"
+            title="Co-Founder, Tulips Organization"
+          />
+          <TestimonialCard
+            quote="I'm really happy with the website's simplicity as well as the richness of the design. I'm looking forward to work with you in the future."
+            name="Venkat"
+            title="Founder, Snowbirds"
+          />
         </motion.div>
       </section>
 
-      {/* Contact CTA */}
+      {/* Kizu CTA */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20"
       >
-        <div className="rounded-lg border border-white/10 bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-xl font-semibold">
-              Have an idea? Let&apos;s build it.
-            </h3>
-            <p className="text-foreground/70">
-              Tell us about your project and we&apos;ll get back to you within
-              24 hours.
-            </p>
+        <div className="rounded-2xl border border-[#FF7043]/30 bg-gradient-to-r from-[#FF7043]/10 to-[#FF8A65]/10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-6">
+            <img
+              src="/images/kizu/app_logo_transparent.png"
+              alt="Kizu"
+              className="w-16 h-16 md:w-20 md:h-20"
+            />
+            <div>
+              <h3 className="text-2xl font-bold">Ready to heal your finances?</h3>
+              <p className="text-foreground/70 mt-1">
+                Join the financial healing revolution. Be the first to know when
+                Kizu launches.
+              </p>
+              <p className="text-sm text-[#FF7043] mt-2">
+                🚀 Launching Soon · Early access perks included
+              </p>
+            </div>
           </div>
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-5 py-3 text-sm font-medium hover:bg-blue-500 transition-colors"
+            href="/kizu"
+            className="inline-flex items-center gap-2 rounded-md bg-[#FF7043] text-white px-6 py-3 text-sm font-medium hover:bg-[#FF8A65] transition-all duration-300 hover:scale-105 whitespace-nowrap"
           >
-            Contact us
+            Get Early Access <ArrowRight size={16} />
           </Link>
         </div>
       </motion.section>
+    </div>
+  );
+}
+
+// Feature Card Component
+function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  color,
+}: {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  color: string;
+}) {
+  return (
+    <motion.div
+      className="p-6 rounded-xl border border-white/10 hover:border-white/20 transition-colors"
+      whileHover={{ y: -4 }}
+    >
+      <div
+        className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+        style={{ backgroundColor: `${color}20` }}
+      >
+        <Icon className="w-6 h-6" style={{ color }} />
+      </div>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="mt-2 text-sm text-foreground/70">{description}</p>
+    </motion.div>
+  );
+}
+
+// Step Card Component
+function StepCard({
+  step,
+  icon: Icon,
+  title,
+  description,
+}: {
+  step: string;
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}) {
+  return (
+    <motion.div
+      className="relative p-6 rounded-xl border border-white/10 hover:border-[#FF7043]/30 transition-colors"
+      whileHover={{ y: -4 }}
+    >
+      <span className="absolute top-4 right-4 text-4xl font-bold text-white/5">
+        {step}
+      </span>
+      <div className="w-12 h-12 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-4">
+        <Icon className="w-6 h-6 text-[#FF7043]" />
+      </div>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="mt-2 text-sm text-foreground/70">{description}</p>
+    </motion.div>
+  );
+}
+
+// Transformation Card Component
+function TransformationCard({
+  stage,
+  score,
+  status,
+  color,
+}: {
+  stage: string;
+  score: number;
+  status: string;
+  color: 'red' | 'yellow' | 'green';
+}) {
+  const colorMap = {
+    red: { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-400' },
+    yellow: { bg: 'bg-yellow-500/10', border: 'border-yellow-500/30', text: 'text-yellow-400' },
+    green: { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-400' },
+  };
+
+  return (
+    <motion.div
+      className={`p-6 rounded-xl border ${colorMap[color].border} ${colorMap[color].bg}`}
+      whileHover={{ y: -4 }}
+    >
+      <div className="flex items-center justify-between mb-4">
+        <h3 className={`font-semibold ${colorMap[color].text}`}>{stage}</h3>
+        <span className={`text-2xl font-bold ${colorMap[color].text}`}>{score}</span>
+      </div>
+      <div className="w-full bg-white/10 rounded-full h-2 mb-4">
+        <div
+          className={`h-2 rounded-full ${color === 'red' ? 'bg-red-500' : color === 'yellow' ? 'bg-yellow-500' : 'bg-green-500'}`}
+          style={{ width: `${score}%` }}
+        ></div>
+      </div>
+      <p className="text-sm text-foreground/70">{status}</p>
+    </motion.div>
+  );
+}
+
+// Testimonial Card Component
+function TestimonialCard({
+  quote,
+  name,
+  title,
+}: {
+  quote: string;
+  name: string;
+  title: string;
+}) {
+  return (
+    <div className="p-6 rounded-lg border border-white/10">
+      <div className="flex items-center gap-1 mb-4">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+        ))}
+      </div>
+      <p className="text-foreground/70 mb-4">&quot;{quote}&quot;</p>
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 bg-gradient-to-r from-[#FF7043] to-[#FF8A65] rounded-full"></div>
+        <div>
+          <p className="font-medium">{name}</p>
+          <p className="text-sm text-foreground/50">{title}</p>
+        </div>
+      </div>
     </div>
   );
 }

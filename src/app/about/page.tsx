@@ -2,7 +2,8 @@
 'use client';
 
 import { motion } from '@/components/ui/motion';
-import { Award, Users2, Globe2, HeartHandshake } from 'lucide-react';
+import { Award, Users2, Globe2, HeartHandshake, Sparkles, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -13,7 +14,7 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl font-bold">About Sheriax</h1>
+        <h1 className="text-4xl font-bold">About Sheriax & Kizu</h1>
         <p className="mt-4 text-xl text-foreground/70 max-w-4xl">
           Sheriax Solutions is a multi-disciplinary technology studio building
           delightful, future-ready products. We blend AI, thoughtful design, and
@@ -25,6 +26,49 @@ export default function AboutPage() {
             alt="Team collaborating with holographic interface and AI assistant"
             className="w-full h-full object-cover"
           />
+        </div>
+      </motion.section>
+
+      {/* Kizu Story Section */}
+      <motion.section
+        className="py-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 rounded-2xl border border-[#FF7043]/30 bg-gradient-to-r from-[#FF7043]/5 to-transparent">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF7043]/10 border border-[#FF7043]/30 text-sm text-[#FF8A65] mb-4">
+              <Sparkles size={14} />
+              <span>Our Flagship Product</span>
+            </div>
+            <h2 className="text-2xl font-bold">The Story of Kizu</h2>
+            <p className="mt-4 text-foreground/70">
+              Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because
+              we believe every financial wound — whether it&apos;s hidden fees,
+              forgotten subscriptions, or poor spending habits — can be healed
+              with the right care and attention.
+            </p>
+            <p className="mt-4 text-foreground/70">
+              Built by Sheriax Solutions, Kizu combines our expertise in AI and
+              thoughtful design to create a financial companion that truly
+              understands your needs.
+            </p>
+            <Link
+              href="/kizu"
+              className="inline-flex items-center gap-2 mt-6 text-[#FF7043] hover:underline"
+            >
+              Learn more about Kizu <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/images/kizu/app_mascot_transparent.png"
+              alt="Kizu Fox Mascot"
+              className="w-48 h-48 lg:w-64 lg:h-64"
+            />
+          </div>
         </div>
       </motion.section>
 
@@ -131,8 +175,10 @@ export default function AboutPage() {
           <p className="mt-2 text-foreground/70">
             Started by a small team of builders, Sheriax has grown into a studio
             delivering impactful products across AI, web, mobile, and immersive
-            technology. We cut complexity for our clients, turning ambitious
-            ideas into well-crafted, scalable reality.
+            technology. Our flagship product Kizu represents our commitment to
+            creating technology that genuinely helps people. We cut complexity
+            for our clients, turning ambitious ideas into well-crafted, scalable
+            reality.
           </p>
           <div className="mt-6 h-56 rounded-md overflow-hidden border border-white/10">
             <img

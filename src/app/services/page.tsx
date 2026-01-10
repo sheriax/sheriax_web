@@ -2,8 +2,9 @@
 'use client';
 
 import ServiceCard from '@/components/ServiceCard';
-import { BrainCircuit, Globe, Smartphone, Search, Boxes } from 'lucide-react';
+import { BrainCircuit, Globe, Smartphone, Search, Boxes, ArrowRight } from 'lucide-react';
 import { motion } from '@/components/ui/motion';
+import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
@@ -13,8 +14,31 @@ export default function ServicesPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        {/* Kizu Callout Banner */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 p-4 rounded-xl border border-[#FF7043]/30 bg-gradient-to-r from-[#FF7043]/10 to-transparent flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🦊</span>
+            <p className="text-foreground/80">
+              Looking for our AI financial product?{' '}
+              <span className="font-medium text-[#FF7043]">Try Kizu</span> — AI-powered financial recovery.
+            </p>
+          </div>
+          <Link
+            href="/kizu"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#FF7043] text-white text-sm font-medium hover:bg-[#FF8A65] transition-colors whitespace-nowrap"
+          >
+            Learn more <ArrowRight size={14} />
+          </Link>
+        </motion.div>
+
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+          <p className="text-sm text-[#FF7043] font-medium mb-2">By the Makers of Kizu</p>
+          <h1 className="text-4xl font-bold mb-4">Custom Development Services</h1>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
             Explore our comprehensive range of services that blend cutting-edge
             AI, thoughtful design, and robust engineering to build intuitive,

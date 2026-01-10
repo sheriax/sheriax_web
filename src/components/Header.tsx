@@ -8,6 +8,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 const nav = [
   { href: '/', label: 'Home' },
+  { href: '/kizu', label: 'Kizu' },
   { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

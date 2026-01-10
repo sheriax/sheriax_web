@@ -40,6 +40,13 @@
   --border: #262626;
   --input: #262626;
   --ring: #3b82f6;
+  
+  /* Kizu Brand Colors */
+  --kizu-orange: #FF7043;
+  --kizu-coral: #FF8A65;
+  --kizu-warm: #FFAB91;
+  --kizu-success: #4CAF50;
+  --kizu-healing: #66BB6A;
 }
 
 /* Dark theme class (kept for compatibility, but dark styles are now in :root) */

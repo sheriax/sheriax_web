@@ -1,0 +1,506 @@
+/* eslint-disable @next/next/no-img-element */
+'use client';
+
+import { motion } from '@/components/ui/motion';
+import {
+  ScanLine,
+  ShieldAlert,
+  HeartPulse,
+  MessageCircleHeart,
+  Upload,
+  AlertTriangle,
+  TrendingUp,
+  Lock,
+  Sparkles,
+  ArrowRight,
+  Check,
+  ChevronDown,
+  ExternalLink,
+} from 'lucide-react';
+import Link from 'next/link';
+import { useState } from 'react';
+import WaitlistForm from '@/components/WaitlistForm';
+
+export default function KizuPage() {
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#FF7043]/10 via-purple-900/10 to-transparent"></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF7043]/10 border border-[#FF7043]/30 text-sm text-[#FF8A65] mb-6">
+                <Sparkles size={14} />
+                <span>AI-Powered Financial Recovery</span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+                Meet{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7043] to-[#FF8A65]">
+                  Kizu
+                </span>
+              </h1>
+
+              <p className="mt-6 text-xl text-foreground/70 max-w-xl">
+                Your AI companion for financial healing. Kizu (傷) means
+                &quot;wound&quot; in Japanese — because we believe every
+                financial wound can be healed.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="#waitlist"
+                  className="inline-flex items-center gap-2 rounded-md bg-[#FF7043] text-white px-6 py-3 text-sm font-medium hover:bg-[#FF8A65] transition-all duration-300 hover:scale-105"
+                >
+                  Join the Waitlist <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="#features"
+                  className="inline-flex items-center gap-2 rounded-md border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition-all"
+                >
+                  See Features
+                </Link>
+                <a
+                  href="https://kizu.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-[#FF7043]/30 text-[#FF7043] px-6 py-3 text-sm font-medium hover:bg-[#FF7043]/10 transition-all"
+                >
+                  Visit kizu.in <ExternalLink size={14} />
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#FF7043]/30 to-transparent blur-3xl rounded-full scale-125"></div>
+                <img
+                  src="/images/kizu/app_mascot_transparent.png"
+                  alt="Kizu Fox Mascot"
+                  className="relative w-72 sm:w-80 lg:w-96 h-auto"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Deep Dive */}
+      <section id="features" className="py-20 border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold">
+              Complete Financial Healing Suite
+            </h2>
+            <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
+              Everything you need to diagnose, treat, and recover from financial
+              wounds.
+            </p>
+          </motion.div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FeatureBlock
+              icon={ScanLine}
+              title="AI Receipt Scanning"
+              description="Point your camera at any receipt, bill, or invoice. Our AI instantly extracts merchant, amount, date, and category — no manual entry needed."
+              features={[
+                'Works with wrinkled or faded receipts',
+                'Supports multiple languages',
+                'Automatic categorization',
+                'Export to spreadsheet',
+              ]}
+            />
+            <FeatureBlock
+              icon={ShieldAlert}
+              title="Wound Detection"
+              description="Kizu continuously monitors your spending patterns to identify financial wounds before they become critical."
+              features={[
+                'Hidden subscription alerts',
+                'Unusual fee detection',
+                'Spending pattern analysis',
+                'Automatic cancellation assistance',
+              ]}
+            />
+            <FeatureBlock
+              icon={HeartPulse}
+              title="Financial Health Score"
+              description="Your Kizu Score is a comprehensive 0-100 rating of your financial wellness, updated in real-time."
+              features={[
+                'Personalized scoring algorithm',
+                'Improvement recommendations',
+                'Progress tracking over time',
+                'Benchmark comparison',
+              ]}
+            />
+            <FeatureBlock
+              icon={MessageCircleHeart}
+              title="AI Therapist"
+              description="Chat with Kizu anytime for personalized financial advice, budgeting help, or just to vent about money stress."
+              features={[
+                '24/7 availability',
+                'No judgment, just support',
+                'Actionable advice',
+                'Emotional intelligence',
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 border-t border-white/10 bg-white/[0.02]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold">How Kizu Works</h2>
+            <p className="mt-4 text-lg text-foreground/70">
+              Your journey to financial wellness in three steps
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-16 relative"
+          >
+            {/* Connection line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF7043]/50 via-[#FF8A65]/50 to-[#4CAF50]/50 -translate-y-1/2"></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              <StepBlock
+                number={1}
+                icon={Upload}
+                title="Connect & Scan"
+                description="Link your bank accounts or snap photos of receipts. Kizu securely analyzes your financial data."
+              />
+              <StepBlock
+                number={2}
+                icon={AlertTriangle}
+                title="Diagnose Wounds"
+                description="Our AI identifies money leaks, hidden fees, forgotten subscriptions, and spending inefficiencies."
+              />
+              <StepBlock
+                number={3}
+                icon={TrendingUp}
+                title="Heal & Thrive"
+                description="Follow personalized treatment plans, track your progress, and watch your Kizu Score improve."
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Privacy & Security */}
+      <section className="py-20 border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-sm text-green-400 mb-6">
+                <Lock size={14} />
+                <span>Your Data, Your Control</span>
+              </div>
+
+              <h2 className="text-3xl font-bold">Privacy-First Design</h2>
+              <p className="mt-4 text-lg text-foreground/70">
+                We built Kizu with privacy at its core. Your financial data is
+                encrypted, never sold, and you can delete it anytime.
+              </p>
+
+              <ul className="mt-8 space-y-4">
+                {[
+                  'End-to-end encryption for all data',
+                  'No data selling to third parties',
+                  'Complete data deletion on request',
+                  'Transparent data usage policies',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <Check size={14} className="text-green-400" />
+                    </div>
+                    <span className="text-foreground/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <img
+                src="/images/kizu/app_logo_transparent.png"
+                alt="Kizu Logo"
+                className="w-64 h-64 opacity-50"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 border-t border-white/10 bg-white/[0.02]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold">Simple Pricing</h2>
+            <p className="mt-4 text-lg text-foreground/70">Coming soon</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"
+          >
+            <div className="p-8 rounded-2xl border border-white/10">
+              <h3 className="text-xl font-semibold">Free</h3>
+              <p className="text-3xl font-bold mt-4">
+                ₹0<span className="text-sm text-foreground/50">/month</span>
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  'Basic receipt scanning',
+                  'Financial Health Score',
+                  'Limited AI chat',
+                  'Basic wound detection',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2 text-sm text-foreground/70">
+                    <Check size={16} className="text-[#FF7043]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-8 rounded-2xl border border-[#FF7043]/50 bg-[#FF7043]/5 relative">
+              <div className="absolute top-0 right-0 px-3 py-1 bg-[#FF7043] text-white text-xs font-medium rounded-bl-lg rounded-tr-xl">
+                Coming Soon
+              </div>
+              <h3 className="text-xl font-semibold">Pro</h3>
+              <p className="text-3xl font-bold mt-4">
+                ₹199<span className="text-sm text-foreground/50">/month</span>
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  'Unlimited receipt scanning',
+                  'Advanced wound detection',
+                  'Unlimited AI therapist',
+                  'Bank account sync',
+                  'Priority support',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2 text-sm text-foreground/70">
+                    <Check size={16} className="text-[#FF7043]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 border-t border-white/10">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-12 space-y-4"
+          >
+            <FAQItem
+              question="What does Kizu mean?"
+              answer="Kizu (傷) means 'wound' in Japanese. We chose this name because we believe every financial wound — whether it's debt, overspending, or hidden fees — can be healed with the right care and attention."
+            />
+            <FAQItem
+              question="Is my financial data safe?"
+              answer="Absolutely. All data is encrypted end-to-end, we never sell your information to third parties, and you can request complete data deletion at any time."
+            />
+            <FAQItem
+              question="How does the AI receipt scanning work?"
+              answer="Simply take a photo of any receipt, bill, or invoice. Our AI reads the text, extracts key information (merchant, amount, date, items), and automatically categorizes it for you."
+            />
+            <FAQItem
+              question="When will Kizu launch?"
+              answer="We're currently in development and will launch soon. Join our waitlist to be the first to know and get early access perks!"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Waitlist CTA */}
+      <section id="waitlist" className="py-20 border-t border-white/10">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <img
+              src="/images/kizu/app_mascot_transparent.png"
+              alt="Kizu Mascot"
+              className="w-32 h-32 mx-auto mb-8"
+            />
+            <h2 className="text-3xl font-bold">
+              Ready to Heal Your Finances?
+            </h2>
+            <p className="mt-4 text-lg text-foreground/70 max-w-xl mx-auto">
+              Join our waitlist and be the first to experience AI-powered
+              financial recovery. Early supporters get exclusive perks!
+            </p>
+
+            <div className="mt-8">
+              <WaitlistForm plan="free" />
+            </div>
+
+            <p className="mt-4 text-sm text-foreground/50">
+              🚀 Launching Soon · No spam, just updates
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// Feature Block Component
+function FeatureBlock({
+  icon: Icon,
+  title,
+  description,
+  features,
+}: {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  features: string[];
+}) {
+  return (
+    <motion.div
+      className="p-6 rounded-xl border border-white/10 hover:border-[#FF7043]/30 transition-colors"
+      whileHover={{ y: -4 }}
+    >
+      <div className="w-12 h-12 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-4">
+        <Icon className="w-6 h-6 text-[#FF7043]" />
+      </div>
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="mt-2 text-foreground/70">{description}</p>
+      <ul className="mt-4 space-y-2">
+        {features.map((feature, i) => (
+          <li key={i} className="flex items-center gap-2 text-sm text-foreground/60">
+            <Check size={14} className="text-[#FF7043]" />
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
+// Step Block Component
+function StepBlock({
+  number,
+  icon: Icon,
+  title,
+  description,
+}: {
+  number: number;
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="relative text-center p-6">
+      <div className="mx-auto w-16 h-16 rounded-full bg-background border-2 border-[#FF7043] flex items-center justify-center mb-4 relative z-10">
+        <Icon className="w-7 h-7 text-[#FF7043]" />
+      </div>
+      <span className="absolute top-2 left-1/2 -translate-x-1/2 text-6xl font-bold text-white/5">
+        {number}
+      </span>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="mt-2 text-sm text-foreground/70">{description}</p>
+    </div>
+  );
+}
+
+// FAQ Item Component
+function FAQItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border border-white/10 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+      >
+        <span className="font-medium">{question}</span>
+        <ChevronDown
+          size={20}
+          className={`text-foreground/50 transition-transform ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+      {open && (
+        <div className="px-6 pb-4">
+          <p className="text-foreground/70">{answer}</p>
+        </div>
+      )}
+    </div>
+  );
+}
