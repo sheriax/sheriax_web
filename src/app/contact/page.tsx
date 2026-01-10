@@ -51,7 +51,7 @@ export default function ContactPage() {
       >
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="mt-3 text-foreground/70">
-          Tell us a bit about your project, and we’ll get back within 24 hours.
+          Tell us a bit about your project, and we&apos;ll get back within 24 hours.
         </p>
       </motion.section>
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
           </p>
           <ul className="mt-6 space-y-4 text-sm">
             <li className="flex items-center gap-3">
-              <Mail className="w-4 h-4" /> contact@sheriax.com
+              <Mail className="w-4 h-4" /> hi@sheriax.com
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4" /> +91 733 892 3502
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <MapPin className="w-4 h-4" /> Remote-first / Global
             </li>
             <li className="flex items-center gap-3">
-              <Clock className="w-4 h-4" /> Mon–Fri, 9am–6pm
+              <Clock className="w-4 h-4" /> Mon-Fri, 9am-6pm
             </li>
           </ul>
           <div className="mt-6 h-48 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-md flex items-center justify-center">

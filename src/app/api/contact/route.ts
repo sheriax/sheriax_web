@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: 'Sheriax Leads <noreply@sheriax.com>',
-      to: ['contact@sheriax.com'],
+      to: ['hi@sheriax.com'],
       subject,
       text,
     });

@@ -100,7 +100,7 @@ const organizationJsonLd = {
     '@type': 'ContactPoint',
     telephone: '+91-733-892-3502',
     contactType: 'customer service',
-    email: 'contact@sheriax.com',
+    email: 'hi@sheriax.com',
   },
   sameAs: [
     'https://linkedin.com/company/sheriax',
