@@ -26,7 +26,7 @@ export default function KizuPage() {
     <div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 sm:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FF7043]/10 via-purple-900/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--kizu-orange)]/10 via-purple-900/10 to-transparent"></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -35,14 +35,14 @@ export default function KizuPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF7043]/10 border border-[#FF7043]/30 text-sm text-[#FF8A65] mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kizu-orange)]/10 border border-[var(--kizu-orange)]/30 text-sm text-[var(--kizu-coral)] mb-6">
                 <Sparkles size={14} />
                 <span>AI-Powered Financial Recovery</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 Meet{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7043] to-[#FF8A65]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--kizu-orange)] to-[var(--kizu-coral)]">
                   Kizu
                 </span>
               </h1>
@@ -56,7 +56,7 @@ export default function KizuPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="#waitlist"
-                  className="inline-flex items-center gap-2 rounded-md bg-[#FF7043] text-white px-6 py-3 text-sm font-medium hover:bg-[#FF8A65] transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-md bg-[var(--kizu-orange)] text-white px-6 py-3 text-sm font-medium hover:bg-[var(--kizu-coral)] transition-all duration-300 hover:scale-105"
                 >
                   Join the Waitlist <ArrowRight size={16} />
                 </Link>
@@ -70,7 +70,7 @@ export default function KizuPage() {
                   href="https://kizu.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-[#FF7043]/30 text-[#FF7043] px-6 py-3 text-sm font-medium hover:bg-[#FF7043]/10 transition-all"
+                  className="inline-flex items-center gap-2 rounded-md border border-[var(--kizu-orange)]/30 text-[var(--kizu-orange)] px-6 py-3 text-sm font-medium hover:bg-[var(--kizu-orange)]/10 transition-all"
                 >
                   Visit kizu.in <ExternalLink size={14} />
                 </a>
@@ -84,7 +84,7 @@ export default function KizuPage() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#FF7043]/30 to-transparent blur-3xl rounded-full scale-125"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--kizu-orange)]/30 to-transparent blur-3xl rounded-full scale-125"></div>
                 <motion.img
                   src="/images/kizu/app_mascot_transparent.png"
                   alt="Kizu Fox Mascot"
@@ -190,7 +190,7 @@ export default function KizuPage() {
             className="mt-16 relative"
           >
             {/* Connection line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF7043]/50 via-[#FF8A65]/50 to-[#4CAF50]/50 -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--kizu-orange)]/50 via-[var(--kizu-coral)]/50 to-[var(--kizu-success)]/50 -translate-y-1/2"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               <StepBlock
@@ -309,7 +309,7 @@ export default function KizuPage() {
                   '10 Kizu AI queries/month',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-foreground/70">
-                    <Check size={18} className="text-teal-500 flex-shrink-0" />
+                    <Check size={18} className="text-[var(--kizu-success)] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -324,16 +324,16 @@ export default function KizuPage() {
 
             {/* Pro Plan */}
             <div className="p-8 rounded-2xl bg-card border border-border shadow-sm relative">
-              <div className="absolute -top-3 right-6 px-4 py-1 bg-[#FF7043] text-white text-sm font-medium rounded-full">
+              <div className="absolute -top-3 right-6 px-4 py-1 bg-[var(--kizu-orange)] text-white text-sm font-medium rounded-full">
                 MOST POPULAR
               </div>
               <h3 className="text-2xl font-bold">Kizu Pro</h3>
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="text-xl text-foreground/40 line-through">₹249</span>
-                <span className="text-4xl font-bold text-[#FF7043]">₹0</span>
+                <span className="text-4xl font-bold text-[var(--kizu-orange)]">₹0</span>
                 <span className="text-foreground/50">/month</span>
               </div>
-              <div className="mt-2 inline-flex items-center gap-1 px-2 py-1 bg-teal-500/10 text-teal-600 text-sm rounded-md">
+              <div className="mt-2 inline-flex items-center gap-1 px-2 py-1 bg-[var(--kizu-success)]/10 text-[var(--kizu-success)] text-sm rounded-md">
                 <Sparkles size={14} />
                 Free for Beta Users
               </div>
@@ -347,14 +347,14 @@ export default function KizuPage() {
                   'CSV + PDF Export',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-foreground/70">
-                    <Check size={18} className="text-teal-500 flex-shrink-0" />
+                    <Check size={18} className="text-[var(--kizu-success)] flex-shrink-0" />
                     <span className="font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 href="#waitlist"
-                className="mt-8 block w-full py-3 text-center rounded-full bg-[#FF7043] text-white font-medium hover:bg-[#FF8A65] transition-colors"
+                className="mt-8 block w-full py-3 text-center rounded-full bg-[var(--kizu-orange)] text-white font-medium hover:bg-[var(--kizu-coral)] transition-colors"
               >
                 Get Early Pro Access
               </Link>
@@ -454,18 +454,18 @@ function FeatureBlock({
 }) {
   return (
     <motion.div
-      className="p-6 rounded-xl border border-border hover:border-[#FF7043]/30 transition-colors"
+      className="p-6 rounded-xl border border-border hover:border-[var(--kizu-orange)]/30 transition-colors"
       whileHover={{ y: -4 }}
     >
-      <div className="w-12 h-12 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-4">
-        <Icon className="w-6 h-6 text-[#FF7043]" />
+      <div className="w-12 h-12 rounded-lg bg-[var(--kizu-orange)]/10 flex items-center justify-center mb-4">
+        <Icon className="w-6 h-6 text-[var(--kizu-orange)]" />
       </div>
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-foreground/70">{description}</p>
       <ul className="mt-4 space-y-2">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-2 text-sm text-foreground/60">
-            <Check size={14} className="text-[#FF7043]" />
+            <Check size={14} className="text-[var(--kizu-orange)]" />
             {feature}
           </li>
         ))}
@@ -488,8 +488,8 @@ function StepBlock({
 }) {
   return (
     <div className="relative text-center p-6">
-      <div className="mx-auto w-16 h-16 rounded-full bg-background border-2 border-[#FF7043] flex items-center justify-center mb-4 relative z-10">
-        <Icon className="w-7 h-7 text-[#FF7043]" />
+      <div className="mx-auto w-16 h-16 rounded-full bg-background border-2 border-[var(--kizu-orange)] flex items-center justify-center mb-4 relative z-10">
+        <Icon className="w-7 h-7 text-[var(--kizu-orange)]" />
       </div>
       <span className="absolute top-2 left-1/2 -translate-x-1/2 text-6xl font-bold text-foreground/5">
         {number}
