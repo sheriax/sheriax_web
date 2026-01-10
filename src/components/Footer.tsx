@@ -68,14 +68,14 @@ export default function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-foreground/60 hover:text-[#FF7043] transition-colors"
+                      className="text-sm text-foreground/60 hover:text-[var(--kizu-orange)] transition-colors"
                     >
                       {link.label} ↗
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/60 hover:text-[#FF7043] transition-colors"
+                      className="text-sm text-foreground/60 hover:text-[var(--kizu-orange)] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -132,7 +132,7 @@ export default function Footer() {
                 href={href}
                 target="_blank"
                 aria-label={label}
-                className="text-foreground/70 hover:text-[#FF7043] transition-colors"
+                className="text-foreground/70 hover:text-[var(--kizu-orange)] transition-colors"
               >
                 <Icon size={18} />
               </Link>
