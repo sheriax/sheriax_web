@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import WaitlistForm from '@/components/WaitlistForm';
 
 export default function KizuPage() {
   return (
@@ -390,15 +391,8 @@ export default function KizuPage() {
               financial recovery. Early supporters get exclusive perks!
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#FF7043]/50 focus:outline-none text-foreground placeholder:text-foreground/50 min-w-[280px]"
-              />
-              <button className="px-6 py-3 rounded-lg bg-[#FF7043] text-white font-medium hover:bg-[#FF8A65] transition-colors flex items-center justify-center gap-2">
-                Join Waitlist <ArrowRight size={16} />
-              </button>
+            <div className="mt-8">
+              <WaitlistForm plan="free" />
             </div>
 
             <p className="mt-4 text-sm text-foreground/50">
