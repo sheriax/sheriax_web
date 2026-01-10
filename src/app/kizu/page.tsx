@@ -15,6 +15,7 @@ import {
   ArrowRight,
   Check,
   ChevronDown,
+  ExternalLink,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -65,6 +66,14 @@ export default function KizuPage() {
                 >
                   See Features
                 </Link>
+                <a
+                  href="https://kizu.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-[#FF7043]/30 text-[#FF7043] px-6 py-3 text-sm font-medium hover:bg-[#FF7043]/10 transition-all"
+                >
+                  Visit kizu.in <ExternalLink size={14} />
+                </a>
               </div>
             </motion.div>
 

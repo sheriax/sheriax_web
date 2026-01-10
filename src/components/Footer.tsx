@@ -24,6 +24,7 @@ const productLinks = [
   { href: '/kizu', label: 'Features' },
   { href: '/kizu#features', label: 'How it Works' },
   { href: '/kizu#waitlist', label: 'Get Early Access' },
+  { href: 'https://kizu.in', label: 'Visit kizu.in', external: true },
 ];
 
 const companyLinks = [
@@ -62,12 +63,23 @@ export default function Footer() {
             <ul className="space-y-2">
               {productLinks.map(link => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/60 hover:text-[#FF7043] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {'external' in link && link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-foreground/60 hover:text-[#FF7043] transition-colors"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-foreground/60 hover:text-[#FF7043] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
