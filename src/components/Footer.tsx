@@ -40,7 +40,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 mt-16">
+    <footer className="border-t border-border mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-foreground/60">
             © {new Date().getFullYear()} Sheriax Solutions. All rights reserved.
           </p>
