@@ -1,26 +1,40 @@
 'use client';
 
-// import { useTheme } from '@/components/ThemeProvider'; // Not needed for dark-only mode
-// import { Moon, Sun } from 'lucide-react'; // Icons not needed for dark-only mode
+import { useTheme } from 'next-themes';
+import { Sun, Moon } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  // Theme toggle disabled - always dark mode
-  // Return null to hide the component entirely
-  return null;
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  // Original theme toggle component (commented out for future use)
-  // const { theme, toggleTheme } = useTheme();
-  // return (
-  //   <button
-  //     onClick={toggleTheme}
-  //     className="p-2 rounded-lg hover:bg-white/5 transition-colors duration-200"
-  //     aria-label="Toggle theme"
-  //   >
-  //     {theme === 'light' ? (
-  //       <Moon className="w-5 h-5 text-foreground/70" />
-  //     ) : (
-  //       <Sun className="w-5 h-5 text-foreground/70" />
-  //     )}
-  //   </button>
-  // );
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <button
+        className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+        aria-label="Toggle theme"
+      >
+        <div className="w-5 h-5" />
+      </button>
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+      aria-label="Toggle theme"
+    >
+      {theme === 'dark' ? (
+        <Sun className="w-5 h-5 text-yellow-500" />
+      ) : (
+        <Moon className="w-5 h-5 text-muted-foreground" />
+      )}
+    </button>
+  );
 }

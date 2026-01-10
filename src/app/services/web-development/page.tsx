@@ -26,7 +26,7 @@ export default function WebDevPage() {
           modern frameworks and best practices. Our focus is on performance,
           scalability, and delightful user experience.
         </p>
-        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/web-dev-responsive-design.jpeg"
             alt="Modern responsive web design on multiple devices, glassmorphism UI"
@@ -45,7 +45,7 @@ export default function WebDevPage() {
         <h2 className="text-2xl font-semibold mb-8">Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Layout className="w-7 h-7 text-blue-500 mb-3" />
@@ -55,7 +55,7 @@ export default function WebDevPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Gauge className="w-7 h-7 text-green-500 mb-3" />
@@ -65,7 +65,7 @@ export default function WebDevPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Accessibility className="w-7 h-7 text-purple-500 mb-3" />
@@ -75,7 +75,7 @@ export default function WebDevPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Sparkles className="w-7 h-7 text-yellow-500 mb-3" />
@@ -94,7 +94,7 @@ export default function WebDevPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8 text-center">
+        <div className="rounded-lg border border-border p-8 text-center">
           <h3 className="text-xl font-semibold">Need a modern website?</h3>
           <p className="mt-2 text-foreground/70">
             Let&apos;s craft a site that converts and delights users.

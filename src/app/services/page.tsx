@@ -44,7 +44,7 @@ export default function ServicesPage() {
             AI, thoughtful design, and robust engineering to build intuitive,
             future-ready products that transform businesses and delight users.
           </p>
-          <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-white/10">
+          <div className="mt-8 h-[24rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/services-showcase-holographic.jpeg"
             alt="Technology services showcase with floating holographic icons"

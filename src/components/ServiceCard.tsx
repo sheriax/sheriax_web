@@ -22,7 +22,7 @@ export default function ServiceCard({
     >
       <Link
         href={href}
-        className="group rounded-lg border border-white/10 p-6 hover:bg-white/5 transition-all duration-300 hover:scale-[1.02]"
+        className="group rounded-lg border border-border p-6 hover:bg-secondary/50 transition-all duration-300 hover:scale-[1.02]"
       >
         <div className="flex flex-col items-center text-center space-y-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100/10">

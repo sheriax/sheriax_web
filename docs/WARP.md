@@ -65,7 +65,7 @@ npm run lint
 Contact form uses Resend API:
 - API route: `app/api/contact/route.ts`
 - Requires `RESEND_API_KEY` environment variable
-- Sends emails to `contact@sheriax.com`
+- Sends emails to `hi@sheriax.com`
 - Form validation for required fields (name, email, message)
 
 ## Content & Assets

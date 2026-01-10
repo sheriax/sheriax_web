@@ -51,14 +51,14 @@ export default function ContactPage() {
       >
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="mt-3 text-foreground/70">
-          Tell us a bit about your project, and we’ll get back within 24 hours.
+          Tell us a bit about your project, and we&apos;ll get back within 24 hours.
         </p>
       </motion.section>
 
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Left: Info */}
         <motion.section
-          className="rounded-lg border border-white/10 p-6"
+          className="rounded-lg border border-border p-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -71,7 +71,7 @@ export default function ContactPage() {
           </p>
           <ul className="mt-6 space-y-4 text-sm">
             <li className="flex items-center gap-3">
-              <Mail className="w-4 h-4" /> contact@sheriax.com
+              <Mail className="w-4 h-4" /> hi@sheriax.com
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4" /> +91 733 892 3502
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <MapPin className="w-4 h-4" /> Remote-first / Global
             </li>
             <li className="flex items-center gap-3">
-              <Clock className="w-4 h-4" /> Mon–Fri, 9am–6pm
+              <Clock className="w-4 h-4" /> Mon-Fri, 9am-6pm
             </li>
           </ul>
           <div className="mt-6 h-48 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-md flex items-center justify-center">
@@ -104,7 +104,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm font-medium">Name</label>
             <input
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Jane Doe"
               {...register('name', { required: 'Name is required' })}
             />
@@ -117,7 +117,7 @@ export default function ContactPage() {
             <label className="block text-sm font-medium">Email</label>
             <input
               type="email"
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="jane@example.com"
               {...register('email', {
                 required: 'Email is required',
@@ -139,7 +139,7 @@ export default function ContactPage() {
               Company (optional)
             </label>
             <input
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Acme Inc."
               {...register('company')}
             />
@@ -148,7 +148,7 @@ export default function ContactPage() {
           <div>
             <label className="block text-sm font-medium">Interested in</label>
             <select
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               {...register('service')}
               defaultValue=""
             >
@@ -177,7 +177,7 @@ export default function ContactPage() {
             <label className="block text-sm font-medium">Message</label>
             <textarea
               rows={5}
-              className="mt-1 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 w-full rounded-md border border-border bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="What are you looking to build?"
               {...register('message', {
                 required: 'Please include a short message',

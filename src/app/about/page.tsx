@@ -20,7 +20,7 @@ export default function AboutPage() {
           delightful, future-ready products. We blend AI, thoughtful design, and
           robust engineering to solve problems that matter.
         </p>
-        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/about-team-innovation.jpeg"
             alt="Team collaborating with holographic interface and AI assistant"
@@ -82,7 +82,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold mb-8">Our Principles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Award className="w-7 h-7 text-yellow-500 mb-3" />
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Users2 className="w-7 h-7 text-blue-500 mb-3" />
@@ -102,7 +102,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Globe2 className="w-7 h-7 text-green-500 mb-3" />
@@ -112,7 +112,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <HeartHandshake className="w-7 h-7 text-pink-500 mb-3" />
@@ -170,7 +170,7 @@ export default function AboutPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8">
+        <div className="rounded-lg border border-border p-8">
           <h3 className="text-xl font-semibold">Our Story</h3>
           <p className="mt-2 text-foreground/70">
             Started by a small team of builders, Sheriax has grown into a studio
@@ -180,7 +180,7 @@ export default function AboutPage() {
             for our clients, turning ambitious ideas into well-crafted, scalable
             reality.
           </p>
-          <div className="mt-6 h-56 rounded-md overflow-hidden border border-white/10">
+          <div className="mt-6 h-56 rounded-md overflow-hidden border border-border">
             <img
               src="/images/about-collaboration-studio.jpeg"
               alt="Diverse team collaborating in modern studio with whiteboards and screens"

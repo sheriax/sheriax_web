@@ -20,7 +20,7 @@ export default function MobileAppPage() {
           brilliantly across Android and iOS. From MVP to scale, we deliver apps
           users love.
         </p>
-        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/mobile-app-devices.jpeg"
             alt="Cross-platform mobile apps on Android and iOS with sleek UI"
@@ -39,7 +39,7 @@ export default function MobileAppPage() {
         <h2 className="text-2xl font-semibold mb-8">Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Smartphone className="w-7 h-7 text-blue-500 mb-3" />
@@ -50,7 +50,7 @@ export default function MobileAppPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Bell className="w-7 h-7 text-green-500 mb-3" />
@@ -60,7 +60,7 @@ export default function MobileAppPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <WifiOff className="w-7 h-7 text-purple-500 mb-3" />
@@ -70,7 +70,7 @@ export default function MobileAppPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Rocket className="w-7 h-7 text-yellow-500 mb-3" />
@@ -89,7 +89,7 @@ export default function MobileAppPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8 text-center">
+        <div className="rounded-lg border border-border p-8 text-center">
           <h3 className="text-xl font-semibold">Let&apos;s build your app.</h3>
           <p className="mt-2 text-foreground/70">
             From MVP to scale, we&apos;ll guide you through every step.

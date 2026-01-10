@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Transformation Showcase */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* Services Spotlight */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-white/10">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -308,7 +308,7 @@ function FeatureCard({
 }) {
   return (
     <motion.div
-      className="p-6 rounded-xl border border-white/10 hover:border-white/20 transition-colors"
+      className="p-6 rounded-xl border border-border hover:border-primary/30 transition-colors"
       whileHover={{ y: -4 }}
     >
       <div
@@ -337,10 +337,10 @@ function StepCard({
 }) {
   return (
     <motion.div
-      className="relative p-6 rounded-xl border border-white/10 hover:border-[#FF7043]/30 transition-colors"
+      className="relative p-6 rounded-xl border border-border hover:border-[#FF7043]/30 transition-colors"
       whileHover={{ y: -4 }}
     >
-      <span className="absolute top-4 right-4 text-4xl font-bold text-white/5">
+      <span className="absolute top-4 right-4 text-4xl font-bold text-foreground/5">
         {step}
       </span>
       <div className="w-12 h-12 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-4">
@@ -379,7 +379,7 @@ function TransformationCard({
         <h3 className={`font-semibold ${colorMap[color].text}`}>{stage}</h3>
         <span className={`text-2xl font-bold ${colorMap[color].text}`}>{score}</span>
       </div>
-      <div className="w-full bg-white/10 rounded-full h-2 mb-4">
+      <div className="w-full bg-secondary/30 rounded-full h-2 mb-4">
         <div
           className={`h-2 rounded-full ${color === 'red' ? 'bg-red-500' : color === 'yellow' ? 'bg-yellow-500' : 'bg-green-500'}`}
           style={{ width: `${score}%` }}
@@ -401,7 +401,7 @@ function TestimonialCard({
   title: string;
 }) {
   return (
-    <div className="p-6 rounded-lg border border-white/10">
+    <div className="p-6 rounded-lg border border-border">
       <div className="flex items-center gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -409,7 +409,9 @@ function TestimonialCard({
       </div>
       <p className="text-foreground/70 mb-4">&quot;{quote}&quot;</p>
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-gradient-to-r from-[#FF7043] to-[#FF8A65] rounded-full"></div>
+        <div className="w-10 h-10 bg-gradient-to-r from-[var(--kizu-orange)] to-[var(--kizu-coral)] rounded-full flex items-center justify-center text-white font-bold text-lg">
+          {name.charAt(0)}
+        </div>
         <div>
           <p className="font-medium">{name}</p>
           <p className="text-sm text-foreground/50">{title}</p>

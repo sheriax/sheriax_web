@@ -100,7 +100,7 @@ const organizationJsonLd = {
     '@type': 'ContactPoint',
     telephone: '+91-733-892-3502',
     contactType: 'customer service',
-    email: 'contact@sheriax.com',
+    email: 'hi@sheriax.com',
   },
   sameAs: [
     'https://linkedin.com/company/sheriax',
@@ -153,11 +153,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="bg-[radial-gradient(1000px_500px_at_50%_-20%,rgba(59,130,246,0.15)_0%,transparent_60%)]">
-            <div className="bg-[linear-gradient(to_bottom,transparent,transparent_60%,rgba(0,0,0,0.02))]">
-              {/* App layout wrapper */}
-              <Layout>{children}</Layout>
-            </div>
+          <div className="min-h-screen">
+            {/* App layout wrapper */}
+            <Layout>{children}</Layout>
           </div>
         </ThemeProvider>
       </body>

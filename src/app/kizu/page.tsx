@@ -26,7 +26,7 @@ export default function KizuPage() {
     <div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 sm:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FF7043]/10 via-purple-900/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--kizu-orange)]/10 via-purple-900/10 to-transparent"></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -35,14 +35,14 @@ export default function KizuPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF7043]/10 border border-[#FF7043]/30 text-sm text-[#FF8A65] mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kizu-orange)]/10 border border-[var(--kizu-orange)]/30 text-sm text-[var(--kizu-coral)] mb-6">
                 <Sparkles size={14} />
                 <span>AI-Powered Financial Recovery</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 Meet{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7043] to-[#FF8A65]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--kizu-orange)] to-[var(--kizu-coral)]">
                   Kizu
                 </span>
               </h1>
@@ -56,13 +56,13 @@ export default function KizuPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="#waitlist"
-                  className="inline-flex items-center gap-2 rounded-md bg-[#FF7043] text-white px-6 py-3 text-sm font-medium hover:bg-[#FF8A65] transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-md bg-[var(--kizu-orange)] text-white px-6 py-3 text-sm font-medium hover:bg-[var(--kizu-coral)] transition-all duration-300 hover:scale-105"
                 >
                   Join the Waitlist <ArrowRight size={16} />
                 </Link>
                 <Link
                   href="#features"
-                  className="inline-flex items-center gap-2 rounded-md border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition-all"
+                  className="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-medium hover:bg-secondary/50 transition-all"
                 >
                   See Features
                 </Link>
@@ -70,7 +70,7 @@ export default function KizuPage() {
                   href="https://kizu.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-[#FF7043]/30 text-[#FF7043] px-6 py-3 text-sm font-medium hover:bg-[#FF7043]/10 transition-all"
+                  className="inline-flex items-center gap-2 rounded-md border border-[var(--kizu-orange)]/30 text-[var(--kizu-orange)] px-6 py-3 text-sm font-medium hover:bg-[var(--kizu-orange)]/10 transition-all"
                 >
                   Visit kizu.in <ExternalLink size={14} />
                 </a>
@@ -84,11 +84,13 @@ export default function KizuPage() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#FF7043]/30 to-transparent blur-3xl rounded-full scale-125"></div>
-                <img
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--kizu-orange)]/30 to-transparent blur-3xl rounded-full scale-125"></div>
+                <motion.img
                   src="/images/kizu/app_mascot_transparent.png"
                   alt="Kizu Fox Mascot"
                   className="relative w-72 sm:w-80 lg:w-96 h-auto"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 />
               </div>
             </motion.div>
@@ -97,7 +99,7 @@ export default function KizuPage() {
       </section>
 
       {/* Features Deep Dive */}
-      <section id="features" className="py-20 border-t border-white/10">
+      <section id="features" className="py-20 border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -165,7 +167,7 @@ export default function KizuPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 border-t border-white/10 bg-white/[0.02]">
+      <section className="py-20 border-t border-border bg-secondary/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -188,7 +190,7 @@ export default function KizuPage() {
             className="mt-16 relative"
           >
             {/* Connection line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF7043]/50 via-[#FF8A65]/50 to-[#4CAF50]/50 -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--kizu-orange)]/50 via-[var(--kizu-coral)]/50 to-[var(--kizu-success)]/50 -translate-y-1/2"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               <StepBlock
@@ -215,7 +217,7 @@ export default function KizuPage() {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-20 border-t border-white/10">
+      <section className="py-20 border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -270,7 +272,7 @@ export default function KizuPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 border-t border-white/10 bg-white/[0.02]">
+      <section className="py-20 border-t border-border bg-secondary/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -280,7 +282,7 @@ export default function KizuPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold">Simple Pricing</h2>
-            <p className="mt-4 text-lg text-foreground/70">Coming soon</p>
+            <p className="mt-4 text-lg text-foreground/70">Start healing for free, upgrade when ready</p>
           </motion.div>
 
           <motion.div
@@ -288,57 +290,81 @@ export default function KizuPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"
+            className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           >
-            <div className="p-8 rounded-2xl border border-white/10">
-              <h3 className="text-xl font-semibold">Free</h3>
-              <p className="text-3xl font-bold mt-4">
-                ₹0<span className="text-sm text-foreground/50">/month</span>
-              </p>
-              <ul className="mt-6 space-y-3">
+            {/* Free Plan */}
+            <div className="p-8 rounded-2xl bg-card border border-border shadow-sm">
+              <h3 className="text-2xl font-bold">Free</h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="text-4xl font-bold">₹0</span>
+                <span className="text-foreground/50">/forever</span>
+              </div>
+              <p className="mt-4 text-foreground/60">Essential tools to start your healing process.</p>
+              <ul className="mt-6 space-y-4">
                 {[
-                  'Basic receipt scanning',
-                  'Financial Health Score',
-                  'Limited AI chat',
-                  'Basic wound detection',
+                  'Unlimited manual transactions',
+                  '30 AI scans/month (~1/day)',
+                  '3 Accounts & Budgets',
+                  '1 Year Transaction History',
+                  '10 Kizu AI queries/month',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-foreground/70">
-                    <Check size={16} className="text-[#FF7043]" />
+                  <li key={i} className="flex items-center gap-3 text-foreground/70">
+                    <Check size={18} className="text-[var(--kizu-success)] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
+              <Link
+                href="#waitlist"
+                className="mt-8 block w-full py-3 text-center rounded-full border border-border font-medium hover:bg-secondary transition-colors"
+              >
+                Join Waitlist – Free
+              </Link>
             </div>
 
-            <div className="p-8 rounded-2xl border border-[#FF7043]/50 bg-[#FF7043]/5 relative">
-              <div className="absolute top-0 right-0 px-3 py-1 bg-[#FF7043] text-white text-xs font-medium rounded-bl-lg rounded-tr-xl">
-                Coming Soon
+            {/* Pro Plan */}
+            <div className="p-8 rounded-2xl bg-card border border-border shadow-sm relative">
+              <div className="absolute -top-3 right-6 px-4 py-1 bg-[var(--kizu-orange)] text-white text-sm font-medium rounded-full">
+                MOST POPULAR
               </div>
-              <h3 className="text-xl font-semibold">Pro</h3>
-              <p className="text-3xl font-bold mt-4">
-                ₹199<span className="text-sm text-foreground/50">/month</span>
-              </p>
-              <ul className="mt-6 space-y-3">
+              <h3 className="text-2xl font-bold">Kizu Pro</h3>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="text-xl text-foreground/40 line-through">₹249</span>
+                <span className="text-4xl font-bold text-[var(--kizu-orange)]">₹0</span>
+                <span className="text-foreground/50">/month</span>
+              </div>
+              <div className="mt-2 inline-flex items-center gap-1 px-2 py-1 bg-[var(--kizu-success)]/10 text-[var(--kizu-success)] text-sm rounded-md">
+                <Sparkles size={14} />
+                Free for Beta Users
+              </div>
+              <p className="mt-4 text-foreground/60">Full access to medical-grade financial care.</p>
+              <ul className="mt-6 space-y-4">
                 {[
-                  'Unlimited receipt scanning',
-                  'Advanced wound detection',
-                  'Unlimited AI therapist',
-                  'Bank account sync',
-                  'Priority support',
+                  'Unlimited AI Scans',
+                  'Unlimited Accounts & Budgets',
+                  'Unlimited History & AI Queries',
+                  'Cloud Backup',
+                  'CSV + PDF Export',
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm text-foreground/70">
-                    <Check size={16} className="text-[#FF7043]" />
-                    {item}
+                  <li key={i} className="flex items-center gap-3 text-foreground/70">
+                    <Check size={18} className="text-[var(--kizu-success)] flex-shrink-0" />
+                    <span className="font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
+              <Link
+                href="#waitlist"
+                className="mt-8 block w-full py-3 text-center rounded-full bg-[var(--kizu-orange)] text-white font-medium hover:bg-[var(--kizu-coral)] transition-colors"
+              >
+                Get Early Pro Access
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 border-t border-white/10">
+      <section className="py-20 border-t border-border">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -378,7 +404,7 @@ export default function KizuPage() {
       </section>
 
       {/* Waitlist CTA */}
-      <section id="waitlist" className="py-20 border-t border-white/10">
+      <section id="waitlist" className="py-20 border-t border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -428,18 +454,18 @@ function FeatureBlock({
 }) {
   return (
     <motion.div
-      className="p-6 rounded-xl border border-white/10 hover:border-[#FF7043]/30 transition-colors"
+      className="p-6 rounded-xl border border-border hover:border-[var(--kizu-orange)]/30 transition-colors"
       whileHover={{ y: -4 }}
     >
-      <div className="w-12 h-12 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-4">
-        <Icon className="w-6 h-6 text-[#FF7043]" />
+      <div className="w-12 h-12 rounded-lg bg-[var(--kizu-orange)]/10 flex items-center justify-center mb-4">
+        <Icon className="w-6 h-6 text-[var(--kizu-orange)]" />
       </div>
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-foreground/70">{description}</p>
       <ul className="mt-4 space-y-2">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-2 text-sm text-foreground/60">
-            <Check size={14} className="text-[#FF7043]" />
+            <Check size={14} className="text-[var(--kizu-orange)]" />
             {feature}
           </li>
         ))}
@@ -462,10 +488,10 @@ function StepBlock({
 }) {
   return (
     <div className="relative text-center p-6">
-      <div className="mx-auto w-16 h-16 rounded-full bg-background border-2 border-[#FF7043] flex items-center justify-center mb-4 relative z-10">
-        <Icon className="w-7 h-7 text-[#FF7043]" />
+      <div className="mx-auto w-16 h-16 rounded-full bg-background border-2 border-[var(--kizu-orange)] flex items-center justify-center mb-4 relative z-10">
+        <Icon className="w-7 h-7 text-[var(--kizu-orange)]" />
       </div>
-      <span className="absolute top-2 left-1/2 -translate-x-1/2 text-6xl font-bold text-white/5">
+      <span className="absolute top-2 left-1/2 -translate-x-1/2 text-6xl font-bold text-foreground/5">
         {number}
       </span>
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -485,10 +511,10 @@ function FAQItem({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border border-white/10 rounded-lg overflow-hidden">
+    <div className="border border-border rounded-lg overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+        className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-secondary/50 transition-colors"
       >
         <span className="font-medium">{question}</span>
         <ChevronDown

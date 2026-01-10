@@ -20,7 +20,7 @@ export default function ARVRPage() {
           with interactive AR/VR prototypes and production-ready apps. From
           concept to reality in virtual worlds.
         </p>
-        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-white/10">
+        <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/ar-vr-immersive-experience.jpeg"
             alt="Immersive AR/VR experience with headset and holograms"
@@ -39,7 +39,7 @@ export default function ARVRPage() {
         <h2 className="text-2xl font-semibold mb-8">Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Eye className="w-7 h-7 text-purple-500 mb-3" />
@@ -52,7 +52,7 @@ export default function ARVRPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Box className="w-7 h-7 text-pink-500 mb-3" />
@@ -62,7 +62,7 @@ export default function ARVRPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Headphones className="w-7 h-7 text-blue-500 mb-3" />
@@ -72,7 +72,7 @@ export default function ARVRPage() {
             </p>
           </motion.div>
           <motion.div
-            className="rounded-lg border border-white/10 p-6 hover:border-white/20"
+            className="rounded-lg border border-border p-6 hover:border-primary/30"
             whileHover={{ y: -4 }}
           >
             <Users className="w-7 h-7 text-green-500 mb-3" />
@@ -93,7 +93,7 @@ export default function ARVRPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg border border-white/10 p-8 text-center">
+        <div className="rounded-lg border border-border p-8 text-center">
           <h3 className="text-xl font-semibold">
             Want to explore immersive experiences?
           </h3>

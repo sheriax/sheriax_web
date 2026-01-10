@@ -66,7 +66,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-md border border-white/15 px-5 py-3 text-sm font-medium hover:bg-white/5 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium hover:bg-secondary/50 transition-all duration-300 hover:scale-105"
               >
                 Our Services
               </Link>
@@ -101,10 +101,12 @@ export default function Hero() {
               {/* Glow effect behind mascot */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#FF7043]/30 to-transparent blur-3xl rounded-full scale-150"></div>
               
-              <img
+              <motion.img
                 src="/images/kizu/app_mascot_transparent.png"
                 alt="Kizu Fox Mascot - Your AI Financial Companion"
                 className="relative w-72 sm:w-80 lg:w-96 h-auto drop-shadow-2xl"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               />
             </div>
           </motion.div>
