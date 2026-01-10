@@ -33,7 +33,7 @@ export default function WaitlistForm({ plan = 'free', className = '' }: Waitlist
     setStatus('loading');
 
     try {
-      const response = await fetch('https://kizu.in/api/wishlist', {
+      const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
