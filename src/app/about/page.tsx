@@ -20,6 +20,11 @@ export default function AboutPage() {
           delightful, future-ready products. We blend AI, thoughtful design, and
           robust engineering to solve problems that matter.
         </p>
+        <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30">
+          <span className="text-sm text-foreground/70">
+            DPIIT Recognized Startup – Government of India
+          </span>
+        </div>
         <div className="mt-8 h-[22rem] rounded-lg overflow-hidden border border-border">
           <img
             src="/images/about-team-innovation.jpeg"
@@ -175,7 +180,8 @@ export default function AboutPage() {
           <p className="mt-2 text-foreground/70">
             Started by a small team of builders, Sheriax has grown into a studio
             delivering impactful products across AI, web, mobile, and immersive
-            technology. Our flagship product Kizu represents our commitment to
+            technology. Recognized by DPIIT (Government of India) as an innovative
+            startup, our flagship product Kizu represents our commitment to
             creating technology that genuinely helps people. We cut complexity
             for our clients, turning ambitious ideas into well-crafted, scalable
             reality.

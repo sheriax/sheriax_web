@@ -55,6 +55,9 @@ export default function Footer() {
             <p className="text-sm text-foreground/50">
               Made with 🧡 in India
             </p>
+            <p className="text-xs text-foreground/40 mt-2">
+              DPIIT Recognized Startup – Government of India
+            </p>
           </div>
 
           {/* Product Links */}

@@ -53,6 +53,12 @@ export default function KizuPage() {
                 financial wound can be healed.
               </p>
 
+              <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30">
+                <span className="text-xs text-foreground/60">
+                  By Sheriax Solutions · DPIIT Recognized Startup
+                </span>
+              </div>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="#waitlist"
