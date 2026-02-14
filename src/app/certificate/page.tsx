@@ -170,7 +170,7 @@ function StepCard({
       className="relative rounded-xl border border-border p-5 hover:border-[#FF7043]/30 transition-colors"
       whileHover={{ y: -4 }}
     >
-      <span className="absolute top-4 right-4 text-3xl font-bold text-foreground/5">
+      <span className="absolute top-4 right-4 text-3xl font-bold" style={{ color: 'var(--step-number)' }}>
         {step}
       </span>
       <div className="w-10 h-10 rounded-lg bg-[#FF7043]/10 flex items-center justify-center mb-3">

@@ -39,6 +39,7 @@
   --error-icon-bg: #fee2e2;
   --error-icon: #ef4444;
   --card-header-bg: #f8fafc;
+  --step-number: rgba(255, 112, 67);
 }
 
 /* Dark Theme */
@@ -73,6 +74,7 @@
   --error-icon-bg: rgba(127, 29, 29, 0.3);
   --error-icon: #f87171;
   --card-header-bg: #1e293b;
+  --step-number: rgba(255, 112, 67);
 }
 
 @theme inline {
