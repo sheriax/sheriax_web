@@ -26,6 +26,19 @@
   --kizu-warm: #FFAB91;
   --kizu-success: #4CAF50;
   --kizu-healing: #66BB6A;
+
+  /* Certificate Verification */
+  --verified-bg: #ecfdf5;
+  --verified-border: #a7f3d0;
+  --verified-icon-bg: #d1fae5;
+  --verified-icon: #059669;
+  --verified-title: #065f46;
+  --verified-text: #047857;
+  --error-bg: #fef2f2;
+  --error-border: #fecaca;
+  --error-icon-bg: #fee2e2;
+  --error-icon: #ef4444;
+  --card-header-bg: #f8fafc;
 }
 
 /* Dark Theme */
@@ -47,6 +60,19 @@
   --border: #262626;
   --input: #262626;
   --ring: #3b82f6;
+
+  /* Certificate Verification */
+  --verified-bg: rgba(6, 78, 59, 0.2);
+  --verified-border: #065f46;
+  --verified-icon-bg: rgba(6, 78, 59, 0.3);
+  --verified-icon: #6ee7b7;
+  --verified-title: #a7f3d0;
+  --verified-text: #6ee7b7;
+  --error-bg: rgba(127, 29, 29, 0.2);
+  --error-border: #7f1d1d;
+  --error-icon-bg: rgba(127, 29, 29, 0.3);
+  --error-icon: #f87171;
+  --card-header-bg: #1e293b;
 }
 
 @theme inline {
