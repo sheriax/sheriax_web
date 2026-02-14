@@ -40,6 +40,10 @@
   --error-icon: #ef4444;
   --card-header-bg: #f8fafc;
   --step-number: rgba(255, 112, 67);
+  --stat-green: #15803d;
+  --stat-green-bold: #166534;
+  --stat-blue: #1d4ed8;
+  --stat-blue-bold: #1e3a8a;
 }
 
 /* Dark Theme */
@@ -75,6 +79,10 @@
   --error-icon: #f87171;
   --card-header-bg: #1e293b;
   --step-number: rgba(255, 112, 67);
+  --stat-green: #4ade80;
+  --stat-green-bold: #86efac;
+  --stat-blue: #60a5fa;
+  --stat-blue-bold: #93c5fd;
 }
 
 @theme inline {

@@ -80,12 +80,12 @@ export default function Hero() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <div className="flex items-center gap-3 px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/30">
-                <span className="text-green-400 text-sm font-medium">Auto-Cancelled</span>
-                <span className="text-green-300 font-bold">₹899 Saved</span>
+                <span className="text-sm font-medium" style={{ color: 'var(--stat-green)' }}>Auto-Cancelled</span>
+                <span className="font-bold" style={{ color: 'var(--stat-green-bold)' }}>₹899 Saved</span>
               </div>
               <div className="flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                <span className="text-blue-400 text-sm font-medium">Health Score</span>
-                <span className="text-blue-300 font-bold">+12 Points</span>
+                <span className="text-sm font-medium" style={{ color: 'var(--stat-blue)' }}>Health Score</span>
+                <span className="font-bold" style={{ color: 'var(--stat-blue-bold)' }}>+12 Points</span>
               </div>
             </motion.div>
           </motion.div>
