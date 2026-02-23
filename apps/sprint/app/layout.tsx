@@ -1,23 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({
-  variable: "--font-sans",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sprint.sheriax.com'),
   title: {
-    default: 'Sheriax Sprint Studio — AI Automation Sprints for Agencies',
+    default: 'Sprint Studio — AI Automation Sprints',
     template: '%s | Sprint Studio'
   },
-  description: 'Fixed-scope AI automation sprints. Automate your agency workflows in 2 weeks. Starting at ₹1,50,000.',
+  description: 'Fixed-scope AI automation sprints. Automate your agency workflows in 2 weeks.',
   openGraph: {
     url: 'https://sprint.sheriax.com',
     siteName: 'Sheriax Sprint Studio',
@@ -33,9 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background text-primary`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased grain`}
       >
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

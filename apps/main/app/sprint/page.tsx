@@ -1,9 +1,6 @@
-import React from 'react';
 import { Metadata } from 'next';
-import { Badge } from '@/components/shared/Badge';
-import { Button } from '@/components/shared/Button';
-import { Card } from '@/components/shared/Card';
-import { sprintAppUrl } from '@/lib/constants';
+import { Badge, Button, Card, SectionHeader } from '@sheriax/ui';
+import { Check } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Sprint Studio — AI Automation Sprints',
@@ -11,69 +8,59 @@ export const metadata: Metadata = {
 };
 
 export default function SprintPage() {
-  const packages = [
-    {
-      title: 'Agency Sprint',
-      price: '₹1.5L',
-      description: 'End-to-end automation of 2-3 core workflows with complete handover documentation in 14 days.',
-    },
-    {
-      title: 'Discovery Sprint',
-      price: '₹50K',
-      description: 'A 3-day deep dive mapping bottlenecks and delivering an automation roadmap.',
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-surface-dark py-24 md:py-32 border-b border-border-dark relative overflow-hidden">
-      {/* Decorative background mesh */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-tr from-accent/5 to-transparent pointer-events-none mix-blend-screen opacity-50" />
-      
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <div className="w-20 h-20 mx-auto rounded-2xl bg-accent/20 border border-accent/30 flex items-center justify-center mb-10 shadow-xl shadow-accent/20 relative">
-          <svg className="w-10 h-10 text-accent/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-          </svg>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <div className="max-w-3xl">
+          <Badge variant="accent">Taking Clients</Badge>
+          <h1 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-display text-stone-900 tracking-tight leading-[1.1]">
+            Sprint Studio — AI Automation in 14 Days
+          </h1>
+          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
+            Fixed-scope AI automation sprints for agencies. We automate your delivery workflows so your team 
+            spends less time on admin and more time on strategy.
+          </p>
         </div>
 
-        <Badge variant="accent" className="mb-6 px-4 font-mono tracking-wider shadow-sm uppercase shadow-accent/20 border-accent/40 bg-accent/10">
-          Taking Clients
-        </Badge>
-        
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
-          Sprint Studio — <br className="hidden md:block"/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-light to-white">AI Automation in 14 Days</span>
-        </h1>
-        
-        <p className="text-xl text-text-muted font-light mb-16 leading-relaxed max-w-2xl mx-auto">
-          We strip away the endless consulting and build production-ready automation workflows for agencies. Predictable scope, fixed pricing, and delivery in exactly two weeks.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-3xl mx-auto">
-          {packages.map((pkg) => (
-            <Card key={pkg.title} className="text-left bg-transparent border-border-dark/60 hover:border-accent/30 transition-colors">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="font-bold text-lg text-white">
-                  {pkg.title}
-                </h3>
-                <span className="text-accent font-mono text-sm tracking-wider bg-accent/10 px-2 py-0.5 rounded border border-accent/20">
-                  {pkg.price}
-                </span>
-              </div>
-              <p className="text-text-muted text-sm leading-relaxed">
-                {pkg.description}
-              </p>
+        <div className="mt-20">
+          <SectionHeader label="Packages" title="Two Sprint Formats" />
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <Card hover>
+              <Badge variant="accent">Popular</Badge>
+              <h3 className="mt-4 text-lg font-display text-stone-900">Agency AI Automation Sprint</h3>
+              <p className="mt-1 text-2xl font-bold text-stone-900 font-mono tracking-tight">₹1,50,000</p>
+              <p className="text-[11px] text-stone-500 mt-0.5 tracking-wide">2 Weeks · AED 15,000+ for UAE</p>
+              <ul className="mt-4 space-y-2.5">
+                {['2-3 workflows automated', 'SOP + handover', 'Dashboard views', '2-week support'].map(item => (
+                  <li key={item} className="flex gap-2.5 text-sm text-stone-600">
+                    <Check className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </Card>
-          ))}
+            <Card hover>
+              <Badge variant="default">Quick Start</Badge>
+              <h3 className="mt-4 text-lg font-display text-stone-900">Workflow Discovery Sprint</h3>
+              <p className="mt-1 text-2xl font-bold text-stone-900 font-mono tracking-tight">₹50,000</p>
+              <p className="text-[11px] text-stone-500 mt-0.5 tracking-wide">3 Days · AED 2,500+ for UAE</p>
+              <ul className="mt-4 space-y-2.5">
+                {['Process audit', 'Bottleneck map', 'Automation matrix', '14-day roadmap'].map(item => (
+                  <li key={item} className="flex gap-2.5 text-sm text-stone-600">
+                    <Check className="w-4 h-4 text-stone-400 flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <Button href={sprintAppUrl} variant="primary" size="lg" className="w-full sm:w-auto overflow-hidden relative group">
-            <span className="relative z-10 flex items-center">
-              View Full Offers <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </span>
+        <div className="mt-16 flex flex-col sm:flex-row gap-3">
+          <Button href="https://sprint.sheriax.com" variant="primary" size="lg" rightIcon>
+            View Full Offers
           </Button>
-          <Button href={`${sprintAppUrl}/book`} variant="secondary" size="lg" className="w-full sm:w-auto !border-border-dark/80 text-white hover:text-white hover:bg-white/5">
+          <Button href="https://sprint.sheriax.com/book" variant="secondary" size="lg" rightIcon>
             Book Discovery Call
           </Button>
         </div>

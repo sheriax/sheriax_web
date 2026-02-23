@@ -1,36 +1,37 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Layout from '@/components/Layout';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 
-const inter = Inter({
-  variable: '--font-sans',
+const geistSans = Geist({
+  variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-mono',
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sheriax.com'),
   title: {
-    default: 'Sheriax Solutions — AI Products & Automation',
+    default: 'Sheriax — AI Products & Automation',
     template: '%s | Sheriax'
   },
-  description: 'We build AI products and automation systems. Makers of Kizu and Sprint Studio. DPIIT Recognized Startup from Chennai, India.',
+  description: 'We build AI products and automation systems. Makers of Kizu and Sprint Studio. DPIIT Recognized Startup, Chennai.',
   keywords: ['AI products', 'automation', 'Chennai startup', 'Sheriax', 'Kizu', 'Sprint Studio'],
   openGraph: {
     type: 'website',
     locale: 'en_IN',
     url: 'https://sheriax.com',
-    siteName: 'Sheriax Solutions',
+    siteName: 'Sheriax',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }]
   },
-  twitter: {
-    card: 'summary_large_image'
-  }
+  twitter: { card: 'summary_large_image' }
 };
 
 export default function RootLayout({
@@ -39,15 +40,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased grain`}
       >
-        <ThemeProvider>
-          <div className="min-h-screen font-sans bg-surface text-primary">
-            <Layout>{children}</Layout>
-          </div>
-        </ThemeProvider>
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

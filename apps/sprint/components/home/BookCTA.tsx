@@ -2,52 +2,40 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '../shared/Button';
-import { bookingUrl } from '@/lib/constants';
 
 export function BookCTA() {
   return (
-    <section id="book" className="py-24 sm:py-32 bg-primary border-t-4 border-accent relative overflow-hidden flex justify-center text-center">
-      {/* Background graphic */}
-      <div className="absolute inset-0 pointer-events-none opacity-20mix-blend-screen mix-blend-screen opacity-[0.1]">
-        <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-accent blur-[150px] rounded-full -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] bg-white blur-[150px] rounded-full translate-y-1/2 -translate-x-1/3" />
-      </div>
+    <section className="relative overflow-hidden bg-stone-900">
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
-        
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-28 text-center">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-surface-dark border border-border-dark p-8 md:p-12 mb-16 shadow-2xl relative"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          {/* Accent decoration */}
-          <div className="absolute -top-3 -right-3 w-6 h-6 bg-accent" />
-          <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-accent" />
-          
-          <div className="max-w-xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-6 leading-tight">
-              Ready to Stop <br />
-              <span className="text-accent underline decoration-4 underline-offset-8">Doing Things Manually?</span>
-            </h2>
-            <p className="text-lg text-text-muted leading-relaxed font-medium mb-10">
-              Book a 30-minute Discovery Call. We&apos;ll map your top workflow bottleneck and show a realistic 14-day plan.
-            </p>
-            
-            <Button
-              href={bookingUrl}
-              variant="primary"
-              size="lg"
-              rightIcon
-              className="w-full text-xl font-black uppercase tracking-widest border-2 border-white rounded-none shadow-[4px_4px_0_theme(colors.white)] hover:shadow-[0_0_0_theme(colors.white)] hover:translate-x-[4px] hover:translate-y-[4px] transition-all bg-accent text-primary p-6"
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display text-white tracking-tight leading-tight">
+            Ready to Stop Doing Things
+            <br />
+            <span className="text-brand-400">Manually?</span>
+          </h2>
+          <p className="mt-5 text-base text-stone-400 max-w-md mx-auto leading-relaxed">
+            Book a 30-minute Discovery Call. We&apos;ll map your top workflow bottleneck and show a realistic 14-day plan.
+          </p>
+          <div className="mt-10">
+            <a
+              href="/book"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 text-sm font-semibold text-stone-900 bg-white rounded-full hover:bg-stone-50 transition-all hover:shadow-xl hover:shadow-white/10"
             >
-              Book Discovery Call
-            </Button>
+              Schedule a Call
+              <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="opacity-40 group-hover:translate-x-0.5 transition-transform">
+                <path d="M2.5 6H9.5M9.5 6L6.5 3M9.5 6L6.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

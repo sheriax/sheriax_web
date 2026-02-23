@@ -1,94 +1,55 @@
 import React from 'react';
 import Link from 'next/link';
-import { companyInfo, kizuAppUrl, sprintAppUrl } from '@/lib/constants';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-surface-dark text-text-muted py-16 px-6 lg:py-24 border-t border-border-dark">
-      <div className="max-w-7xl mx-auto flex flex-col items-center max-w-[1400px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 w-full">
-          {/* Brand Col */}
-          <div className="flex flex-col space-y-4">
-            <Link href="/" className="font-bold text-2xl tracking-tight text-white group w-fit">
-              Sheriax
-              <span className="inline-block w-2 text-accent">.</span>
-            </Link>
-            <p className="text-sm max-w-xs">{companyInfo.description}</p>
-            <div className="pt-4 flex items-center space-x-2">
-              <span className="text-sm">Made with 🧡 in India</span>
-              <span className="mx-2 h-1 w-1 bg-border rounded-full" />
-              <span className="text-xs bg-accent-light/10 border border-accent/20 px-2 py-1 rounded text-accent-light inline-block font-mono">
-                DPIIT Recognized
-              </span>
+    <footer className="border-t border-stone-100">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-6">
+          {/* Brand */}
+          <div className="col-span-2 sm:col-span-1">
+            <div className="flex items-center gap-1 mb-3">
+              <span className="text-base font-bold text-stone-900">Sheriax</span>
+              <span className="text-base font-bold text-brand-500">.</span>
             </div>
+            <p className="text-[13px] text-stone-500 leading-relaxed">
+              Made with 🧡 in India
+            </p>
+            <p className="text-[11px] text-stone-500 mt-1 tracking-wide">DPIIT Recognized Startup</p>
           </div>
 
-          {/* Core Products */}
-          <div className="flex flex-col space-y-4">
-            <h4 className="text-white font-semibold uppercase tracking-wider text-xs">Products</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href={kizuAppUrl} className="text-sm hover:text-white transition-colors">
-                  Kizu
-                </Link>
-              </li>
-              <li>
-                <Link href={sprintAppUrl} className="text-sm hover:text-white transition-colors">
-                  Sprint Studio
-                </Link>
-              </li>
+          {/* Products */}
+          <div>
+            <h4 className="text-[10px] font-semibold text-stone-500 uppercase tracking-[0.15em] mb-4">Products</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/kizu" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">Kizu</Link></li>
+              <li><Link href="/sprint" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">Sprint Studio</Link></li>
             </ul>
           </div>
 
           {/* Company */}
-          <div className="flex flex-col space-y-4">
-            <h4 className="text-white font-semibold uppercase tracking-wider text-xs">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-sm hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
+          <div>
+            <h4 className="text-[10px] font-semibold text-stone-500 uppercase tracking-[0.15em] mb-4">Company</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/about" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Socials / Legal */}
-          <div className="flex flex-col space-y-4">
-            <h4 className="text-white font-semibold uppercase tracking-wider text-xs">Legal & Socials</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/privacy" className="text-sm hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <a 
-                  href={companyInfo.socials.linkedin} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="text-sm hover:text-white transition-colors block pt-2"
-                >
-                  LinkedIn↗
-                </a>
-              </li>
+          {/* Legal */}
+          <div>
+            <h4 className="text-[10px] font-semibold text-stone-500 uppercase tracking-[0.15em] mb-4">Legal</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/privacy" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">Privacy</Link></li>
+              <li><Link href="/terms" className="text-[13px] text-stone-600 hover:text-stone-900 transition-colors">Terms</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-border-dark w-full mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0 text-text-muted/60">
-          <p>© {currentYear} {companyInfo.name}. All rights reserved.</p>
+        <div className="mt-12 pt-6 border-t border-stone-100 text-center">
+          <p className="text-[11px] text-stone-500 tracking-wide">&copy; {currentYear} Sheriax Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,71 +1,67 @@
-import React from 'react';
 import { Metadata } from 'next';
-import { Badge } from '@/components/shared/Badge';
-import { Button } from '@/components/shared/Button';
-import { Card } from '@/components/shared/Card';
-import { kizuAppUrl } from '@/lib/constants';
+import { Badge, Button, Card, SectionHeader } from '@sheriax/ui';
 
 export const metadata: Metadata = {
   title: 'Kizu — AI Financial Recovery',
-  description: 'AI-powered financial recovery app. Scans receipts, detects money leaks, and guides you to financial wellness.',
+  description: 'Kizu uses AI to scan your receipts, detect money leaks, and guide you to financial wellness.',
 };
 
+const features = [
+  {
+    title: 'Receipt Scanning',
+    description: 'AI-powered receipt scanning that extracts and categorizes your spending automatically.',
+  },
+  {
+    title: 'Wound Detection',
+    description: 'Identifies financial wounds — recurring leaks, overspending patterns, and missed savings.',
+  },
+  {
+    title: 'Health Score',
+    description: 'Track your financial health score over time as you heal your spending habits.',
+  },
+];
+
 export default function KizuPage() {
-  const features = [
-    {
-      title: 'Receipt Scanning',
-      description: 'Automatically extract line items and categorize expenses with unmatched AI precision.',
-    },
-    {
-      title: 'Wound Detection',
-      description: 'Identify hidden subscriptions and money leaks bleeding your account dry.',
-    },
-    {
-      title: 'Health Score',
-      description: 'Get actionable insights and a daily financial health score to stay on track.',
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-surface py-24 md:py-32">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="w-20 h-20 mx-auto rounded-2xl bg-success/10 border border-success/20 flex items-center justify-center mb-10 shadow-lg shadow-success/10">
-          <svg className="w-10 h-10 text-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-32 pb-20 sm:pt-40 sm:pb-28">
+
+        {/* Hero */}
+        <div className="max-w-3xl">
+          <Badge variant="success">Launching 2026</Badge>
+          <h1 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-display text-stone-900 tracking-tight leading-[1.1]">
+            Kizu — Heal Your Financial Wounds
+          </h1>
+          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
+            Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because we believe every financial wound — 
+            whether it&apos;s hidden fees, forgotten subscriptions, or poor spending habits — can be healed with the right 
+            care and attention.
+          </p>
+          <p className="mt-4 text-base text-stone-600 leading-relaxed">
+            Built by Sheriax Solutions, Kizu combines our expertise in AI and thoughtful design to create a financial
+            companion that truly understands your needs.
+          </p>
         </div>
 
-        <Badge variant="success" className="mb-6 animate-pulse">
-          Launching 2026
-        </Badge>
-        
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-primary mb-6">
-          Kizu — Heal Your <br className="hidden md:block"/> Financial Wounds
-        </h1>
-        
-        <p className="text-xl text-text-muted font-light mb-16 leading-relaxed max-w-2xl mx-auto">
-          We built Kizu to stop the bleeding. It’s an AI-powered financial recovery system that scans your receipts, spots your money leaks, and coaches you to a healthier bank balance.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {features.map((feature) => (
-            <Card key={feature.title} className="text-left bg-transparent border-border/60 hover:border-success/30 transition-colors">
-              <h3 className="font-bold text-lg text-primary mb-2 flex items-center">
-                <span className="w-2 h-2 rounded-full bg-success mr-2 block"/>
-                {feature.title}
-              </h3>
-              <p className="text-text-muted text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </Card>
-          ))}
+        {/* Features */}
+        <div className="mt-20">
+          <SectionHeader label="Features" title="How Kizu Works" />
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+            {features.map((feature) => (
+              <Card key={feature.title} hover>
+                <h3 className="text-base font-bold text-stone-900">{feature.title}</h3>
+                <p className="mt-2 text-sm text-stone-600 leading-relaxed">{feature.description}</p>
+              </Card>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <Button href={kizuAppUrl} variant="primary" size="lg" className="w-full sm:w-auto bg-success hover:bg-success/90">
-            Visit kizu.in <span className="ml-2 font-mono opacity-60">↗</span>
+        {/* CTA */}
+        <div className="mt-16 flex flex-col sm:flex-row gap-3">
+          <Button href="https://kizu.in" variant="primary" size="lg" rightIcon>
+            Visit kizu.in
           </Button>
-          <Button href={`${kizuAppUrl}/waitlist`} variant="secondary" size="lg" className="w-full sm:w-auto">
+          <Button href="https://kizu.in/#waitlist" variant="secondary" size="lg">
             Join the Waitlist
           </Button>
         </div>

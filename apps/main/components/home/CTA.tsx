@@ -2,52 +2,39 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '../shared/Button';
-import { sprintAppUrl } from '@/lib/constants';
 
 export function CTA() {
   return (
-    <section className="py-24 sm:py-32 bg-surface-dark border-t border-border-dark relative overflow-hidden flex justify-center">
-      {/* Abstract light leak */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent opacity-10 blur-[150px] rounded-full pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-[-100px] left-[-100px] w-80 h-80 bg-blue-500 opacity-5 blur-[120px] rounded-full pointer-events-none mix-blend-screen" />
+    <section className="relative overflow-hidden bg-stone-900">
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 text-center z-10 relative">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-28 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col items-center"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-6">
-            Have a workflow problem? <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">
-              Let's sprint.
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-white tracking-tight leading-tight">
+            Have a workflow problem?
+            <br />
+            <span className="text-brand-400">Let&apos;s sprint.</span>
           </h2>
-          
-          <p className="text-lg md:text-xl font-light text-text-muted max-w-2xl mb-12">
-            We run fixed-scope 2-week automation sprints for high-performing agencies. Stop wasting hours on manual repetition.
+          <p className="mt-5 text-base sm:text-lg text-stone-400 max-w-lg mx-auto leading-relaxed">
+            We run fixed-scope 2-week automation sprints for agencies.
           </p>
-          
-          <Button
-            href={`${sprintAppUrl}/book`}
-            variant="primary"
-            size="lg"
-            rightIcon
-            className="group px-8 relative overflow-hidden bg-white text-surface-dark hover:bg-surface"
-          >
-            <span className="relative z-10 flex items-center font-bold">
+          <div className="mt-10">
+            <a
+              href="https://sprint.sheriax.com/book"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 text-sm font-semibold text-stone-900 bg-white rounded-full hover:bg-stone-50 transition-all hover:shadow-xl hover:shadow-white/10"
+            >
               Book a Discovery Call
-              <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </span>
-            <div className="absolute inset-x-0 bottom-0 h-[2px] bg-accent group-hover:h-full transition-all duration-300 z-0 opacity-20" />
-          </Button>
-
-          <p className="mt-8 text-xs font-mono text-text-muted/60 uppercase tracking-widest">
-            30 minute intro · No commitment required
-          </p>
+              <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="opacity-40 group-hover:translate-x-0.5 transition-transform">
+                <path d="M2.5 6H9.5M9.5 6L6.5 3M9.5 6L6.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

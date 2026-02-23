@@ -1,8 +1,8 @@
-/* apps/main — sheriax.com */
+/* Sheriax Shared Design Tokens — Refined Editorial Minimalism */
 @import "tailwindcss";
 
 @theme {
-  /* Brand */
+  /* Brand — warm coral with depth */
   --color-brand-50: #FFF7F3;
   --color-brand-100: #FFEDE5;
   --color-brand-200: #FFD7C7;
@@ -14,48 +14,36 @@
   --color-brand-800: #9F3D17;
   --color-brand-900: #7A3016;
 
-  /* Neutrals — warm-tinted */
+  /* Neutrals — warm-tinted for editorial feel */
   --color-ink: #1A1A1A;
   --color-muted: #71717A;
   --color-soft: #FAFAF9;
   --color-line: #E7E5E4;
   --color-surface: #F5F5F4;
 
-  /* Fonts — Geist */
+  /* Fonts — Geist (same as live sheriax.com) */
   --font-display: var(--font-geist-sans), system-ui, sans-serif;
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
 }
 
+/* Base resets */
 body {
-  color: #1A1A1A;
+  color: var(--color-ink);
   background-color: #FEFEFE;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Grain overlay */
+/* Grain overlay utility */
 .grain::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.02;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 128px;
-}
-
-/* Gradient text utility */
-.text-gradient {
-  background: linear-gradient(135deg, #FF6B35 0%, #E85A24 50%, #C44A1A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Glow accent */
-.glow-brand {
-  box-shadow: 0 0 60px -12px rgba(255, 107, 53, 0.25);
 }

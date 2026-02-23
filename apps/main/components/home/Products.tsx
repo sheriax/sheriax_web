@@ -1,126 +1,99 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Card } from '../shared/Card';
-import { Badge } from '../shared/Badge';
-import { Button } from '../shared/Button';
-import { SectionHeader } from '../shared/SectionHeader';
-import { kizuAppUrl, sprintAppUrl } from '@/lib/constants';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const products = [
   {
-    id: 'kizu',
     title: 'Kizu',
     description: 'AI-powered financial recovery. Scans receipts, detects money leaks, and guides you to financial wellness.',
     badge: 'Launching 2026',
-    badgeVariant: 'accent' as const,
-    link: '/kizu',
-    linkText: 'Learn more',
-    icon: (
-      <div className="w-12 h-12 rounded-xl bg-surface-dark border border-border-dark flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-500 ease-out z-10 relative">
-        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-        </svg>
-      </div>
-    ),
-    color: 'group-hover:bg-accent/5',
+    badgeColor: 'bg-emerald-50 text-emerald-600 border-emerald-100',
+    href: '/kizu',
+    linkLabel: 'Learn more',
+    gradient: 'from-emerald-50/50 to-transparent',
+    icon: '/images/kizu/app_logo_transparent.png',
   },
   {
-    id: 'sprint',
     title: 'Sprint Studio',
     description: 'Fixed-scope AI automation sprints for agencies. Automate your delivery workflows in 14 days.',
     badge: 'Taking Clients',
-    badgeVariant: 'success' as const,
-    link: sprintAppUrl,
-    linkText: 'View offers',
-    icon: (
-      <div className="w-12 h-12 rounded-xl bg-surface-dark border border-border-dark flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-500 ease-out z-10 relative">
-        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
-      </div>
-    ),
-    color: 'group-hover:bg-success/5',
-  }
+    badgeColor: 'bg-brand-50 text-brand-600 border-brand-100',
+    href: 'https://sprint.sheriax.com',
+    linkLabel: 'View offers',
+    gradient: 'from-brand-50/50 to-transparent',
+    icon: null,
+  },
 ];
 
 export function Products() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
-  };
-
   return (
-    <section id="products" className="py-24 sm:py-32 bg-surface relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="products" className="relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-stone-50/80 to-white" />
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const }}
+          className="text-center mb-16"
         >
-          <SectionHeader
-            label="What We Build"
-            title="Two focused offerings."
-            description="We split our focus between our flagship AI consumer product and specialized automation sprints for high-performing agencies."
-            align="left"
-          />
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">What We Build</span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight">Products</h2>
+          <p className="mt-3 text-base text-stone-600 max-w-lg mx-auto">
+            We ship products that automate real workflows and solve hard problems.
+          </p>
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: '-50px' }}
-        >
-          {products.map((product) => (
-            <motion.div key={product.id} variants={item}>
-              <Card 
-                hover 
-                className={`h-full group flex flex-col justify-between transition-colors duration-500 border-border/60 ${product.color}`}
-              >
-                <div>
-                  <div className="flex justify-between items-start">
-                    {product.icon}
-                    <Badge variant={product.badgeVariant} className="font-mono shadow-sm">
-                      {product.badge}
-                    </Badge>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {products.map((product, i) => (
+            <motion.div
+              key={product.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.12, ease: [0.25, 0.4, 0.25, 1] as const }}
+            >
+              <Link href={product.href} className="block group">
+                <div className={`relative overflow-hidden rounded-2xl border border-stone-200/60 bg-white p-7 sm:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-stone-900/[0.04] hover:border-stone-300/60 hover:-translate-y-0.5`}>
+                  {/* Subtle gradient top */}
+                  <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${product.gradient} pointer-events-none`} />
+                  
+                  <div className="relative">
+                    <div className="flex items-start gap-4">
+                      {/* Product icon */}
+                      {product.icon ? (
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-100/60 p-1.5 shadow-sm">
+                          <Image src={product.icon} alt={product.title} width={36} height={36} />
+                        </div>
+                      ) : (
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-brand-50 to-brand-100/50 border border-brand-100/60 flex items-center justify-center shadow-sm">
+                          <svg className="w-6 h-6 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                          </svg>
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <span className={`inline-flex px-2.5 py-1 text-[10px] font-semibold tracking-wider uppercase rounded-full border ${product.badgeColor}`}>
+                          {product.badge}
+                        </span>
+                        <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">{product.title}</h3>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-[15px] text-stone-600 leading-relaxed">{product.description}</p>
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 group-hover:gap-2.5 transition-all">
+                      {product.linkLabel}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">
-                    {product.title}
-                  </h3>
-                  <p className="text-text-muted leading-relaxed max-w-sm">
-                    {product.description}
-                  </p>
                 </div>
-                
-                <div className="mt-8 pt-8 border-t border-border/50 flex justify-start">
-                  <Button
-                    href={product.link}
-                    variant="ghost"
-                    size="sm"
-                    rightIcon
-                    className="px-0 text-primary hover:text-accent font-medium group-hover:translate-x-2 transition-transform"
-                  >
-                    {product.linkText}
-                  </Button>
-                </div>
-              </Card>
+              </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,59 +1,120 @@
-import React from 'react';
 import { Metadata } from 'next';
-import { SectionHeader } from '@/components/shared/SectionHeader';
 
 export const metadata: Metadata = {
-  title: 'About | Sheriax',
-  description: 'Built in Chennai by Youhana Sheriff. The story of Sheriax Solutions.',
+  title: 'About',
 };
 
+const team = [
+  { name: 'Youhana Sheriff', role: 'Founder & CEO', line: 'Building AI products from Chennai for the world.' },
+  { name: 'Alamur Rahman', role: 'CTO', line: 'Engineering the systems that power everything we ship.' },
+  { name: 'Nusrath', role: 'CMO', line: 'Driving go-to-market strategy and brand presence.' },
+];
+
 export default function AboutPage() {
-  const team = [
-    { name: 'Youhana Sheriff', role: 'Founder & CEO', tag: 'Building AI products from Chennai for the world.' },
-    { name: 'Nusrath', role: 'CMO', tag: 'Architecting narrative and market presence.' },
-  ];
-
   return (
-    <div className="min-h-screen bg-surface">
-      <div className="max-w-3xl mx-auto px-6 py-24 md:py-32">
-        <SectionHeader
-          label="Founder Story"
-          title="Building from Chennai for the world."
-          align="left"
-        />
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-32 pb-20 sm:pt-40 sm:pb-28">
 
-        <div className="prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-a:text-accent max-w-none mb-24 text-text-muted">
-          <p className="lead text-2xl font-light text-primary mb-8">
-            Sheriax started with a simple belief: most software is bloated, confusing, and doesn't actually solve the problem it was hired to do.
-          </p>
-          <p>
-            I'm Youhana Sheriff, and I started this company because I believe automation and AI shouldn't just be buzzwords thrown around in pitch decks. They should be invisible tools that remove friction from our daily lives.
-          </p>
-          <p>
-            When we build products—whether it's our flagship financial recovery tool, Kizu, or the intense 14-day automation sprints we run for agencies—our focus is always on the outcome. We don't ship "features"; we ship time saved, margins improved, and headaches eliminated. 
-          </p>
-          <p>
-            We're a small, concentrated team based out of Chennai, India. We operate on the thesis that small, dedicated pods can out-ship massive corporations by staying relentlessly focused on user reality instead of corporate bureaucracy. 
+        {/* Hero */}
+        <div className="max-w-3xl">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">About</span>
+          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight leading-[1.1]">
+            About Sheriax & Kizu
+          </h1>
+          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
+            Sheriax Solutions is a multi-disciplinary technology studio building delightful, future-ready products.
+            We blend AI, thoughtful design, and robust engineering to solve problems that matter.
           </p>
         </div>
 
-        <div className="py-16 border-t border-border">
-          <SectionHeader
-            label="The Team"
-            title="Small by design."
-            align="left"
-            className="mb-12"
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {team.map((member) => (
-              <div key={member.name} className="flex flex-col">
-                <div className="w-full aspect-square bg-surface-dark border border-border-dark rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center text-text-muted/20 font-mono text-xs">
-                  [Photo: {member.name}]
+        {/* Mission & Vision */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-stone-200/60 p-7 sm:p-8 bg-white">
+            <span className="text-[10px] font-semibold text-brand-500 tracking-widest uppercase">Mission</span>
+            <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">
+              Igniting Tomorrow&apos;s Marvels Through Revolutionary Tech Adventures
+            </h3>
+            <p className="mt-3 text-[15px] text-stone-600 leading-relaxed">
+              We embark on thrilling, creative tech adventures powered by AI and ML. Inspired by Doraemon, Wall‑E, Eva,
+              and Big Hero 6, our goal is to build magical, imaginative technology that delights.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-stone-200/60 p-7 sm:p-8 bg-white">
+            <span className="text-[10px] font-semibold text-brand-500 tracking-widest uppercase">Vision</span>
+            <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">
+              Crafting Tomorrow&apos;s Tech Ecosystem with Intuitive Brilliance
+            </h3>
+            <p className="mt-3 text-[15px] text-stone-600 leading-relaxed">
+              We envision a seamless and trustworthy tech ecosystem — smart, intuitive, and impactful. Drawing from
+              creativity, eco-consciousness, futuristic thinking, reliability, and team spirit.
+            </p>
+          </div>
+        </div>
+
+        {/* Our Story */}
+        <div className="mt-20 max-w-3xl">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">Our Story</span>
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">How it started</h2>
+          <div className="mt-6 space-y-5 text-[15px] text-stone-600 leading-[1.8]">
+            <p>
+              Sheriax started with a simple frustration: too much technology felt cold, complicated, and disconnected from
+              the people it was supposed to help. Youhana Sheriff founded the company in Chennai with a conviction that
+              technology should feel more like Doraemon pulling a gadget from his pocket — magical, personal, and genuinely useful.
+            </p>
+            <p>
+              The early days were spent building for clients — websites, mobile apps, AI prototypes. Every project taught us
+              something about what works and what doesn&apos;t. But the real turning point came when we stopped asking
+              &quot;what can we build for someone else?&quot; and started asking &quot;what should exist in the world?&quot;
+            </p>
+            <p>
+              That question led to Kizu. We saw friends and family bleeding money through forgotten subscriptions, hidden fees,
+              and spending habits they didn&apos;t even know they had. The name Kizu (傷) — Japanese for &quot;wound&quot; — felt right.
+              Financial wounds are real, they&apos;re personal, and they can be healed with the right care. So we set out to build
+              an AI companion that scans, detects, and heals.
+            </p>
+            <p>
+              Along the way, agencies kept asking us for help automating their own workflows. Rather than take on open-ended
+              consulting, we created Sprint Studio — fixed-scope, 2-week automation sprints with clear deliverables, pricing,
+              and handovers. No scope creep, no guesswork.
+            </p>
+            <p>
+              Today, Sheriax is a small team that ships real products. We&apos;re recognized by DPIIT as an innovative startup.
+              We operate from Chennai, serve clients across India and the UAE, and believe that the best technology is the kind
+              you barely notice — it just makes your life better.
+            </p>
+          </div>
+        </div>
+
+        {/* Kizu Story */}
+        <div className="mt-20 max-w-3xl">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-emerald-500">Product</span>
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">The Story of Kizu</h2>
+          <div className="mt-6 space-y-5 text-[15px] text-stone-600 leading-[1.8]">
+            <p>
+              Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because we believe every financial wound —
+              whether it&apos;s hidden fees, forgotten subscriptions, or poor spending habits — can be healed with the right
+              care and attention.
+            </p>
+            <p>
+              Built by Sheriax Solutions, Kizu combines our expertise in AI and thoughtful design to create a financial
+              companion that truly understands your needs.
+            </p>
+          </div>
+        </div>
+
+        {/* Team */}
+        <div className="mt-20">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">Team</span>
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">The people</h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {team.map((person) => (
+              <div key={person.name} className="rounded-2xl border border-stone-200/60 p-6 bg-white">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-stone-100 flex items-center justify-center mb-4">
+                  <span className="text-lg font-bold text-brand-600">{person.name[0]}</span>
                 </div>
-                <h3 className="font-bold text-2xl text-primary mb-1 tracking-tight">{member.name}</h3>
-                <p className="text-accent font-mono text-sm tracking-wider uppercase mb-3">{member.role}</p>
-                <p className="text-text-muted">{member.tag}</p>
+                <h3 className="text-base font-bold text-stone-900">{person.name}</h3>
+                <p className="text-[13px] text-stone-500 font-medium">{person.role}</p>
+                <p className="mt-2 text-[14px] text-stone-600 leading-relaxed">{person.line}</p>
               </div>
             ))}
           </div>

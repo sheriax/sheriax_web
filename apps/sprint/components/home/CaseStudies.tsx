@@ -2,61 +2,49 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Card, Badge, SectionHeader } from '@sheriax/ui';
 
 const cases = [
   {
-    tag: 'Education Workflow',
-    client: 'VIT Project',
+    type: 'Education Workflow',
+    title: 'VIT Project',
     description: 'Built and shipped a structured automation workflow that reduced manual back-and-forth in task tracking. Centralized intake, ownership, and execution visibility for faster coordination.',
   },
   {
-    tag: 'Ops Standardization',
-    client: 'Sheriax Internal',
+    type: 'Ops Standardization',
+    title: 'Sheriax Internal',
     description: 'Core repetitive operations standardized into repeatable automation pipelines. Improved response consistency, reduced avoidable misses, and created cleaner operating rhythm.',
   },
   {
-    tag: 'Government Workflow',
-    client: 'RFP Automation',
+    type: 'Government Workflow',
+    title: 'RFP Automation',
     description: 'Fragmented RFP response process converted into structured pipeline: requirement extraction, owner assignment, deadline triggers, and progress visibility.',
   },
 ];
 
 export function CaseStudies() {
   return (
-    <section className="py-24 sm:py-32 bg-surface border-t border-border">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 md:mb-24">
-          <span className="text-text-muted font-black tracking-[0.2em] uppercase text-sm mb-4 block">
-            Proof of Work
-          </span>
-          <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-[0.9] text-primary">
-            Real Results, <br className="hidden sm:block" /> Not Theory.
-          </h2>
-        </div>
+    <section className="bg-stone-50/50">
+      <div className="max-w-[1120px] mx-auto px-5 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <SectionHeader
+          label="Proof of Work"
+          title="Real Results, Not Theory"
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {cases.map((cs, i) => (
             <motion.div
-              key={cs.client}
-              initial={{ opacity: 0, y: 30 }}
+              key={cs.title}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="border border-border p-8 h-full flex flex-col hover:border-accent transition-colors duration-300 relative bg-white">
-                <div className="inline-flex items-center px-3 py-1 bg-border/50 text-text-muted font-black text-xs uppercase tracking-widest mb-6 w-fit group-hover:bg-accent/20 group-hover:text-accent transition-colors">
-                  {cs.client}
-                </div>
-                <h3 className="text-xl font-black uppercase tracking-tight text-primary mb-4 leading-none">
-                  {cs.tag}
-                </h3>
-                <p className="text-sm font-medium leading-relaxed text-text-muted">
-                  {cs.description}
-                </p>
-                <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-border group-hover:border-accent transition-colors" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-border group-hover:border-accent transition-colors" />
-              </div>
+              <Card hover className="h-full">
+                <Badge variant="default">{cs.type}</Badge>
+                <h3 className="mt-4 text-base font-bold text-stone-900">{cs.title}</h3>
+                <p className="mt-2 text-sm text-stone-600 leading-relaxed">{cs.description}</p>
+              </Card>
             </motion.div>
           ))}
         </div>

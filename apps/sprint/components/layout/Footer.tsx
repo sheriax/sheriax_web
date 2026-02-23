@@ -1,50 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
-import { companyInfo } from '@/lib/constants';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-surface-dark border-t-4 border-accent text-white py-16 px-6 relative overflow-hidden">
-      {/* Background graphic */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
-        <div className="absolute right-0 bottom-0 w-[50vw] h-[50vw] bg-accent blur-[200px] rounded-full mix-blend-screen" />
-      </div>
-
-      <div className="max-w-7xl mx-auto flex flex-col relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 w-full mb-16">
-          
-          <div className="flex flex-col space-y-4">
-            <Link href="/" className="font-black text-3xl uppercase tracking-tighter text-white">
-              Sheriax <span className="text-accent underline decoration-4 underline-offset-8">Sprint</span>
-            </Link>
-            <p className="text-sm font-mono tracking-widest text-text-muted mt-2">
-              MADE WITH DEDICATION IN INDIA
-            </p>
+    <footer className="bg-stone-900">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
+              <span className="text-lg font-bold text-white tracking-tight">Sheriax</span>
+              <span className="text-lg font-bold text-brand-500">.</span>
+            </div>
+            <span className="text-[11px] font-semibold text-stone-400 uppercase tracking-widest">Sprint Studio</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-wider text-text-muted">
-            <Link href="/#packages" className="hover:text-white hover:translate-x-1 transition-all">Sprint Offers</Link>
-            <Link href="/government" className="hover:text-accent hover:translate-x-1 transition-all">Government</Link>
-            <Link href="/case-studies" className="hover:text-white hover:translate-x-1 transition-all">Case Studies</Link>
-            <Link href="/#faq" className="hover:text-white hover:translate-x-1 transition-all">FAQ</Link>
-            <Link href="/privacy" className="hover:text-white hover:translate-x-1 transition-all text-xs opacity-60">Privacy</Link>
-            <Link href="/terms" className="hover:text-white hover:translate-x-1 transition-all text-xs opacity-60">Terms</Link>
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-sm text-stone-400">
+            <Link href="/" className="hover:text-white transition-colors">Sprint Home</Link>
+            <Link href="/india" className="hover:text-white transition-colors">India</Link>
+            <Link href="/uae" className="hover:text-white transition-colors">UAE</Link>
+            <Link href="/government" className="hover:text-white transition-colors">Government</Link>
+            <a href="https://sheriax.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">sheriax.com</a>
           </div>
-          
-          <div className="flex flex-col items-start md:items-end">
-            <a href={companyInfo.parentUrl} target="_blank" rel="noreferrer" className="text-xs font-mono group p-4 border border-border-dark/50 hover:bg-white/5 transition-colors">
-              <span className="block text-text-muted mb-1">A product of</span>
-              <span className="font-bold text-white group-hover:text-accent transition-colors">Sheriax Solutions ↗</span>
-            </a>
-          </div>
-
         </div>
 
-        <div className="border-t border-white/10 w-full pt-8 flex items-center justify-between text-xs font-mono text-text-muted/60">
-          <p>© {currentYear} {companyInfo.parentCompany}. All rights reserved.</p>
-          <p className="hidden md:block">sprint.sheriax.com</p>
+        <div className="mt-8 pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-500">
+          <p>&copy; {currentYear} Sheriax Solutions. All rights reserved.</p>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-stone-300 transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-stone-300 transition-colors">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>

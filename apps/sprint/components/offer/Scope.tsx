@@ -2,53 +2,43 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Card, SectionHeader } from '@sheriax/ui';
 
-interface ScopeProp {
-  items: {
-    num: string;
-    title: string;
-    description: string;
-  }[];
+interface ScopeItem {
+  num: string;
+  title: string;
+  description: string;
 }
 
-export function Scope({ items }: ScopeProp) {
-  return (
-    <section className="py-24 md:py-32 bg-surface text-primary relative z-10 border-t border-border">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="text-center md:text-left mb-16 md:mb-24 flex flex-col items-center">
-          <span className="text-accent font-black tracking-[0.2em] uppercase text-sm mb-4 block">
-            What You Get
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-primary">
-            Top 3 Automations.
-          </h2>
-        </div>
+interface ScopeProps {
+  items: ScopeItem[];
+}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+export function Scope({ items }: ScopeProps) {
+  return (
+    <section className="bg-white">
+      <div className="max-w-[1120px] mx-auto px-5 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <SectionHeader
+          label="What We Automate"
+          title="In-Scope Workstreams"
+        />
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="border border-border p-8 h-full flex flex-col bg-white hover:border-accent hover:-translate-y-2 transition-all duration-300 relative">
-                <div className="absolute top-0 right-0 bg-accent text-primary font-black uppercase tracking-widest px-4 py-1 text-xs -translate-y-1/2 translate-x-1/4 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
-                  Automation {item.num}
+              <Card hover className="h-full">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xs font-bold text-brand-600 bg-brand-50 rounded px-2 py-0.5">{item.num}</span>
+                  <h3 className="text-base font-bold text-gray-900">{item.title}</h3>
                 </div>
-                
-                <h3 className="text-2xl font-black uppercase tracking-tight text-primary mt-6 mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-base text-text-muted leading-relaxed font-medium">
-                  {item.description}
-                </p>
-                
-                <div className="absolute bottom-0 left-0 w-8 h-1 bg-border-dark group-hover:bg-accent group-hover:w-full transition-all duration-300" />
-              </div>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+              </Card>
             </motion.div>
           ))}
         </div>

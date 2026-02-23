@@ -1,7 +1,7 @@
 {
   "name": "sheriax-web",
   "private": true,
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.28.0",
   "engines": {
     "node": ">=22.0.0"
   },

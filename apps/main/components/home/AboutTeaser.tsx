@@ -2,59 +2,51 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '../shared/Button';
-import { SectionHeader } from '../shared/SectionHeader';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export function AboutTeaser() {
   return (
-    <section className="py-24 sm:py-32 bg-surface">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="order-2 lg:order-1 flex flex-col items-start"
-        >
-          <SectionHeader
-            label="About"
-            title="Built in Chennai by Youhana Sheriff"
-            description="Sheriax is driven by a belief that great software should feel inevitable. We don't just write code; we architect systems that automate the mundane, so humans can focus on what matters."
-            align="left"
-            className="mb-8"
-          />
-          <Button
-            href="/about"
-            variant="ghost"
-            rightIcon
-            className="group px-0 hover:bg-transparent"
+    <section className="relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+            className="max-w-xl"
           >
-            <span className="border-b border-primary/30 group-hover:border-primary pb-1 transition-colors font-semibold">
-              Read more about our story
-            </span>
-          </Button>
-        </motion.div>
+            <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">About</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-display text-stone-900 tracking-tight">
+              Built in Chennai <br className="hidden sm:block" />by Youhana Sheriff
+            </h2>
+            <p className="mt-5 text-base text-stone-600 leading-relaxed">
+              I started Sheriax because I believe technology should solve real problems, not just create more complexity.
+              We build focused AI products and run automation sprints for agencies who are tired of inefficient workflows.
+            </p>
+            <Link
+              href="/about"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors group"
+            >
+              Read the full story
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="order-1 lg:order-2 w-full aspect-square md:aspect-video lg:aspect-square bg-surface-dark dark:bg-border rounded-3xl overflow-hidden relative shadow-2xl shadow-accent/5 ring-1 ring-border-dark/10"
-        >
-          {/* Placeholder for founder image, styled to look premium even without image */}
-          <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 to-transparent z-10" />
-          <div className="absolute inset-0 flex items-center justify-center text-text-muted/20 font-mono text-sm">
-            [Founder Image Placeholder]
-          </div>
-          
-          <div className="absolute bottom-8 left-8 z-20">
-            <p className="text-white font-bold text-xl mb-1">Youhana Sheriff</p>
-            <p className="text-white/60 font-mono text-xs">Founder & CEO</p>
-          </div>
-        </motion.div>
-
+          {/* Decorative element */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hidden lg:block"
+          >
+            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-brand-100/60 via-brand-50/30 to-stone-50 border border-stone-200/40 flex items-center justify-center">
+              <span className="text-6xl font-display text-brand-500/30 select-none">S.</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
