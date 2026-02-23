@@ -29,15 +29,15 @@ export default function KizuPage() {
         {/* Hero */}
         <div className="max-w-3xl">
           <Badge variant="success">Launching 2026</Badge>
-          <h1 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-display text-stone-900 tracking-tight leading-[1.1]">
+          <h1 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-display text-zinc-900 tracking-tight leading-[1.1]">
             Kizu — Heal Your Financial Wounds
           </h1>
-          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
-            Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because we believe every financial wound — 
-            whether it&apos;s hidden fees, forgotten subscriptions, or poor spending habits — can be healed with the right 
+          <p className="mt-5 text-lg text-zinc-600 leading-relaxed">
+            Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because we believe every financial wound —
+            whether it&apos;s hidden fees, forgotten subscriptions, or poor spending habits — can be healed with the right
             care and attention.
           </p>
-          <p className="mt-4 text-base text-stone-600 leading-relaxed">
+          <p className="mt-4 text-base text-zinc-600 leading-relaxed">
             Built by Sheriax Solutions, Kizu combines our expertise in AI and thoughtful design to create a financial
             companion that truly understands your needs.
           </p>
@@ -49,8 +49,8 @@ export default function KizuPage() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
             {features.map((feature) => (
               <Card key={feature.title} hover>
-                <h3 className="text-base font-bold text-stone-900">{feature.title}</h3>
-                <p className="mt-2 text-sm text-stone-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-base font-bold text-zinc-900">{feature.title}</h3>
+                <p className="mt-2 text-sm text-zinc-600 leading-relaxed">{feature.description}</p>
               </Card>
             ))}
           </div>

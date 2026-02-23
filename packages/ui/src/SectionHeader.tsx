@@ -19,16 +19,16 @@ export function SectionHeader({
   return (
     <div className={cn(align === 'center' ? 'text-center' : 'text-left', className)}>
       {label && (
-        <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">
+        <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">
           {label}
         </span>
       )}
-      <h2 className="mt-3 text-3xl sm:text-4xl font-display text-stone-900 tracking-tight">
+      <h2 className="mt-3 text-3xl sm:text-[2.5rem] font-display text-zinc-900 tracking-[-0.03em]">
         {title}
       </h2>
       {description && (
         <p className={cn(
-          'mt-3 text-base text-stone-600',
+          'mt-3 text-base text-zinc-500',
           align === 'center' && 'max-w-lg mx-auto'
         )}>
           {description}

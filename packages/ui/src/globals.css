@@ -1,25 +1,30 @@
-/* Sheriax Shared Design Tokens — Refined Editorial Minimalism */
+/* Sheriax Shared Design Tokens — Bold Premium */
 @import "tailwindcss";
 
 @theme {
-  /* Brand — warm coral with depth */
-  --color-brand-50: #FFF7F3;
-  --color-brand-100: #FFEDE5;
-  --color-brand-200: #FFD7C7;
-  --color-brand-300: #FFB899;
-  --color-brand-400: #FF926B;
-  --color-brand-500: #FF6B35;
-  --color-brand-600: #E85A24;
-  --color-brand-700: #C44A1A;
-  --color-brand-800: #9F3D17;
-  --color-brand-900: #7A3016;
+  /* Brand — deep teal with depth */
+  --color-brand-50: #EEFBF9;
+  --color-brand-100: #D0F5EF;
+  --color-brand-200: #A3EBE0;
+  --color-brand-300: #6EDACE;
+  --color-brand-400: #3CC4B8;
+  --color-brand-500: #14B8A6;
+  --color-brand-600: #0D9488;
+  --color-brand-700: #0F766E;
+  --color-brand-800: #115E59;
+  --color-brand-900: #134E4A;
 
-  /* Neutrals — warm-tinted for editorial feel */
-  --color-ink: #1A1A1A;
+  /* Accent — violet for gradient energy */
+  --color-accent-400: #A78BFA;
+  --color-accent-500: #8B5CF6;
+  --color-accent-600: #7C3AED;
+
+  /* Neutrals — cool-tinted for premium feel */
+  --color-ink: #0F172A;
   --color-muted: #71717A;
-  --color-soft: #FAFAF9;
-  --color-line: #E7E5E4;
-  --color-surface: #F5F5F4;
+  --color-soft: #FAFBFC;
+  --color-line: #E4E4E7;
+  --color-surface: #F4F4F5;
 
   /* Fonts — Geist (same as live sheriax.com) */
   --font-display: var(--font-geist-sans), system-ui, sans-serif;
@@ -30,7 +35,7 @@
 /* Base resets */
 body {
   color: var(--color-ink);
-  background-color: #FEFEFE;
+  background-color: #FAFBFC;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -32,7 +32,7 @@ const products = [
 export function Products() {
   return (
     <section id="products" className="relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-stone-50/80 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-50/80 to-white" />
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,9 +41,9 @@ export function Products() {
           transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const }}
           className="text-center mb-16"
         >
-          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">What We Build</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight">Products</h2>
-          <p className="mt-3 text-base text-stone-600 max-w-lg mx-auto">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">What We Build</span>
+          <h2 className="mt-3 text-3xl sm:text-[2.5rem] font-bold text-zinc-900 tracking-[-0.03em]">Products</h2>
+          <p className="mt-3 text-base text-zinc-500 max-w-lg mx-auto">
             We ship products that automate real workflows and solve hard problems.
           </p>
         </motion.div>
@@ -58,10 +58,10 @@ export function Products() {
               transition={{ duration: 0.5, delay: i * 0.12, ease: [0.25, 0.4, 0.25, 1] as const }}
             >
               <Link href={product.href} className="block group">
-                <div className={`relative overflow-hidden rounded-2xl border border-stone-200/60 bg-white p-7 sm:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-stone-900/[0.04] hover:border-stone-300/60 hover:-translate-y-0.5`}>
+                <div className={`relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white p-7 sm:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-zinc-900/[0.06] hover:border-zinc-300/60 hover:-translate-y-0.5`}>
                   {/* Subtle gradient top */}
                   <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${product.gradient} pointer-events-none`} />
-                  
+
                   <div className="relative">
                     <div className="flex items-start gap-4">
                       {/* Product icon */}
@@ -80,10 +80,10 @@ export function Products() {
                         <span className={`inline-flex px-2.5 py-1 text-[10px] font-semibold tracking-wider uppercase rounded-full border ${product.badgeColor}`}>
                           {product.badge}
                         </span>
-                        <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">{product.title}</h3>
+                        <h3 className="mt-3 text-xl font-bold text-zinc-900 tracking-tight">{product.title}</h3>
                       </div>
                     </div>
-                    <p className="mt-4 text-[15px] text-stone-600 leading-relaxed">{product.description}</p>
+                    <p className="mt-4 text-[15px] text-zinc-600 leading-relaxed">{product.description}</p>
                     <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 group-hover:gap-2.5 transition-all">
                       {product.linkLabel}
                       <ArrowRight className="w-3.5 h-3.5" />

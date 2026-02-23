@@ -11,7 +11,7 @@ const stats = [
 
 export function Numbers() {
   return (
-    <section className="border-y border-stone-100">
+    <section className="border-y border-zinc-100">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12">
           {stats.map((stat, i) => (
@@ -23,10 +23,10 @@ export function Numbers() {
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
               className="text-center"
             >
-              <p className={`text-3xl sm:text-4xl font-bold tracking-tight ${stat.mono ? 'font-mono text-stone-900' : 'text-gradient'}`}>
+              <p className={`text-3xl sm:text-4xl font-bold tracking-tight ${stat.mono ? 'font-mono text-zinc-900' : 'text-gradient'}`}>
                 {stat.value}
               </p>
-              <p className="mt-1.5 text-[13px] text-stone-500 tracking-wide">{stat.label}</p>
+              <p className="mt-1.5 text-[13px] text-zinc-500 tracking-wide">{stat.label}</p>
             </motion.div>
           ))}
         </div>

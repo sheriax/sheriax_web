@@ -25,7 +25,7 @@ export function FAQ() {
           title="Frequently Asked Questions"
         />
 
-        <div className="mt-12 max-w-3xl mx-auto divide-y divide-stone-200">
+        <div className="mt-12 max-w-3xl mx-auto divide-y divide-zinc-200">
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
@@ -38,11 +38,11 @@ export function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between py-5 text-left group"
               >
-                <span className="text-sm sm:text-base font-semibold text-stone-900 pr-8 group-hover:text-brand-600 transition-colors">
+                <span className="text-sm sm:text-base font-semibold text-zinc-900 pr-8 group-hover:text-brand-600 transition-colors">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-4 h-4 text-stone-400 flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-4 h-4 text-zinc-400 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
                 />
@@ -52,7 +52,7 @@ export function FAQ() {
                   openIndex === i ? 'max-h-40 pb-5' : 'max-h-0'
                 }`}
               >
-                <p className="text-sm text-stone-600 leading-relaxed pr-12">
+                <p className="text-sm text-zinc-600 leading-relaxed pr-12">
                   {faq.answer}
                 </p>
               </div>

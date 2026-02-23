@@ -19,13 +19,13 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden min-h-[90vh] flex items-center">
       {/* Gradient mesh background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-50/60 via-white to-stone-50/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-50/60 via-white to-zinc-50/80" />
       <div className="absolute top-[-200px] right-[-100px] w-[700px] h-[700px] rounded-full bg-gradient-to-br from-brand-100/50 via-brand-50/30 to-transparent blur-3xl pointer-events-none" />
-      <div className="absolute bottom-[-100px] left-[-200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-stone-100/60 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[-100px] left-[-200px] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-zinc-100/60 to-transparent blur-3xl pointer-events-none" />
       {/* Decorative dots */}
       <div className="absolute top-32 right-20 w-2 h-2 rounded-full bg-brand-300/40 hidden lg:block" />
       <div className="absolute top-48 right-40 w-1.5 h-1.5 rounded-full bg-brand-200/50 hidden lg:block" />
-      <div className="absolute bottom-40 left-32 w-2 h-2 rounded-full bg-stone-300/30 hidden lg:block" />
+      <div className="absolute bottom-40 left-32 w-2 h-2 rounded-full bg-zinc-300/30 hidden lg:block" />
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-20 sm:py-0 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center">
@@ -37,7 +37,7 @@ export function Hero() {
           >
             {/* Badge */}
             <motion.div variants={fadeUp}>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-stone-500 bg-white/80 border border-stone-200/60 rounded-full shadow-sm">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-[11px] font-semibold tracking-widest uppercase text-zinc-500 bg-white/80 border border-zinc-200/60 rounded-full shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
                 DPIIT Recognized Startup
               </span>
@@ -46,7 +46,7 @@ export function Hero() {
             {/* Headline */}
             <motion.h1
               variants={fadeUp}
-              className="mt-8 text-[2.75rem] sm:text-[3.5rem] lg:text-[4.25rem] font-bold text-stone-900 leading-[1.05] tracking-tight"
+              className="mt-8 text-[3rem] sm:text-[4rem] lg:text-[5rem] font-bold text-zinc-900 leading-[1.0] tracking-[-0.04em]"
             >
               We build AI products <br className="hidden lg:block" />
               that{' '}
@@ -56,7 +56,7 @@ export function Hero() {
             {/* Subheading */}
             <motion.p
               variants={fadeUp}
-              className="mt-6 text-lg sm:text-xl text-stone-600 leading-relaxed max-w-xl"
+              className="mt-6 text-lg sm:text-xl text-zinc-600 leading-relaxed max-w-xl"
             >
               Sheriax is a product studio from Chennai. We design, build, and ship AI-powered products and automation systems.
             </motion.p>
@@ -65,7 +65,7 @@ export function Hero() {
             <motion.div variants={fadeUp} className="mt-10 flex flex-col sm:flex-row gap-3">
               <a
                 href="#products"
-                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-white bg-stone-900 rounded-full hover:bg-stone-800 transition-all hover:shadow-lg hover:shadow-stone-900/10"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-white bg-brand-600 rounded-full hover:bg-brand-500 transition-all hover:shadow-lg hover:shadow-brand-500/20"
               >
                 See Our Work
                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="opacity-60 group-hover:translate-x-0.5 transition-transform">
@@ -74,7 +74,7 @@ export function Hero() {
               </a>
               <a
                 href="https://sprint.sheriax.com"
-                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-stone-600 bg-white/80 border border-stone-200 rounded-full hover:border-stone-300 hover:bg-white transition-all"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-zinc-600 bg-white/80 border border-zinc-200 rounded-full hover:border-zinc-300 hover:bg-white transition-all"
               >
                 Work With Us
                 <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="opacity-40 group-hover:translate-x-0.5 transition-transform">
@@ -86,7 +86,7 @@ export function Hero() {
             {/* Subtext */}
             <motion.p
               variants={fadeUp}
-              className="mt-8 text-[13px] text-stone-500 tracking-wide"
+              className="mt-8 text-[13px] text-zinc-500 tracking-wide"
             >
               Currently building{' '}
               <span className="text-brand-500 font-medium">Kizu</span> — AI-powered financial recovery

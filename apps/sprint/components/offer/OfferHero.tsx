@@ -32,7 +32,7 @@ export function OfferHero({ badgeText, title, subtitle, highlightText, highlight
           <motion.h1
             {...fadeUp}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-[1.1]"
+            className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 tracking-tight leading-[1.1]"
           >
             {title}
           </motion.h1>
@@ -40,7 +40,7 @@ export function OfferHero({ badgeText, title, subtitle, highlightText, highlight
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-5 text-lg text-gray-500 leading-relaxed max-w-2xl"
+            className="mt-5 text-lg text-zinc-500 leading-relaxed max-w-2xl"
           >
             {subtitle}
           </motion.p>
@@ -48,11 +48,11 @@ export function OfferHero({ badgeText, title, subtitle, highlightText, highlight
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-5 sm:p-6 max-w-2xl"
+            className="mt-8 rounded-xl border border-zinc-200 bg-zinc-50 p-5 sm:p-6 max-w-2xl"
           >
             <div className="flex gap-3">
               {highlightIcon && <div className="flex-shrink-0 mt-0.5">{highlightIcon}</div>}
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{highlightText}</p>
+              <p className="text-sm sm:text-base text-zinc-700 leading-relaxed">{highlightText}</p>
             </div>
           </motion.div>
 

@@ -10,8 +10,8 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  default: 'bg-stone-100/80 text-stone-500 border-stone-200/60',
-  accent: 'bg-brand-50 text-brand-600 border-brand-100/80',
+  default: 'bg-zinc-100/80 text-zinc-500 border-zinc-200/60',
+  accent: 'bg-brand-50 text-brand-700 border-brand-200/60',
   success: 'bg-emerald-50 text-emerald-600 border-emerald-100/80',
   blue: 'bg-blue-50 text-blue-600 border-blue-100/80',
 };

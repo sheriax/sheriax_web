@@ -14,15 +14,15 @@ export default function RFPCaseStudy() {
     <>
       <article className="min-h-screen bg-white">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 pt-32 pb-20 sm:pt-40 sm:pb-28">
-          <Link href="/case-studies" className="inline-flex items-center gap-2 text-[13px] text-stone-500 hover:text-stone-700 transition-colors mb-10">
+          <Link href="/case-studies" className="inline-flex items-center gap-2 text-[13px] text-zinc-500 hover:text-zinc-700 transition-colors mb-10">
             <ArrowLeft className="w-3.5 h-3.5" /> All Case Studies
           </Link>
 
           <Badge variant="blue">Government Workflow</Badge>
-          <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight leading-[1.1]">
+          <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight leading-[1.1]">
             Structuring the RFP Response Process With AI-Assisted Automation
           </h1>
-          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
+          <p className="mt-5 text-lg text-zinc-600 leading-relaxed">
             Government RFP responses involve manual document parsing, fragmented owner assignment, and constant
             deadline anxiety. Here&apos;s how a structured automation pipeline makes the process repeatable and trackable.
           </p>
@@ -33,17 +33,17 @@ export default function RFPCaseStudy() {
               { value: 'AI', label: 'Requirement parsing' },
               { value: '100%', label: 'Audit coverage' },
             ].map((m) => (
-              <div key={m.label} className="text-center p-4 rounded-xl bg-stone-50 border border-stone-100">
-                <p className="text-2xl font-bold text-stone-900 font-mono">{m.value}</p>
-                <p className="mt-1 text-[12px] text-stone-500 tracking-wide">{m.label}</p>
+              <div key={m.label} className="text-center p-4 rounded-xl bg-zinc-50 border border-zinc-100">
+                <p className="text-2xl font-bold text-zinc-900 font-mono">{m.value}</p>
+                <p className="mt-1 text-[12px] text-zinc-500 tracking-wide">{m.label}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-14 space-y-10">
             <section>
-              <h2 className="text-lg font-bold text-stone-900 mb-3">The Problem</h2>
-              <div className="space-y-4 text-[15px] text-stone-600 leading-[1.8]">
+              <h2 className="text-lg font-bold text-zinc-900 mb-3">The Problem</h2>
+              <div className="space-y-4 text-[15px] text-zinc-600 leading-[1.8]">
                 <p>
                   Responding to government RFPs (Request for Proposals) is a high-stakes, deadline-driven process. The team
                   was handling it with a manual, document-first approach: someone would read through the 40-80 page RFP
@@ -61,8 +61,8 @@ export default function RFPCaseStudy() {
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-stone-900 mb-3">How Automation Solves This</h2>
-              <div className="space-y-4 text-[15px] text-stone-600 leading-[1.8]">
+              <h2 className="text-lg font-bold text-zinc-900 mb-3">How Automation Solves This</h2>
+              <div className="space-y-4 text-[15px] text-zinc-600 leading-[1.8]">
                 <p>
                   The answer is a 3-layer automation system that replaces manual parsing, coordination, and compliance
                   checking with structured pipelines:
@@ -71,7 +71,7 @@ export default function RFPCaseStudy() {
                   <li className="flex items-start gap-2.5">
                     <span className="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-blue-500" />
                     <span>
-                      <strong className="text-stone-800">Layer 1 — AI Requirement Extraction:</strong> Upload the RFP document (PDF or Word).
+                      <strong className="text-zinc-800">Layer 1 — AI Requirement Extraction:</strong> Upload the RFP document (PDF or Word).
                       An AI pipeline extracts individual requirements, categorizes them (technical, financial, compliance, narrative),
                       assigns priority levels, and outputs a structured requirements matrix — automatically. What typically takes a senior
                       team member 3-4 hours becomes a 5-minute review.
@@ -80,7 +80,7 @@ export default function RFPCaseStudy() {
                   <li className="flex items-start gap-2.5">
                     <span className="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-blue-500" />
                     <span>
-                      <strong className="text-stone-800">Layer 2 — Assignment & Tracking:</strong> Each extracted requirement gets auto-assigned
+                      <strong className="text-zinc-800">Layer 2 — Assignment & Tracking:</strong> Each extracted requirement gets auto-assigned
                       to the relevant team member based on expertise area. Deadlines cascade backwards from the submission date.
                       The system sends reminders, flags overdue items, and shows a real-time progress dashboard.
                     </span>
@@ -88,7 +88,7 @@ export default function RFPCaseStudy() {
                   <li className="flex items-start gap-2.5">
                     <span className="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-blue-500" />
                     <span>
-                      <strong className="text-stone-800">Layer 3 — Compliance Checklist & Audit:</strong> Before final submission, the system
+                      <strong className="text-zinc-800">Layer 3 — Compliance Checklist & Audit:</strong> Before final submission, the system
                       runs a compliance check — verifying that every extracted requirement has a corresponding response section, all
                       mandatory documents are attached, and formatting standards are met. Every action is logged for a full audit trail.
                     </span>
@@ -103,8 +103,8 @@ export default function RFPCaseStudy() {
             </section>
 
             <section>
-              <h2 className="text-lg font-bold text-stone-900 mb-3">The Impact</h2>
-              <div className="space-y-4 text-[15px] text-stone-600 leading-[1.8]">
+              <h2 className="text-lg font-bold text-zinc-900 mb-3">The Impact</h2>
+              <div className="space-y-4 text-[15px] text-zinc-600 leading-[1.8]">
                 <p>
                   Teams that implement this kind of pipeline typically cut RFP response turnaround by 50%. The requirement
                   extraction phase — usually the bottleneck — goes from half a day of manual work to minutes. Assignment
@@ -124,8 +124,8 @@ export default function RFPCaseStudy() {
             </section>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-stone-100">
-            <p className="text-base font-bold text-stone-900 mb-5">Struggling with government workflows?</p>
+          <div className="mt-14 pt-8 border-t border-zinc-100">
+            <p className="text-base font-bold text-zinc-900 mb-5">Struggling with government workflows?</p>
             <div className="flex gap-3">
               <Button href="/book" variant="primary" size="md" rightIcon>
                 Book a Discovery Call

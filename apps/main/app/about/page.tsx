@@ -17,11 +17,11 @@ export default function AboutPage() {
 
         {/* Hero */}
         <div className="max-w-3xl">
-          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">About</span>
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight leading-[1.1]">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">About</span>
+          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 tracking-tight leading-[1.1]">
             About Sheriax & Kizu
           </h1>
-          <p className="mt-5 text-lg text-stone-600 leading-relaxed">
+          <p className="mt-5 text-lg text-zinc-600 leading-relaxed">
             Sheriax Solutions is a multi-disciplinary technology studio building delightful, future-ready products.
             We blend AI, thoughtful design, and robust engineering to solve problems that matter.
           </p>
@@ -29,22 +29,22 @@ export default function AboutPage() {
 
         {/* Mission & Vision */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-stone-200/60 p-7 sm:p-8 bg-white">
-            <span className="text-[10px] font-semibold text-brand-500 tracking-widest uppercase">Mission</span>
-            <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">
+          <div className="rounded-2xl border border-zinc-200/60 p-7 sm:p-8 bg-white">
+            <span className="text-[10px] font-semibold text-brand-600 tracking-widest uppercase">Mission</span>
+            <h3 className="mt-3 text-xl font-bold text-zinc-900 tracking-tight">
               Igniting Tomorrow&apos;s Marvels Through Revolutionary Tech Adventures
             </h3>
-            <p className="mt-3 text-[15px] text-stone-600 leading-relaxed">
+            <p className="mt-3 text-[15px] text-zinc-600 leading-relaxed">
               We embark on thrilling, creative tech adventures powered by AI and ML. Inspired by Doraemon, Wall‑E, Eva,
               and Big Hero 6, our goal is to build magical, imaginative technology that delights.
             </p>
           </div>
-          <div className="rounded-2xl border border-stone-200/60 p-7 sm:p-8 bg-white">
-            <span className="text-[10px] font-semibold text-brand-500 tracking-widest uppercase">Vision</span>
-            <h3 className="mt-3 text-xl font-bold text-stone-900 tracking-tight">
+          <div className="rounded-2xl border border-zinc-200/60 p-7 sm:p-8 bg-white">
+            <span className="text-[10px] font-semibold text-brand-600 tracking-widest uppercase">Vision</span>
+            <h3 className="mt-3 text-xl font-bold text-zinc-900 tracking-tight">
               Crafting Tomorrow&apos;s Tech Ecosystem with Intuitive Brilliance
             </h3>
-            <p className="mt-3 text-[15px] text-stone-600 leading-relaxed">
+            <p className="mt-3 text-[15px] text-zinc-600 leading-relaxed">
               We envision a seamless and trustworthy tech ecosystem — smart, intuitive, and impactful. Drawing from
               creativity, eco-consciousness, futuristic thinking, reliability, and team spirit.
             </p>
@@ -53,9 +53,9 @@ export default function AboutPage() {
 
         {/* Our Story */}
         <div className="mt-20 max-w-3xl">
-          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">Our Story</span>
-          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">How it started</h2>
-          <div className="mt-6 space-y-5 text-[15px] text-stone-600 leading-[1.8]">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">Our Story</span>
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">How it started</h2>
+          <div className="mt-6 space-y-5 text-[15px] text-zinc-600 leading-[1.8]">
             <p>
               Sheriax started with a simple frustration: too much technology felt cold, complicated, and disconnected from
               the people it was supposed to help. Youhana Sheriff founded the company in Chennai with a conviction that
@@ -88,8 +88,8 @@ export default function AboutPage() {
         {/* Kizu Story */}
         <div className="mt-20 max-w-3xl">
           <span className="text-[11px] font-semibold tracking-widest uppercase text-emerald-500">Product</span>
-          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">The Story of Kizu</h2>
-          <div className="mt-6 space-y-5 text-[15px] text-stone-600 leading-[1.8]">
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">The Story of Kizu</h2>
+          <div className="mt-6 space-y-5 text-[15px] text-zinc-600 leading-[1.8]">
             <p>
               Kizu (傷) means &quot;wound&quot; in Japanese. We chose this name because we believe every financial wound —
               whether it&apos;s hidden fees, forgotten subscriptions, or poor spending habits — can be healed with the right
@@ -104,17 +104,17 @@ export default function AboutPage() {
 
         {/* Team */}
         <div className="mt-20">
-          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">Team</span>
-          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">The people</h2>
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">Team</span>
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-zinc-900 tracking-tight">The people</h2>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
             {team.map((person) => (
-              <div key={person.name} className="rounded-2xl border border-stone-200/60 p-6 bg-white">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-stone-100 flex items-center justify-center mb-4">
+              <div key={person.name} className="rounded-2xl border border-zinc-200/60 p-6 bg-white">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-zinc-100 flex items-center justify-center mb-4">
                   <span className="text-lg font-bold text-brand-600">{person.name[0]}</span>
                 </div>
-                <h3 className="text-base font-bold text-stone-900">{person.name}</h3>
-                <p className="text-[13px] text-stone-500 font-medium">{person.role}</p>
-                <p className="mt-2 text-[14px] text-stone-600 leading-relaxed">{person.line}</p>
+                <h3 className="text-base font-bold text-zinc-900">{person.name}</h3>
+                <p className="text-[13px] text-zinc-500 font-medium">{person.role}</p>
+                <p className="mt-2 text-[14px] text-zinc-600 leading-relaxed">{person.line}</p>
               </div>
             ))}
           </div>

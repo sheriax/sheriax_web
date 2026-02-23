@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export function BookCTA() {
   return (
-    <section className="relative overflow-hidden bg-stone-900">
+    <section className="relative overflow-hidden bg-[#0F172A]">
       {/* Ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand-500/15 blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-28 text-center">
         <motion.div
@@ -21,13 +21,13 @@ export function BookCTA() {
             <br />
             <span className="text-brand-400">Manually?</span>
           </h2>
-          <p className="mt-5 text-base text-stone-400 max-w-md mx-auto leading-relaxed">
+          <p className="mt-5 text-base text-zinc-400 max-w-md mx-auto leading-relaxed">
             Book a 30-minute Discovery Call. We&apos;ll map your top workflow bottleneck and show a realistic 14-day plan.
           </p>
           <div className="mt-10">
             <a
               href="/book"
-              className="group inline-flex items-center gap-2.5 px-8 py-4 text-sm font-semibold text-stone-900 bg-white rounded-full hover:bg-stone-50 transition-all hover:shadow-xl hover:shadow-white/10"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 text-sm font-semibold text-zinc-900 bg-white rounded-full hover:bg-zinc-50 transition-all hover:shadow-xl hover:shadow-white/10"
             >
               Schedule a Call
               <svg width="14" height="14" viewBox="0 0 12 12" fill="none" className="opacity-40 group-hover:translate-x-0.5 transition-transform">

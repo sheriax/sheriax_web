@@ -15,20 +15,20 @@ export function LegalPage({ markdown }: LegalPageProps) {
           <Markdown
             components={{
               h1: ({ children }) => (
-                <h1 className="text-3xl sm:text-4xl font-display font-bold text-stone-900 tracking-tight mb-2">{children}</h1>
+                <h1 className="text-3xl sm:text-4xl font-display font-bold text-zinc-900 tracking-tight mb-2">{children}</h1>
               ),
               h2: ({ children }) => (
-                <h2 className="text-lg font-semibold text-stone-900 mt-10 mb-3">{children}</h2>
+                <h2 className="text-lg font-semibold text-zinc-900 mt-10 mb-3">{children}</h2>
               ),
               p: ({ children }) => (
-                <p className="text-[15px] text-stone-600 leading-relaxed mt-3">{children}</p>
+                <p className="text-[15px] text-zinc-600 leading-relaxed mt-3">{children}</p>
               ),
               ul: ({ children }) => (
                 <ul className="mt-3 space-y-2">{children}</ul>
               ),
               li: ({ children }) => (
-                <li className="flex gap-2.5 text-[15px] text-stone-600 leading-relaxed">
-                  <span className="flex-shrink-0 mt-2 w-1 h-1 rounded-full bg-stone-400" />
+                <li className="flex gap-2.5 text-[15px] text-zinc-600 leading-relaxed">
+                  <span className="flex-shrink-0 mt-2 w-1 h-1 rounded-full bg-zinc-400" />
                   <span>{children}</span>
                 </li>
               ),
@@ -38,7 +38,7 @@ export function LegalPage({ markdown }: LegalPageProps) {
                 </a>
               ),
               strong: ({ children }) => (
-                <strong className="font-semibold text-stone-800">{children}</strong>
+                <strong className="font-semibold text-zinc-800">{children}</strong>
               ),
             }}
           >

@@ -32,7 +32,7 @@ const cases = [
 
 export function CaseStudies() {
   return (
-    <section className="bg-stone-50/50">
+    <section className="bg-zinc-50/50">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-20 sm:py-24">
         <SectionHeader
           label="Proof of Work"
@@ -51,10 +51,10 @@ export function CaseStudies() {
               <Link href={`/case-studies/${cs.slug}`} className="block group h-full">
                 <Card hover className="h-full flex flex-col">
                   <Badge variant="default">{cs.type}</Badge>
-                  <h3 className="mt-4 text-base font-bold text-stone-900">{cs.title}</h3>
-                  <p className="mt-2 text-sm text-stone-600 leading-relaxed flex-1">{cs.description}</p>
-                  <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-[12px] font-medium text-stone-500 bg-stone-50 px-2 py-0.5 rounded">{cs.metric}</span>
+                  <h3 className="mt-4 text-base font-bold text-zinc-900">{cs.title}</h3>
+                  <p className="mt-2 text-sm text-zinc-600 leading-relaxed flex-1">{cs.description}</p>
+                  <div className="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between">
+                    <span className="text-[12px] font-medium text-zinc-500 bg-zinc-50 px-2 py-0.5 rounded">{cs.metric}</span>
                     <span className="text-[13px] font-semibold text-brand-600 group-hover:gap-2 inline-flex items-center gap-1 transition-all">
                       Read <ArrowRight className="w-3 h-3" />
                     </span>

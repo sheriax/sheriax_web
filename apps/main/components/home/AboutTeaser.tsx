@@ -17,11 +17,11 @@ export function AboutTeaser() {
             transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
             className="max-w-xl"
           >
-            <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-500">About</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-display text-stone-900 tracking-tight">
+            <span className="text-[11px] font-semibold tracking-widest uppercase text-brand-600">About</span>
+            <h2 className="mt-3 text-3xl sm:text-[2.5rem] font-display text-zinc-900 tracking-[-0.03em]">
               Built in Chennai <br className="hidden sm:block" />by Youhana Sheriff
             </h2>
-            <p className="mt-5 text-base text-stone-600 leading-relaxed">
+            <p className="mt-5 text-base text-zinc-600 leading-relaxed">
               I started Sheriax because I believe technology should solve real problems, not just create more complexity.
               We build focused AI products and run automation sprints for agencies who are tired of inefficient workflows.
             </p>
@@ -42,7 +42,7 @@ export function AboutTeaser() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden lg:block"
           >
-            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-brand-100/60 via-brand-50/30 to-stone-50 border border-stone-200/40 flex items-center justify-center">
+            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-brand-100/60 via-brand-50/30 to-zinc-50 border border-zinc-200/40 flex items-center justify-center">
               <span className="text-6xl font-display text-brand-500/30 select-none">S.</span>
             </div>
           </motion.div>

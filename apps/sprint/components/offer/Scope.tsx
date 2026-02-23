@@ -34,10 +34,10 @@ export function Scope({ items }: ScopeProps) {
             >
               <Card hover className="h-full">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-bold text-brand-600 bg-brand-50 rounded px-2 py-0.5">{item.num}</span>
-                  <h3 className="text-base font-bold text-gray-900">{item.title}</h3>
+                  <span className="text-xs font-bold text-brand-700 bg-brand-50 rounded px-2 py-0.5">{item.num}</span>
+                  <h3 className="text-base font-bold text-zinc-900">{item.title}</h3>
                 </div>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-zinc-500 leading-relaxed">{item.description}</p>
               </Card>
             </motion.div>
           ))}

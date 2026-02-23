@@ -36,9 +36,9 @@ export function Button({
   };
 
   const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'text-white bg-stone-900 rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-900/10',
-    secondary: 'text-stone-600 bg-white border border-stone-200 rounded-full hover:border-stone-300 hover:bg-stone-50',
-    ghost: 'text-stone-400 hover:text-stone-900',
+    primary: 'text-white bg-brand-600 rounded-full hover:bg-brand-500 hover:shadow-lg hover:shadow-brand-500/20',
+    secondary: 'text-zinc-600 bg-white border border-zinc-200 rounded-full hover:border-zinc-300 hover:bg-zinc-50',
+    ghost: 'text-zinc-400 hover:text-zinc-900',
   };
 
   const classes = cn(

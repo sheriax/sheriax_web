@@ -20,7 +20,7 @@ interface PricingProps {
 
 export function Pricing({ tiers }: PricingProps) {
   return (
-    <section className="bg-gray-50/70">
+    <section className="bg-zinc-50/70">
       <div className="max-w-[1120px] mx-auto px-5 sm:px-6 lg:px-8 py-20 sm:py-24">
         <SectionHeader
           label="Investment"
@@ -41,32 +41,32 @@ export function Pricing({ tiers }: PricingProps) {
               <div className={`relative rounded-2xl overflow-hidden h-full flex flex-col ${
                 tier.highlighted
                   ? 'border-2 border-brand-500 shadow-lg'
-                  : 'border border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]'
+                  : 'border border-zinc-200 shadow-[0_1px_3px_rgba(0,0,0,0.06)]'
               }`}>
                 {tier.highlighted && (
-                  <div className="h-1.5 bg-gradient-to-r from-brand-500 via-brand-400 to-brand-500" />
+                  <div className="h-1.5 bg-gradient-to-r from-brand-500 via-accent-400 to-brand-500" />
                 )}
                 <div className="p-6 sm:p-8 flex flex-col flex-1 bg-white">
                   <span className={`inline-flex self-start text-xs font-semibold rounded px-2 py-0.5 mb-4 ${
-                    tier.highlighted ? 'text-brand-600 bg-brand-50' : 'text-gray-600 bg-gray-100'
+                    tier.highlighted ? 'text-brand-600 bg-brand-50' : 'text-zinc-600 bg-zinc-100'
                   }`}>
                     {tier.tag}
                   </span>
 
-                  <h3 className="text-xl font-bold text-gray-900">{tier.name}</h3>
+                  <h3 className="text-xl font-bold text-zinc-900">{tier.name}</h3>
 
                   <div className="mt-4 mb-6">
-                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+                    <p className="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">
                       {tier.price}
                     </p>
-                    {tier.currency && <p className="text-sm text-gray-400 mt-1">{tier.currency}</p>}
+                    {tier.currency && <p className="text-sm text-zinc-400 mt-1">{tier.currency}</p>}
                   </div>
 
                   <ul className="space-y-3 mb-8 flex-1">
                     {tier.features.map(f => (
-                      <li key={f} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                      <li key={f} className="flex gap-3 text-sm text-zinc-700 leading-relaxed">
                         <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
-                          tier.highlighted ? 'text-brand-500' : 'text-gray-400'
+                          tier.highlighted ? 'text-brand-500' : 'text-zinc-400'
                         }`} />
                         {f}
                       </li>

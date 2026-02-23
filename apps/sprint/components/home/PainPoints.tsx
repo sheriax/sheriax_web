@@ -26,7 +26,7 @@ const painPoints = [
 export function PainPoints() {
   return (
     <section className="relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-stone-50/80 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-50/80 to-white" />
       <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-24 sm:py-32">
         <SectionHeader
           label="The Problem"
@@ -48,8 +48,8 @@ export function PainPoints() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/>
                   </svg>
                 </div>
-                <h3 className="text-base font-bold text-stone-900">{point.title}</h3>
-                <p className="mt-2 text-[14px] text-stone-600 leading-relaxed">{point.description}</p>
+                <h3 className="text-base font-bold text-zinc-900">{point.title}</h3>
+                <p className="mt-2 text-[14px] text-zinc-600 leading-relaxed">{point.description}</p>
               </Card>
             </motion.div>
           ))}
