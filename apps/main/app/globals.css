@@ -27,9 +27,12 @@
   --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
 }
 
+@custom-variant dark (&:not(.force-dark));
+
 body {
   color: #1A1A1A;
   background-color: #FEFEFE;
+  color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
