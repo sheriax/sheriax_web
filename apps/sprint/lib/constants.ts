@@ -1,6 +1,6 @@
 export const companyInfo = {
   name: 'Sheriax Sprint Studio',
-  email: 'sprint@sheriax.com',
+  email: 'hi@sheriax.com',
   parentCompany: 'Sheriax Solutions',
   parentUrl: 'https://sheriax.com',
 };
@@ -11,4 +11,4 @@ export const mainNavLinks = [
   { name: 'FAQ', href: '/#faq' },
 ];
 
-export const bookingUrl = 'https://cal.com/sheriax/discovery';
+export const bookingUrl = 'https://cal.com/sheriax';
