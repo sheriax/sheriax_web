@@ -112,7 +112,7 @@ export default function OpsCaseStudy() {
           </div>
 
           <div className="mt-14 pt-8 border-t border-stone-100">
-            <p className="text-base font-bold text-stone-900 mb-3">Running operations on manual effort?</p>
+            <p className="text-base font-bold text-stone-900 mb-5">Running operations on manual effort?</p>
             <Button href="/book" variant="primary" size="md" rightIcon>
               Book a Discovery Call
             </Button>

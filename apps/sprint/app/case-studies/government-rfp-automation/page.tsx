@@ -125,7 +125,7 @@ export default function RFPCaseStudy() {
           </div>
 
           <div className="mt-14 pt-8 border-t border-stone-100">
-            <p className="text-base font-bold text-stone-900 mb-3">Struggling with government workflows?</p>
+            <p className="text-base font-bold text-stone-900 mb-5">Struggling with government workflows?</p>
             <div className="flex gap-3">
               <Button href="/book" variant="primary" size="md" rightIcon>
                 Book a Discovery Call

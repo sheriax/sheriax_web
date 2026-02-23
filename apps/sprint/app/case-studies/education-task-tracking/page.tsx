@@ -105,7 +105,7 @@ export default function EducationCaseStudy() {
           </div>
 
           <div className="mt-14 pt-8 border-t border-stone-100">
-            <p className="text-base font-bold text-stone-900 mb-3">Facing similar coordination problems?</p>
+            <p className="text-base font-bold text-stone-900 mb-5">Facing similar coordination problems?</p>
             <Button href="/book" variant="primary" size="md" rightIcon>
               Book a Discovery Call
             </Button>
