@@ -1,0 +1,40 @@
+/* apps/main/app/globals.css */
+@import "tailwindcss";
+
+/* Sheriax Brand Theme */
+@theme {
+  /* Colors */
+  --color-primary: #0A0A0A;
+  --color-accent: #FF6B35;
+  --color-accent-light: #FFF0E8;
+  --color-surface: #FAFAFA;
+  --color-surface-dark: #111111;
+  --color-border: #E5E5E5;
+  --color-border-dark: #2A2A2A;
+  --color-text-muted: #6B7280;
+  --color-success: #10B981;
+  
+  /* Fonts */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Custom utilities */
+  --spacing-section: 5rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #FAFAFA;
+    --color-surface: #0A0A0A;
+    --color-border: #2A2A2A;
+  }
+}
+
+/* Custom components using @layer */
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-accent/90 transition-colors;
+  }
+}
