@@ -14,6 +14,7 @@ The **Sprint** app is configured for static export and can be hosted on Cloudfla
    - **Framework preset**: None (or Next.js Static HTML Export)
    - **Build command**: `cd ../.. && pnpm install && pnpm turbo build --filter=sprint`
    - **Build output directory**: `out`
+   - **Deploy command** (Pages → Settings → Builds): `npx wrangler deploy` (uses `wrangler.jsonc` in apps/sprint pointing assets to `./out`)
    - **Node.js version**: 22 (Environment variables → add `NODE_VERSION` = `22`)
 4. Deploy
 
