@@ -1,5 +1,6 @@
 /* apps/sprint — sprint.sheriax.com */
 @import "tailwindcss";
+@source "../../../packages/ui/src";
 
 @theme {
   /* Brand */
