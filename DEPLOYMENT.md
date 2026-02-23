@@ -1,6 +1,38 @@
-# Vercel Deployment (Monorepo)
+# Deployment
 
-This repo contains two Next.js apps that deploy as **separate Vercel projects**:
+## Cloudflare Pages (Sprint — Free)
+
+The **Sprint** app is configured for static export and can be hosted on Cloudflare Pages for free (unlimited bandwidth, global CDN).
+
+### Setup
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
+2. Select your repository
+3. Configure:
+   - **Project name**: `sheriax-sprint` (or your choice)
+   - **Root directory (advanced)**: `apps/sprint`
+   - **Framework preset**: None (or Next.js Static HTML Export)
+   - **Build command**: `cd ../.. && pnpm install && pnpm turbo build --filter=sprint`
+   - **Build output directory**: `out`
+   - **Node.js version**: 22 (Environment variables → add `NODE_VERSION` = `22`)
+4. Deploy
+
+### Custom domain
+
+In the project → **Custom domains** → Add `sprint.sheriax.com`.
+
+### Local static build
+
+```bash
+pnpm turbo build --filter=sprint
+# Output: apps/sprint/out/
+```
+
+---
+
+## Vercel (Main site — Monorepo)
+
+This repo contains two Next.js apps. **Main** deploys to Vercel (SSR, API routes); **Sprint** can also use Vercel or Cloudflare Pages.
 
 | App | Path | Package Name | Likely Domain |
 |-----|------|--------------|---------------|
@@ -24,16 +56,10 @@ This repo contains two Next.js apps that deploy as **separate Vercel projects**:
 5. Add env vars (e.g. `RESEND_API_KEY`, `KIZU_WISHLIST_API_URL`) if needed
 6. **Deploy**
 
-### 2. Sprint app (sprint.sheriax.com)
+### 2. Sprint app (sprint.sheriax.com) — Vercel or Cloudflare
 
-1. **Add New** → **Project** again (same repo)
-2. **Root Directory**: `apps/sprint`
-3. **Node.js Version**: `22.x`
-4. `vercel.json` in `apps/sprint` sets:
-   - `installCommand`: `cd ../.. && pnpm install`
-   - `buildCommand`: `cd ../.. && pnpm turbo build --filter=sprint`
-5. Add env vars if needed
-6. **Deploy**
+For **Vercel**: Root Directory `apps/sprint`; `vercel.json` sets install/build commands.
+For **Cloudflare Pages** (free): See Cloudflare section above. Sprint uses static export (`output: 'export'`).
 
 ## If Build Fails
 
