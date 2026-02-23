@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Button } from '@sheriax/ui';
+import { companyInfo } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -24,13 +25,13 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-[10px] font-semibold text-zinc-500 uppercase tracking-[0.15em] mb-2">Email</h3>
-              <a href="mailto:hello@sheriax.com" className="text-base text-brand-600 hover:text-brand-700 font-medium">
-                hello@sheriax.com
+              <a href={`mailto:${companyInfo.email}`} className="text-base text-brand-600 hover:text-brand-700 font-medium">
+                {companyInfo.email}
               </a>
             </div>
             <div>
               <h3 className="text-[10px] font-semibold text-zinc-500 uppercase tracking-[0.15em] mb-2">Location</h3>
-              <p className="text-base text-zinc-800">Chennai, India</p>
+              <p className="text-base text-zinc-800">Global (remote)</p>
             </div>
             <div className="pt-4 border-t border-zinc-100">
               <p className="text-sm text-zinc-600">
