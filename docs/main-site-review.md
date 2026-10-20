@@ -79,6 +79,12 @@ The only remaining `services`/`portfolio` wording in the main-site source is in 
 
 A pre-existing pnpm warning about `onlyBuiltDependencies` being declared inside the main package remains; it is unrelated to this change. No company facts lacking evidence were added. Substantive legal items above remain for review before publication.
 
+## Clean production build recheck
+
+The production build was repeated after the initial Vercel deployment failure. A fresh checkout of commit `8237375`, without local environment files, installed dependencies or build output, passed `pnpm install --frozen-lockfile` and `pnpm turbo build --filter=sheriax_web --force`. Turborepo reported one successful task and zero cached tasks. This exercises the build command configured for Vercel without relying on the working checkout’s generated files.
+
+The working checkout also passed `pnpm --filter sheriax_web build`, `pnpm --filter sheriax_web lint` and `pnpm --filter sheriax_web typecheck`. No application-code build failure was reproduced. These local checks do not establish a successful Vercel deployment; platform build logs are still needed to diagnose its earlier failures.
+
 ## Files changed
 
 The list below excludes the pre-existing instruction-file deletion, which is preserved.
