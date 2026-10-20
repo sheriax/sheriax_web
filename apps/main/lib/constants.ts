@@ -4,11 +4,10 @@ export const EARLY_ACCESS_URL = `${TATHEER_URL}/#early-access`;
 
 export const companyInfo = {
   name: "Sheriax",
-  legalName: "Sheriax Solutions (OPC) Private Limited",
+  companyName: "Sheriax Solutions Private Limited",
   email: "hi@sheriax.com",
   location: "Chennai, Tamil Nadu, India",
   incorporationDate: "7 November 2024",
-  cin: "U62099TN2024OPC174546",
   description:
     "The company behind Tat’heer. We’re building a way to identify unwanted bank interest, understand scholarly guidance and keep disposal records.",
 };

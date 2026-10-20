@@ -6,7 +6,7 @@ Website information updated: 20 October 2026
 
 ## 1. Introduction
 
-${companyInfo.legalName} ("we," "our," or "us") is the company behind Tat’heer. This page covers the Sheriax company website and correspondence with the company.
+${companyInfo.name} ("we," "our," or "us") is the company behind Tat’heer. This page covers the Sheriax company website and correspondence with the company.
 
 ## 2. Information We Collect
 
@@ -49,7 +49,7 @@ Website information updated: 20 October 2026
 
 ## 1. Acceptance of Terms
 
-By accessing or using the website provided by ${companyInfo.legalName} ("Company," "we," "our," or "us"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use this website.
+By accessing or using the website provided by ${companyInfo.name} ("Company," "we," "our," or "us"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use this website.
 
 ## 2. This Website
 

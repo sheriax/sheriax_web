@@ -35,7 +35,7 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} {companyInfo.legalName}
+            © {new Date().getFullYear()} {companyInfo.companyName}
           </p>
           <p>{companyInfo.location}</p>
         </div>

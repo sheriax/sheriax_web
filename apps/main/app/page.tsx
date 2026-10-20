@@ -45,17 +45,12 @@ export default function Home() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: companyInfo.name,
-    legalName: companyInfo.legalName,
+    alternateName: companyInfo.companyName,
     url: SITE_URL,
     logo: `${SITE_URL}/logo/Sheriax-Logo.png`,
     email: companyInfo.email,
     foundingDate: "2024-11-07",
     description: companyInfo.description,
-    identifier: {
-      "@type": "PropertyValue",
-      propertyID: "CIN",
-      value: companyInfo.cin,
-    },
   };
   return (
     <>
@@ -189,7 +184,7 @@ export default function Home() {
         </div>
         <div className="company-details">
           <p>
-            {companyInfo.legalName} is an Indian company incorporated in 2024.
+            {companyInfo.companyName} is an Indian company incorporated in 2024.
             Our work is focused on developing Tat’heer.
           </p>
           <p>For company questions or correspondence about Tat’heer:</p>

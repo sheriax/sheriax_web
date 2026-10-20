@@ -50,7 +50,7 @@ export default function ContactPage() {
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
           <p className="detail-note">
-            {companyInfo.legalName}
+            {companyInfo.companyName}
             <br />
             {companyInfo.location}
           </p>

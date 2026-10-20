@@ -12,14 +12,17 @@ All primary product links go to the product website. Early access remains at `ht
 
 ## Company evidence
 
-The following company details are used:
+The following company details are recorded:
 
-- Legal name: Sheriax Solutions (OPC) Private Limited.
-- Incorporation: 7 November 2024; CIN U62099TN2024OPC174546.
+- Public company name: Sheriax Solutions Private Limited, as requested by the company while its conversion application is pending.
+- Historical incorporation record: Sheriax Solutions (OPC) Private Limited.
+- Incorporation: 7 November 2024. The previous CIN is omitted from the public site pending updated registration details.
 - Location: Chennai, Tamil Nadu, India. No street address is published.
 - Contact: hi@sheriax.com, as specified by the company for public correspondence.
 
-The legal name, date and CIN were checked against the Ministry of Corporate Affairs incorporation certificate in the company workspace at `10-Operations/proof-assets/company-registration/COI_Sheriax.pdf`. The location is supported by the GST registration certificate in the same directory. These are incorporation/registration records, not a claim of a new live MCA status search. The public contact address is hi@sheriax.com, as explicitly requested by the company. Mailbox configuration and delivery for this address have not been tested. No email was sent or delivery promised.
+The historical legal name, date and CIN were checked against the Ministry of Corporate Affairs incorporation certificate in the company workspace at `10-Operations/proof-assets/company-registration/COI_Sheriax.pdf`. The location is supported by the GST registration certificate in the same directory. These are incorporation/registration records, not a claim of a new live MCA status search. The public contact address is hi@sheriax.com, as explicitly requested by the company. Mailbox configuration and delivery for this address have not been tested. No email was sent or delivery promised.
+
+The company reports that its application to convert from an OPC is pending. The requested public name omits “(OPC)”; it is presented as the company name, without asserting that conversion has completed. The organization schema uses this as an alternate name and omits registered legal-name and CIN assertions. The legal pages refer to the Sheriax brand until updated registration details are supplied. No replacement CIN, conversion date or updated certificate has been invented.
 
 Unverified founder/team stories, traction and recognition claims were omitted. Legacy certificate data is not imported or rendered, and was left unchanged. No personal certificate information was copied into the website or this note.
 
@@ -58,6 +61,7 @@ Legal review is still needed for:
 2. The scope and enforceability of the retained liability and governing-law provisions for this informational website, and appropriate rights over company-site content. No new Tat’heer app licence or religious assurance has been drafted.
 3. Actual hosting/CDN and email-provider processing, retention/deletion periods, subprocessors, international transfers and privacy-request procedures. These operational details were not invented.
 4. The applicability and wording of the retained privacy-rights promises under the company’s actual processing arrangements.
+5. Confirm the registered legal name and current CIN from the conversion certificate when issued, then restore the appropriate registration details on the site and in structured data.
 
 The only remaining `services`/`portfolio` wording in the main-site source is in those retained legal clauses. Searches found no remaining Kizu, Sprint, agency, studio, automation, discovery-call or booking promotion in the main-site source. Historical planning documents and Sprint’s independent content remain outside this migration.
 

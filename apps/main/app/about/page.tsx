@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "About",
-  "Sheriax Solutions (OPC) Private Limited is the company developing Tat’heer. Company registration and contact details.",
+  `${companyInfo.companyName} is the company developing Tat’heer. Company information and contact details.`,
   "/about",
 );
 
@@ -37,16 +37,12 @@ export default function AboutPage() {
           <h2>Company details</h2>
           <dl>
             <div>
-              <dt>Legal name</dt>
-              <dd>{companyInfo.legalName}</dd>
+              <dt>Company name</dt>
+              <dd>{companyInfo.companyName}</dd>
             </div>
             <div>
               <dt>Incorporated</dt>
               <dd>{companyInfo.incorporationDate}</dd>
-            </div>
-            <div>
-              <dt>Corporate identity number</dt>
-              <dd>{companyInfo.cin}</dd>
             </div>
             <div>
               <dt>Location</dt>
