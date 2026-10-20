@@ -83,7 +83,7 @@ A pre-existing pnpm warning about `onlyBuiltDependencies` being declared inside 
 
 The production build was repeated after the initial Vercel deployment failure. A fresh checkout of commit `8237375`, without local environment files, installed dependencies or build output, passed `pnpm install --frozen-lockfile` and `pnpm turbo build --filter=sheriax_web --force`. Turborepo reported one successful task and zero cached tasks. This exercises the build command configured for Vercel without relying on the working checkout’s generated files.
 
-The working checkout also passed `pnpm --filter sheriax_web build`, `pnpm --filter sheriax_web lint` and `pnpm --filter sheriax_web typecheck`. No application-code build failure was reproduced. These local checks do not establish a successful Vercel deployment; platform build logs are still needed to diagnose its earlier failures.
+The working checkout also passed `pnpm --filter sheriax_web build`, `pnpm --filter sheriax_web lint` and `pnpm --filter sheriax_web typecheck`. No application-code build failure was reproduced. The subsequent Vercel log identified the failure before compilation: the project selected discontinued Node.js 20.x. The main app now declares `engines.node: "24.x"` in its package manifest, matching the local Node.js 24 runtime. The main deployment instructions also specify 24.x. Root workspace and Sprint runtime settings are unchanged. Local validation does not establish that a remote deployment has completed.
 
 ## Files changed
 

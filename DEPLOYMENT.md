@@ -46,9 +46,9 @@ This repo contains two Next.js apps. **Main** deploys to Vercel (SSR, API routes
 
 1. In [Vercel Dashboard](https://vercel.com/dashboard) → **Add New** → **Project**
 2. Import the Git repo
-3. **Project Settings** → **General**:
+3. In **Project Settings**:
    - **Root Directory**: `apps/main` (edit, select from repo)
-   - **Node.js Version**: `22.x` (or use `.nvmrc`)
+   - **Node.js Version**: `24.x` for the main project. `apps/main/package.json` also declares `engines.node: "24.x"`, which [overrides the project setting](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions#version-overrides-in-packagejson) for new builds.
    - **Framework Preset**: Next.js
 4. **Build & Deployment**:
    - `vercel.json` in `apps/main` sets:
@@ -65,11 +65,11 @@ For **Cloudflare Pages** (free): See Cloudflare section above. Sprint uses stati
 ## If Build Fails
 
 - Confirm **Root Directory** is set for each project (`apps/main` or `apps/sprint`)
-- Ensure **Node.js** is 22+ (Project Settings → General)
+- For the main app, use **Node.js 24.x** in Project Settings → Build and Deployment. The main app package also declares this version; the separate Sprint runtime is unchanged.
 - Ensure **Package Manager** is pnpm (auto-detected from `pnpm-lock.yaml`)
 - Check build logs; common issues:
   - Missing workspace packages → install must run from monorepo root (hence `cd ../..`)
-  - Node version mismatch → set Node 22 in Vercel
+  - Main app Node version mismatch → set Node 24.x in Vercel. A discontinued Node 20.x project setting can stop a deployment before the build command runs.
 
 ## Local Builds
 
