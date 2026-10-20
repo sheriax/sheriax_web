@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 480 84" width="480" height="84" role="img" aria-labelledby="title desc">
+	<title id="title">Tatheer compact navigation lockup</title>
+	<desc id="desc">Proportionally balanced horizontal lockup tailored for application navigation bars and compact UI surfaces.</desc>
+	<style>
+		.s-entry { opacity: .18; fill: #102a43; }
+		.s-cradle { fill: none; stroke: #102a43; stroke-linecap: round; stroke-width: 20; }
+		.s-teal { fill: #087f73; }
+		.s-coral { fill: #ff7043; }
+		.s-exit-line { fill: none; stroke: #ff7043; stroke-linecap: round; stroke-width: 12; }
+		.s-navy { fill: #102a43; }
+		.s-slate { fill: #5a6e82; }
+	</style>
+
+
+	<g transform="translate(-32, -37) scale(0.54)">
+
+		<path fill-rule="evenodd" class="s-entry" d="m105 143h6c7.73 0 14 6.27 14 14 0 7.73-6.27 14-14 14h-6c-7.73 0-14-6.27-14-14 0-7.73 6.27-14 14-14z" />
+
+		<path class="s-cradle" d="m155 111c-20 0-36 16-36 36 0 20 16 36 36 36h78c20 0 36-16 36-36 0-20-16-36-36-36" />
+
+		<circle class="s-teal" cx="180" cy="132" r="12" />
+
+		<circle class="s-coral" cx="214" cy="133" r="12" />
+
+		<path class="s-exit-line" d="m279 147h22" />
+		<circle class="s-coral" cx="319" cy="147" r="7" />
+	</g>
+
+
+	<g transform="translate(-48, -46) scale(0.62)">
+
+		<path id="TAT" class="s-navy" aria-label="TAT" d="M357.4 167V125.52H344.548V116.34H380.588V125.52H367.94V167ZM384.124 167 401.26 116.34H415.268L432.404 167H420.912L417.512 156.664H398.948L395.548 167ZM401.872 147.484H414.588L406.836 123.548H409.692ZM448.792 167V125.52H435.94V116.34H471.98V125.52H459.332V167Z" />
+
+		<circle id="interpunct" class="s-teal" cx="493" cy="143" r="11.5" />
+
+		<path id="HEER" class="s-navy" aria-label="HEER" d="M518.488 167V116.34H529.028V138.236H548.748V116.34H559.288V167H548.748V147.416H529.028V167ZM573.704 167V116.34H607.772V125.52H584.244V137.012H606.412V146.192H584.244V157.82H607.772V167ZM619.196 167V116.34H653.264V125.52H629.736V137.012H651.904V146.192H629.736V157.82H653.264V167ZM664.688 167V116.34H684.068Q689.304 116.34 693.35 118.176Q697.396 120.012 699.708 123.616Q702.02 127.22 702.02 132.524Q702.02 137.692 699.64 141.33Q697.26 144.968 693.248 146.804L704.808 167H692.976L680.464 144.628L687.264 148.64H675.228V167ZM675.228 139.46H684.136Q686.38 139.46 688.012 138.576Q689.644 137.692 690.562 136.128Q691.48 134.564 691.48 132.524Q691.48 130.416 690.562 128.852Q689.644 127.288 688.012 126.404Q686.38 125.52 684.136 125.52H675.228Z" />
+	</g>
+
+
+	</svg>

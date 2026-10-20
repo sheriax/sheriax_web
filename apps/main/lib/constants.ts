@@ -1,25 +1,25 @@
+export const SITE_URL = "https://sheriax.com";
+export const TATHEER_URL = "https://tatheer.money";
+export const EARLY_ACCESS_URL = `${TATHEER_URL}/#early-access`;
+
 export const companyInfo = {
-  name: 'Sheriax Solutions',
-  shortName: 'Sheriax',
-  description: 'We build AI products and automation systems.',
-  email: 'hi@sheriax.com', // As given in the plan
-  location: 'Chennai, India',
-  founded: '2026',
-  tagline: 'We build AI products that solve real problems.',
-  socials: {
-    linkedin: 'https://linkedin.com/company/sheriax',
-    twitter: 'https://x.com/sheriaxofficial',
-    github: 'https://github.com/sheriax',
-  }
+  name: "Sheriax",
+  legalName: "Sheriax Solutions (OPC) Private Limited",
+  email: "hi@sheriax.com",
+  location: "Chennai, Tamil Nadu, India",
+  incorporationDate: "7 November 2024",
+  cin: "U62099TN2024OPC174546",
+  description:
+    "The company behind Tat’heer. We’re building a way to identify unwanted bank interest, understand scholarly guidance and keep disposal records.",
 };
 
 export const mainNavLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Kizu', href: '/kizu' },
-  { name: 'Sprint Studio', href: '/sprint' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
-export const sprintAppUrl = 'https://sprint.sheriax.com';
-export const kizuAppUrl = 'https://kizu.in';
+export const legalLinks = [
+  { name: "Privacy", href: "/privacy" },
+  { name: "Terms", href: "/terms" },
+];

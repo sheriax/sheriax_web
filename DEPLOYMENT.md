@@ -54,7 +54,7 @@ This repo contains two Next.js apps. **Main** deploys to Vercel (SSR, API routes
    - `vercel.json` in `apps/main` sets:
      - `installCommand`: `cd ../.. && pnpm install`
      - `buildCommand`: `cd ../.. && pnpm turbo build --filter=sheriax_web`
-5. Add env vars (e.g. `RESEND_API_KEY`, `KIZU_WISHLIST_API_URL`) if needed
+5. The main company website currently requires no application secrets. Contact uses an email link, and early-access signup takes place on the product website.
 6. **Deploy**
 
 ### 2. Sprint app (sprint.sheriax.com) — Vercel or Cloudflare

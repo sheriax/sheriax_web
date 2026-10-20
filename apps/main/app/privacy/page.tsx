@@ -1,8 +1,13 @@
-import { Metadata } from 'next';
-import { PrivacyContent } from '@sheriax/ui';
+import { CompanyLegalPage } from "@/components/CompanyLegalPage";
+import { privacyContent } from "@/lib/legal-content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = { title: 'Privacy Policy' };
+export const metadata = pageMetadata(
+  "Privacy Policy",
+  "How the Sheriax company website and company correspondence use personal information.",
+  "/privacy",
+);
 
 export default function PrivacyPage() {
-  return <PrivacyContent />;
+  return <CompanyLegalPage content={privacyContent} />;
 }

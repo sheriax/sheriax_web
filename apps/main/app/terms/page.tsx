@@ -1,8 +1,13 @@
-import { Metadata } from 'next';
-import { TermsContent } from '@sheriax/ui';
+import { CompanyLegalPage } from "@/components/CompanyLegalPage";
+import { termsContent } from "@/lib/legal-content";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = { title: 'Terms of Service' };
+export const metadata = pageMetadata(
+  "Terms of Service",
+  "Terms for the Sheriax company website, with information about Tat’heer’s development status.",
+  "/terms",
+);
 
 export default function TermsPage() {
-  return <TermsContent />;
+  return <CompanyLegalPage content={termsContent} />;
 }
